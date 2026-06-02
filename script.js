@@ -371,7 +371,7 @@ const assistantTopics = [
     keys: ["what is vestano", "about vestano", "vestano", "company", "who are you", "purpose", "people", "values"],
     exact: ["vestano", "what is vestano", "about vestano"],
     reply:
-      "Vestano International Pvt Ltd is a retail consulting, technology, ERP, auditing, compliance, workforce operations, and business transformation company. Since 2010, Vestano has helped retail chains, developers, and corporate ecosystems build efficient, profitable, and scalable operations. The company focuses on purpose-led transformation, specialized in-house departments, confidentiality, ethics, and operational order.",
+      "United Vestano Corporate International is a retail consulting, technology, ERP, auditing, compliance, workforce operations, and business transformation company. Since 2010, Vestano has helped retail chains, developers, and corporate ecosystems build efficient, profitable, and scalable operations. The company focuses on purpose-led transformation, specialized in-house departments, confidentiality, ethics, and operational order.",
     actions: [
       { label: "About Vestano", url: "/index.html#about-details" },
       { label: "View services", url: "/index.html?menu=services" },
@@ -402,7 +402,7 @@ const assistantTopics = [
     id: "contact",
     keys: ["contact", "phone", "call", "number", "whatsapp", "email", "mail", "location", "address", "toll free"],
     reply:
-      "Contact Vestano International Pvt Ltd through Sudheesh NIT. Phone: 7306178755. Toll free: 1800 890 7988. Email: info@vestanoretail.com. Address: 7th Floor, Tower 2, HiLITE Business Park, Kozhikode. Working hours are Monday to Saturday, 9 AM to 6 PM.",
+      "Contact United Vestano Corporate International through Sudheesh NIT. Phone: 7306178755. Toll free: 1800 890 7988. Email: info@vestanoretail.com. Address: 7th Floor, Tower 2, HiLITE Business Park, Kozhikode. Working hours are Monday to Saturday, 9 AM to 6 PM.",
     actions: [
       { label: "Call now", url: "tel:+917306178755" },
       { label: "WhatsApp", url: "https://wa.me/917306178755" },
@@ -423,7 +423,7 @@ const websiteVoiceCorrections = [
 function normalizeAssistantText(message) {
   let text = message
     .toLowerCase()
-    .replace(/\b(vesty mole|vesty mol|vesty mall|vesti mol)\b/g, "vesty mol");
+    .replace(/\b(vesty mole|vesty mol|vesty mall|vesti mol)\b/g, "vesty");
 
   websiteVoiceCorrections.forEach((correction) => {
     text = text.replace(correction.pattern, correction.replacement);
@@ -683,16 +683,16 @@ function buildAssistant() {
   assistant.innerHTML = `
     <button class="assistant-toggle" type="button" aria-label="Open Vestano assistant" aria-expanded="false">
       <span class="assistant-orb" aria-hidden="true"></span>
-      <span class="assistant-label">Ask Vesty Mol</span>
+      <span class="assistant-label">Ask Vesty</span>
     </button>
     <div class="assistant-panel" aria-label="Vestano auto reply assistant">
       <div class="assistant-head">
         <div>
-          <span>Vesty Mol</span>
+          <span>Vesty</span>
           <strong>Auto reply support</strong>
         </div>
         <div class="assistant-head-actions">
-          <button class="assistant-close" type="button" aria-label="Close assistant">×</button>
+          <button class="assistant-close" type="button" aria-label="Close assistant">Ã—</button>
         </div>
       </div>
       <div class="assistant-messages" aria-live="polite"></div>
@@ -704,7 +704,7 @@ function buildAssistant() {
         <button type="button" data-question="How can I contact Vestano?">Contact</button>
       </div>
       <form class="assistant-form">
-        <input type="text" placeholder="Ask in English..." aria-label="Ask Vesty Mol assistant" autocomplete="off" />
+        <input type="text" placeholder="Ask in English..." aria-label="Ask Vesty assistant" autocomplete="off" />
         <button class="assistant-mic" type="button" aria-label="Speak to Vestano assistant" title="Speak">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 3a3.5 3.5 0 0 1 3.5 3.5v5a3.5 3.5 0 1 1-7 0v-5A3.5 3.5 0 0 1 12 3Zm0 13.5a5 5 0 0 0 5-5h2a7 7 0 0 1-6 6.9V21h-2v-2.6a7 7 0 0 1-6-6.9h2a5 5 0 0 0 5 5Z" />
@@ -728,7 +728,7 @@ function buildAssistant() {
   const canSpeak = "speechSynthesis" in window;
   let recognition = null;
   let isListening = false;
-  let hasIntroducedVestyMol = false;
+  let hasIntroducedVesty = false;
 
   function addMessage(text, sender = "bot", actions = []) {
     const message = document.createElement("div");
@@ -788,9 +788,9 @@ function buildAssistant() {
   function openAssistant() {
     assistant.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
-    if (!hasIntroducedVestyMol && !messages.children.length) {
-      addMessage("Hi, I am Vesty Mol. Ask me in English about services, careers, StorePilot, Edge Market ERP, or contact details.");
-      hasIntroducedVestyMol = true;
+    if (!hasIntroducedVesty && !messages.children.length) {
+      addMessage("Hi, I am Vesty. Ask me in English about services, careers, StorePilot, Edge Market ERP, or contact details.");
+      hasIntroducedVesty = true;
     }
     setTimeout(() => input.focus(), 80);
   }

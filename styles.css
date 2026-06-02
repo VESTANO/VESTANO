@@ -124,6 +124,35 @@ a {
   cursor: pointer;
 }
 
+@media (min-width: 1041px) and (max-width: 1180px) {
+  .navbar {
+    gap: 14px;
+    padding: 0 28px;
+  }
+
+  .brand {
+    width: 214px;
+    min-width: 214px;
+    height: 64px;
+  }
+
+  .brand img {
+    width: 204px;
+    height: 58px;
+  }
+
+  .nav-shell {
+    gap: 14px;
+  }
+
+  .nav-links a,
+  .nav-button,
+  .nav-actions a {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
 @media (min-width: 1041px) and (max-width: 1320px) {
   .navbar {
     gap: 18px;
@@ -1202,6 +1231,30 @@ a {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+@media (min-width: 1041px) and (max-width: 1260px) {
+  .mission-vision-wrap {
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+    gap: 24px;
+  }
+
+  .mission-vision-copy h2 {
+    font-size: clamp(40px, 4.2vw, 62px);
+  }
+
+  .mission-vision-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mission-vision-visual {
+    max-width: 620px;
+    margin-top: 72px;
+  }
+
+  .pillar-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .pillar-grid {
@@ -2423,6 +2476,31 @@ a {
   text-transform: uppercase;
 }
 
+@media (min-width: 1041px) and (max-width: 1320px) {
+  .directors-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .director-card,
+  .director-card:nth-child(-n + 3),
+  .director-card-match-finance,
+  .director-card-match-market {
+    min-height: auto !important;
+  }
+
+  .director-card-compact {
+    padding: 12px;
+  }
+
+  .leadership-small-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .project-execution-card {
+    grid-template-columns: 124px minmax(0, 1fr);
+  }
+}
+
 .article-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2595,6 +2673,17 @@ a {
     padding: 0 24px;
   }
 
+  .brand {
+    width: 220px;
+    min-width: 220px;
+    height: 66px;
+  }
+
+  .brand img {
+    width: 208px;
+    height: 58px;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -2721,12 +2810,13 @@ a {
 
   .mission-vision-wrap,
   .leader-feature,
-  .directors-grid,
-  .leadership-small-grid,
-  .project-execution-card,
   .erp-showcase,
   .article-list-panel {
     grid-template-columns: 1fr;
+  }
+
+  .directors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .director-card-compact {
@@ -2751,8 +2841,25 @@ a {
     align-items: start;
   }
 
+  .mission-vision-visual {
+    max-width: 680px;
+    margin: 28px 0 0;
+  }
+
+  .mission-vision-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .pillar-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-execution-card {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .leadership-small-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .trending-grid {
@@ -2777,6 +2884,53 @@ a {
 
   .article-wrap h1 {
     max-width: 760px;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-content {
+    width: calc(100% - 48px);
+    margin: 8vh 24px 48px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(40px, 8vw, 62px);
+  }
+
+  .mission-vision-wrap,
+  .leader-feature,
+  .project-execution-card,
+  .article-list-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision-visual {
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .directors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-small-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-execution-card {
+    gap: 14px;
+  }
+
+  .trend-card {
+    flex-basis: min(84vw, 360px);
   }
 }
 
