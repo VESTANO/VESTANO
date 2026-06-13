@@ -2631,9 +2631,15 @@ a {
 
   .site-header.nav-open .nav-shell {
     display: block;
-    max-height: calc(100dvh - var(--header-height));
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .site-header.nav-open {
+    height: 100dvh;
     overflow-y: auto;
     overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links,
