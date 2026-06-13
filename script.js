@@ -6,8 +6,10 @@ const siteSearch = document.querySelector(".site-search");
 const searchToggle = document.querySelector(".search-toggle");
 const searchInput = document.querySelector("#site-search-input");
 const searchResults = document.querySelector(".search-results");
+const megaBackButtons = document.querySelectorAll(".mega-mobile-back");
 
 const searchItems = [
+  { title: "The Market", category: "Venture", url: "the-market.html" },
   { title: "StorePilot", category: "Platform", url: "services/storepilot-workforce.html" },
   { title: "Edge Market ERP", category: "Platform", url: "services/edge-market-erp.html" },
   { title: "Vestano Media", category: "Platform", url: "services/vestano-media.html" },
@@ -45,6 +47,7 @@ const searchItems = [
 
 const websiteKnowledgePageUrls = [
   "/index.html",
+  "/the-market.html",
   "/leadership.html",
   "/services/storepilot-workforce.html",
   "/services/edge-market-erp.html",
@@ -186,10 +189,19 @@ megaButtons.forEach((button) => {
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
     const isOpen = !header.classList.contains("nav-open");
+    closeMegaMenus();
+    closeSearch();
     header.classList.toggle("nav-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 }
+
+megaBackButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    closeMegaMenus();
+  });
+});
 
 if (searchToggle && siteSearch && searchInput) {
   searchToggle.addEventListener("click", () => {
