@@ -383,7 +383,7 @@ const assistantTopics = [
     keys: ["what is vestano", "about vestano", "vestano", "company", "who are you", "purpose", "people", "values"],
     exact: ["vestano", "what is vestano", "about vestano"],
     reply:
-      "United Vestano Corporate International is a retail consulting, technology, ERP, auditing, compliance, workforce operations, and business transformation company. Since 2010, Vestano has helped retail chains, developers, and corporate ecosystems build efficient, profitable, and scalable operations. The company focuses on purpose-led transformation, specialized in-house departments, confidentiality, ethics, and operational order.",
+      "Vestano International Pvt Ltd is a retail consulting, technology, ERP, auditing, compliance, workforce operations, and business transformation company. Since 2010, Vestano has helped retail chains, developers, and corporate ecosystems build efficient, profitable, and scalable operations. The company focuses on purpose-led transformation, specialized in-house departments, confidentiality, ethics, and operational order.",
     actions: [
       { label: "About Vestano", url: "/index.html#about-details" },
       { label: "View services", url: "/index.html?menu=services" },
@@ -414,7 +414,7 @@ const assistantTopics = [
     id: "contact",
     keys: ["contact", "phone", "call", "number", "whatsapp", "email", "mail", "location", "address", "toll free"],
     reply:
-      "Contact United Vestano Corporate International through Sudheesh NIT. Phone: 7306178755. Toll free: 1800 890 7988. Email: info@vestanoretail.com. Address: 7th Floor, Tower 2, HiLITE Business Park, Kozhikode. Working hours are Monday to Saturday, 9 AM to 6 PM.",
+      "Contact Vestano International Pvt Ltd through Sudheesh NIT. Phone: 7306178755. Toll free: 1800 890 7988. Email: info@vestanoretail.com. Address: 7th Floor, Tower 2, HiLITE Business Park, Kozhikode. Working hours are Monday to Saturday, 9 AM to 6 PM.",
     actions: [
       { label: "Call now", url: "tel:+917306178755" },
       { label: "WhatsApp", url: "https://wa.me/917306178755" },
