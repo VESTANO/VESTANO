@@ -704,7 +704,7 @@ function buildAssistant() {
           <strong>Auto reply support</strong>
         </div>
         <div class="assistant-head-actions">
-          <button class="assistant-close" type="button" aria-label="Close assistant">Ã—</button>
+          <button class="assistant-close" type="button" aria-label="Minimize auto reply support">X</button>
         </div>
       </div>
       <div class="assistant-messages" aria-live="polite"></div>
