@@ -8,8 +8,74 @@ const searchInput = document.querySelector("#site-search-input");
 const searchResults = document.querySelector(".search-results");
 const megaBackButtons = document.querySelectorAll(".mega-mobile-back");
 
+const businessNavLink = Array.from(document.querySelectorAll(".nav-links > li > a")).find(
+  (link) => link.textContent.trim().toUpperCase() === "OUR BUSINESS",
+);
+let businessNavTrigger = null;
+let businessDropdown = null;
+
+if (businessNavLink) {
+  const businessNavItem = businessNavLink.closest("li");
+  const businessRootUrl = new URL(businessNavLink.getAttribute("href"), document.baseURI).href.replace(
+    /the-market\.html(?:[?#].*)?$/,
+    "",
+  );
+  const businessItems = [
+    { title: "The Market", meta: "Supermarket venture", path: "the-market.html", image: "assets/images/the-market-logo-dark.png" },
+    { title: "StorePilot", meta: "Workforce operations", path: "services/storepilot-workforce.html", image: "assets/images/storepilot-logo.jpeg" },
+    { title: "Edge Market ERP", meta: "Retail ERP platform", path: "services/edge-market-erp.html", image: "assets/images/edge-market-logo.png" },
+    { title: "Vestano Media", meta: "Digital marketing", path: "services/vestano-media.html", image: "assets/images/vestano-media-logo.jpeg" },
+    { title: "Import & Export", meta: "Global sourcing", path: "industries/import-export-operations.html#trade-readiness", image: "assets/images/import-export-port.jpg" },
+    { title: "The Sign", meta: "Premium villa communities", path: "industries/villa-projects.html", image: "assets/images/the-sign-logo.png" },
+    { title: "NEXIQ", meta: "MIS & Data Analytics", path: "business/nexiq.html", image: "assets/images/nexiq-logo.png" },
+    { title: "AUDITRA", meta: "Finance & Auditing", path: "business/auditra.html", image: "assets/images/auditra-logo.png" },
+    { title: "Tiffin Box", meta: "New project • Coming soon", path: "business/tiffin-box.html", image: "assets/images/tiffin-box-logo.png" },
+    { title: "UVPRO", meta: "Restaurant ERP & POS", path: "business/up-pro.html", image: "assets/images/uvpro-logo.png" },
+    { title: "Fanzzy", meta: "Online jewellery", path: "business/fanzzy.html", image: "assets/images/fanzzy-logo.png" },
+  ];
+
+  businessNavTrigger = document.createElement("button");
+  businessNavTrigger.className = "nav-button business-nav-trigger";
+  businessNavTrigger.type = "button";
+  businessNavTrigger.setAttribute("aria-expanded", "false");
+  businessNavTrigger.setAttribute("aria-controls", "business-dropdown");
+  businessNavTrigger.innerHTML = '<span>OUR BUSINESS</span><span class="business-nav-chevron" aria-hidden="true"></span>';
+
+  businessDropdown = document.createElement("ul");
+  businessDropdown.className = "business-dropdown";
+  businessDropdown.id = "business-dropdown";
+  businessDropdown.hidden = true;
+
+  businessItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+    const image = document.createElement("img");
+    const copy = document.createElement("span");
+    const title = document.createElement("strong");
+    const meta = document.createElement("small");
+    link.href = new URL(item.path, businessRootUrl).href;
+    image.src = new URL(item.image, businessRootUrl).href;
+    image.alt = "";
+    title.textContent = item.title;
+    meta.textContent = item.meta;
+    copy.append(title, meta);
+    link.append(image, copy);
+    listItem.append(link);
+    businessDropdown.append(listItem);
+  });
+
+  businessNavItem.classList.add("business-nav-item");
+  businessNavLink.replaceWith(businessNavTrigger);
+  businessNavItem.append(businessDropdown);
+}
+
 const searchItems = [
   { title: "The Market", category: "Venture", url: "the-market.html" },
+  { title: "NEXIQ Next-Generation Intelligence", category: "Business", url: "business/nexiq.html" },
+  { title: "AUDITRA Finance & Auditing", category: "Business", url: "business/auditra.html" },
+  { title: "Tiffin Box Coming Soon", category: "Business", url: "business/tiffin-box.html" },
+  { title: "UVPRO Restaurant ERP & POS", category: "Business", url: "business/up-pro.html" },
+  { title: "Fanzzy Jewellery", category: "Business", url: "business/fanzzy.html" },
   { title: "StorePilot", category: "Platform", url: "services/storepilot-workforce.html" },
   { title: "Edge Market ERP", category: "Platform", url: "services/edge-market-erp.html" },
   { title: "Vestano Media", category: "Platform", url: "services/vestano-media.html" },
@@ -26,7 +92,7 @@ const searchItems = [
   { title: "Hypermarkets, Supermarkets & Grocery Retail", category: "Industries", url: "industries/hypermarkets-supermarkets-grocery.html" },
   { title: "FMCG & Consumer Goods Distribution", category: "Industries", url: "industries/fmcg-consumer-goods.html" },
   { title: "Consumer Electronics & Appliance Outlets", category: "Industries", url: "industries/consumer-electronics-appliances.html" },
-  { title: "Vestano Villa Projects", category: "Industries", url: "industries/villa-projects.html" },
+  { title: "The Sign Premium Villa Communities", category: "Industries", url: "industries/villa-projects.html" },
   { title: "Import & Export Operations", category: "Industries", url: "industries/import-export-operations.html#trade-readiness" },
   { title: "Contact info", category: "Contact", url: "#contact" },
   { title: "About Vestano Internship Programs", category: "Careers", url: "careers/internship-programs.html" },
@@ -48,6 +114,11 @@ const searchItems = [
 const websiteKnowledgePageUrls = [
   "/index.html",
   "/the-market.html",
+  "/business/nexiq.html",
+  "/business/auditra.html",
+  "/business/tiffin-box.html",
+  "/business/up-pro.html",
+  "/business/fanzzy.html",
   "/leadership.html",
   "/services/storepilot-workforce.html",
   "/services/edge-market-erp.html",
@@ -95,47 +166,6 @@ function updateHeaderScrollState() {
 updateHeaderScrollState();
 window.addEventListener("scroll", updateHeaderScrollState, { passive: true });
 
-const trendingSlider = document.querySelector("[data-trending-slider]");
-
-if (trendingSlider) {
-  const trendScroller = trendingSlider.querySelector(".trending-grid");
-  const trendPrev = trendingSlider.querySelector(".trending-slide-zone-left");
-  const trendNext = trendingSlider.querySelector(".trending-slide-zone-right");
-  let trendHoverTimer = null;
-
-  const getTrendStep = () => {
-    const firstCard = trendScroller?.querySelector(".trend-card");
-    if (!trendScroller || !firstCard) return 0;
-    const gap = parseFloat(window.getComputedStyle(trendScroller).columnGap) || 0;
-    return firstCard.getBoundingClientRect().width + gap;
-  };
-
-  const slideTrending = (direction) => {
-    const step = getTrendStep();
-    if (!trendScroller || !step) return;
-    trendScroller.scrollBy({ left: step * direction, behavior: "smooth" });
-  };
-
-  const startTrendingSlide = (direction) => {
-    window.clearInterval(trendHoverTimer);
-    slideTrending(direction);
-    trendHoverTimer = window.setInterval(() => slideTrending(direction), 1100);
-  };
-
-  const stopTrendingSlide = () => {
-    window.clearInterval(trendHoverTimer);
-    trendHoverTimer = null;
-  };
-
-  trendNext?.addEventListener("mouseenter", () => startTrendingSlide(1));
-  trendPrev?.addEventListener("mouseenter", () => startTrendingSlide(-1));
-  trendNext?.addEventListener("mouseleave", stopTrendingSlide);
-  trendPrev?.addEventListener("mouseleave", stopTrendingSlide);
-  trendingSlider.addEventListener("mouseleave", stopTrendingSlide);
-  trendNext?.addEventListener("click", () => slideTrending(1));
-  trendPrev?.addEventListener("click", () => slideTrending(-1));
-}
-
 function closeMegaMenus() {
   megaMenus.forEach((menu) => menu.classList.remove("is-open"));
   megaButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
@@ -145,6 +175,34 @@ function closeSearch() {
   siteSearch?.classList.remove("is-open");
   searchToggle?.setAttribute("aria-expanded", "false");
 }
+
+function closeBusinessDropdown() {
+  if (!businessDropdown || !businessNavTrigger) return;
+  businessDropdown.hidden = true;
+  businessNavTrigger.setAttribute("aria-expanded", "false");
+}
+
+function toggleBusinessDropdown() {
+  if (!businessDropdown || !businessNavTrigger) return;
+  const shouldOpen = businessDropdown.hidden;
+  closeMegaMenus();
+  closeSearch();
+  businessDropdown.hidden = !shouldOpen;
+  businessNavTrigger.setAttribute("aria-expanded", String(shouldOpen));
+}
+
+businessNavTrigger?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  toggleBusinessDropdown();
+});
+
+businessDropdown?.addEventListener("click", (event) => {
+  if (event.target.closest("a")) {
+    closeBusinessDropdown();
+    header?.classList.remove("nav-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  }
+});
 
 function renderSearchResults(query = "") {
   if (!searchResults) return;
@@ -173,6 +231,7 @@ function toggleMegaMenu(button) {
   const shouldOpen = target && !target.classList.contains("is-open");
 
   closeMegaMenus();
+  closeBusinessDropdown();
 
   if (target && shouldOpen) {
     target.classList.add("is-open");
@@ -191,6 +250,7 @@ if (menuToggle) {
     const isOpen = !header.classList.contains("nav-open");
     closeMegaMenus();
     closeSearch();
+    closeBusinessDropdown();
     header.classList.toggle("nav-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
@@ -207,6 +267,7 @@ if (searchToggle && siteSearch && searchInput) {
   searchToggle.addEventListener("click", () => {
     const isOpen = !siteSearch.classList.contains("is-open");
     closeMegaMenus();
+    closeBusinessDropdown();
     siteSearch.classList.toggle("is-open", isOpen);
     searchToggle.setAttribute("aria-expanded", String(isOpen));
 
@@ -240,12 +301,17 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMegaMenus();
     closeSearch();
+    closeBusinessDropdown();
     header?.classList.remove("nav-open");
     menuToggle?.setAttribute("aria-expanded", "false");
   }
 });
 
 document.addEventListener("click", (event) => {
+  if (businessDropdown && !event.target.closest(".business-nav-item")) {
+    closeBusinessDropdown();
+  }
+
   if (header && !header.contains(event.target)) {
     closeMegaMenus();
     closeSearch();
@@ -337,6 +403,27 @@ const assistantTopics = [
     actions: [{ label: "Open audit service", url: "/services/auditing-tax-compliance.html" }],
   },
   {
+    id: "auditra",
+    keys: ["auditra", "finance company", "auditing company", "full audit", "p&l", "profit and loss", "audit reports", "financial audit"],
+    reply:
+      "AUDITRA is Vestano's finance and auditing company. It provides full financial and operational audits, P&L review, ledger and voucher verification, bank and cash reconciliation, supplier and customer balance checks, purchase and sales review, inventory and tax checks, internal-control assessment, compliance observations, management audit reports, risk findings, and corrective-action follow-up.",
+    actions: [{ label: "Open AUDITRA", url: "/business/auditra.html" }],
+  },
+  {
+    id: "tiffin-box",
+    keys: ["tiffin box", "tiffin", "new project", "coming soon", "meal service", "food project"],
+    reply:
+      "Tiffin Box is a new Vestano food and meal-service project currently in development. The concept, operating model, customer experience, and launch plan are being prepared. More project and availability details will be announced soon.",
+    actions: [{ label: "View Tiffin Box", url: "/business/tiffin-box.html" }],
+  },
+  {
+    id: "nexiq",
+    keys: ["nexiq", "next-generation intelligence", "next generation intelligence", "mis department", "data analytics team", "management presentation", "next required action"],
+    reply:
+      "NEXIQ stands for Next-Generation Intelligence. It is Vestano's MIS and data analytics department. The team receives reports from every business function, validates and studies the data, identifies trends, gaps, risks, and opportunities, prepares clear management presentations and structured MIS reports, and concludes each review with the next required action, priority, responsible owner, and follow-up point.",
+    actions: [{ label: "Open NEXIQ", url: "/business/nexiq.html" }],
+  },
+  {
     id: "mis-analytics",
     keys: ["mis", "analytics", "diagnostic", "diagnostics", "margin", "dump value", "sales purchase", "stock analysis", "business reports"],
     reply:
@@ -368,7 +455,7 @@ const assistantTopics = [
     id: "industries",
     keys: ["industry", "industries", "intreeies", "sectors", "fmcg", "grocery", "hypermarket", "supermarket", "villa", "villas", "residential", "import", "export", "construction", "electronics", "saas"],
     reply:
-      "Vestano works across these industries:\n1. Hypermarkets, Supermarkets, and Grocery Retail: layout, fixtures, perishable assets, Edge Market ERP, POS speed, modern trade, basket value, and profitability.\n2. FMCG and Consumer Goods Distribution: supplier credit matrices, vendor accounts, warehouse utilization, holding cost reduction, predictive purchasing, and margin protection.\n3. Consumer Electronics and Appliance Outlets: serial-number tracking, warranty logs, seasonal pricing, stock visibility, and high-value inventory security.\n4. Engineering, Real Estate, and Infrastructure Construction: civil floor plans, spatial zoning, MEP layouts, utility loads, footfall readiness, and hypermarket equipment load planning.\n5. Vestano Villa Projects: secure gated villa communities, landscaped roads, premium villas, community facilities, and long-term residential investment value.\n6. International Trade Import and Export: global sourcing, buying agreements, freight logistics, customs compliance, currency risk, and cross-border scaling.\n7. Technology, Software, and Enterprise SaaS Providers: Python and Flask web integrations, MySQL databases, enterprise tools, StorePilot workflows, role approvals, and location-verified operations.\n8. Corporate Auditing, Risk Management, and Compliance: invoice extraction, tax credit protection, dump-value validation, risk controls, GST readiness, and accounting compliance.",
+      "Vestano works across these industries:\n1. Hypermarkets, Supermarkets, and Grocery Retail: layout, fixtures, perishable assets, Edge Market ERP, POS speed, modern trade, basket value, and profitability.\n2. FMCG and Consumer Goods Distribution: supplier credit matrices, vendor accounts, warehouse utilization, holding cost reduction, predictive purchasing, and margin protection.\n3. Consumer Electronics and Appliance Outlets: serial-number tracking, warranty logs, seasonal pricing, stock visibility, and high-value inventory security.\n4. Engineering, Real Estate, and Infrastructure Construction: civil floor plans, spatial zoning, MEP layouts, utility loads, footfall readiness, and hypermarket equipment load planning.\n5. The Sign: secure gated villa communities, landscaped roads, premium villas, community facilities, and long-term residential investment value.\n6. International Trade Import and Export: global sourcing, buying agreements, freight logistics, customs compliance, currency risk, and cross-border scaling.\n7. Technology, Software, and Enterprise SaaS Providers: Python and Flask web integrations, MySQL databases, enterprise tools, StorePilot workflows, role approvals, and location-verified operations.\n8. Corporate Auditing, Risk Management, and Compliance: invoice extraction, tax credit protection, dump-value validation, risk controls, GST readiness, and accounting compliance.",
     actions: [{ label: "View industries", url: "/index.html?menu=industries" }],
   },
   {
@@ -405,9 +492,9 @@ const assistantTopics = [
   },
   {
     id: "leadership",
-    keys: ["leader", "leadership", "director", "ceo", "sudheesh", "sudeesh", "managing director", "sandeep", "developers", "finance", "auditing"],
+    keys: ["leader", "leadership", "director", "ceo", "sudheesh", "sudeesh", "managing director", "developers", "finance", "auditing"],
     reply:
-      "Vestano leadership includes Sudheesh NIT, CEO and Managing Director. It also includes Director of Vestano Developers and Finance & Auditing leadership: strong finance builds the business, smart auditing protects it.",
+      "Vestano leadership includes Sudheesh NIT, CEO and Managing Director, and Finance & Auditing leadership: strong finance builds the business, smart auditing protects it.",
     actions: [{ label: "View leadership", url: "/leadership.html" }],
   },
   {
