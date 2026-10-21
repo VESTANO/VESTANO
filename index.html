@@ -50,7 +50,7 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=remove-developer-director-20261021" />
+    <link rel="stylesheet" href="styles.css?v=trending-business-carousel-20261021" />
   </head>
   <body>
     <header class="site-header">
@@ -496,13 +496,22 @@
       </section>
 
       <section class="trending-band" id="trending-now">
-        <div class="section-heading">
-          <h2>Trending now</h2>
-          <p class="trending-intro">Explore all Vestano businesses and projects in one place.</p>
+        <div class="trending-heading-row">
+          <div class="section-heading">
+            <h2>Trending now</h2>
+            <p class="trending-intro">Explore all Vestano businesses and projects in one place.</p>
+          </div>
+          <a class="trending-view-all" href="all-businesses.html">
+            View all businesses <span aria-hidden="true">→</span>
+          </a>
         </div>
 
-        <div class="trending-slider">
-          <div class="trending-grid">
+        <div class="trending-slider" data-trending-slider>
+          <button class="trending-arrow" type="button" data-trending-prev aria-label="Show previous businesses" disabled>
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="trending-viewport" tabindex="0" role="region" aria-label="Featured businesses" aria-roledescription="carousel">
+            <div class="trending-grid" id="trending-grid" data-trending-track>
             <article class="trend-card">
               <div class="trend-copy">
                 <div class="trend-logo market-logo">
@@ -760,7 +769,15 @@
                 <img src="assets/images/fanzzy-site-collections.png" alt="Fanzzy jewellery collections" />
               </div>
             </article>
+            </div>
           </div>
+          <button class="trending-arrow" type="button" data-trending-next aria-label="Show next businesses">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="trending-slider-meta" aria-hidden="false">
+          <span class="trending-slide-count" data-trending-count role="status" aria-live="polite">1–3 of 12</span>
+          <div class="trending-progress" aria-hidden="true"><span data-trending-progress></span></div>
         </div>
       </section>
 
@@ -977,6 +994,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=remove-developer-director-20261021"></script>
+    <script src="script.js?v=trending-business-carousel-20261021"></script>
   </body>
 </html>

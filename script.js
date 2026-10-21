@@ -1013,3 +1013,70 @@ function buildAssistant() {
 }
 
 buildAssistant();
+
+function setupTrendingCarousel() {
+  const slider = document.querySelector("[data-trending-slider]");
+  if (!slider) return;
+
+  const track = slider.querySelector("[data-trending-track]");
+  const viewport = slider.querySelector(".trending-viewport");
+  const previousButton = slider.querySelector("[data-trending-prev]");
+  const nextButton = slider.querySelector("[data-trending-next]");
+  const countLabel = document.querySelector("[data-trending-count]");
+  const progress = document.querySelector("[data-trending-progress]");
+  const cards = Array.from(track?.querySelectorAll(":scope > .trend-card") ?? []);
+  if (!track || !viewport || !previousButton || !nextButton || cards.length === 0) return;
+
+  let firstVisible = 0;
+
+  function visibleCardCount() {
+    const configured = Number.parseInt(window.getComputedStyle(slider).getPropertyValue("--trending-visible"), 10);
+    return Number.isFinite(configured) && configured > 0 ? Math.min(configured, cards.length) : 3;
+  }
+
+  function updateCarousel() {
+    const visible = visibleCardCount();
+    const maxFirst = Math.max(0, cards.length - visible);
+    firstVisible = Math.min(firstVisible, maxFirst);
+    const lastVisible = Math.min(firstVisible + visible, cards.length);
+    const offset = cards[firstVisible].offsetLeft - cards[0].offsetLeft;
+
+    track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+    previousButton.disabled = firstVisible === 0;
+    nextButton.disabled = firstVisible === maxFirst;
+
+    cards.forEach((card, index) => {
+      const isVisible = index >= firstVisible && index < lastVisible;
+      card.setAttribute("aria-hidden", String(!isVisible));
+      card.inert = !isVisible;
+    });
+
+    if (countLabel) countLabel.textContent = `${firstVisible + 1}–${lastVisible} of ${cards.length}`;
+    if (progress) progress.style.width = `${(lastVisible / cards.length) * 100}%`;
+  }
+
+  function moveBy(amount) {
+    const maxFirst = Math.max(0, cards.length - visibleCardCount());
+    firstVisible = Math.max(0, Math.min(maxFirst, firstVisible + amount));
+    updateCarousel();
+  }
+
+  previousButton.addEventListener("click", () => moveBy(-1));
+  nextButton.addEventListener("click", () => moveBy(1));
+  viewport.addEventListener("keydown", (event) => {
+    if (event.target !== viewport) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      moveBy(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      moveBy(1);
+    }
+  });
+  window.addEventListener("resize", () => window.requestAnimationFrame(updateCarousel), { passive: true });
+
+  slider.classList.add("is-ready");
+  updateCarousel();
+}
+
+setupTrendingCarousel();
