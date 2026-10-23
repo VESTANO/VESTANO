@@ -24,12 +24,14 @@ if (businessNavLink) {
     { title: "The Market", meta: "Supermarket venture", path: "the-market.html", image: "assets/images/the-market-logo-dark.png" },
     { title: "StorePilot", meta: "Workforce operations", path: "services/storepilot-workforce.html", image: "assets/images/storepilot-logo.jpeg" },
     { title: "Edge Market ERP", meta: "Retail ERP platform", path: "services/edge-market-erp.html", image: "assets/images/edge-market-logo.png" },
+    { title: "Vestano India LLP", meta: "Hardware", path: "business/digital-solutions.html", image: "assets/images/vestano-india-llp-logo-transparent.png" },
+    { title: "Vestano Projects & Property", meta: "Construction and development", path: "business/vestano-projects-property.html", image: "assets/images/vestano-india-llp-logo-transparent.png" },
     { title: "Vestano Media", meta: "Digital marketing", path: "services/vestano-media.html", image: "assets/images/vestano-media-logo.jpeg" },
     { title: "Import & Export", meta: "Global sourcing", path: "industries/import-export-operations.html#trade-readiness", image: "assets/images/import-export-port.jpg" },
     { title: "The Sign", meta: "Premium villa communities", path: "industries/villa-projects.html", image: "assets/images/the-sign-logo.png" },
     { title: "NEXIQ", meta: "MIS & Data Analytics", path: "business/nexiq.html", image: "assets/images/nexiq-logo.png" },
     { title: "AUDITRA", meta: "Finance & Auditing", path: "business/auditra.html", image: "assets/images/auditra-logo.png" },
-    { title: "Tiffin Box", meta: "New project • Coming soon", path: "business/tiffin-box.html", image: "assets/images/tiffin-box-logo.png" },
+    { title: "Tiffin Box", meta: "New project • Coming soon", path: "business/tiffin-box.html", image: "assets/images/tiffin-box-logo-v2.png" },
     { title: "UVPRO", meta: "Restaurant ERP & POS", path: "business/up-pro.html", image: "assets/images/uvpro-logo.png" },
     { title: "Fanzzy", meta: "Online jewellery", path: "business/fanzzy.html", image: "assets/images/fanzzy-logo.png" },
   ];
@@ -78,6 +80,11 @@ const searchItems = [
   { title: "Fanzzy Jewellery", category: "Business", url: "business/fanzzy.html" },
   { title: "StorePilot", category: "Platform", url: "services/storepilot-workforce.html" },
   { title: "Edge Market ERP", category: "Platform", url: "services/edge-market-erp.html" },
+  { title: "Vestano India LLP Hardware & Digital Solutions", category: "Business", url: "business/digital-solutions.html" },
+  { title: "Vestano Projects & Property Construction and Development", category: "Business", url: "business/vestano-projects-property.html" },
+  { title: "TSC Hardware & Label Printing", category: "Hardware", url: "business/tsc-hardware.html" },
+  { title: "ESSAE POS Systems", category: "Hardware", url: "business/essae-pos.html" },
+  { title: "BPOS Billing Hardware", category: "Hardware", url: "business/bpos-hardware.html" },
   { title: "Vestano Media", category: "Platform", url: "services/vestano-media.html" },
   { title: "360 Retail & Supermarket Consulting", category: "Services", url: "services/retail-supermarket-consulting.html" },
   { title: "Automated Auditing, Tax, & Compliance Solutions", category: "Services", url: "services/auditing-tax-compliance.html" },
@@ -122,6 +129,10 @@ const websiteKnowledgePageUrls = [
   "/leadership.html",
   "/services/storepilot-workforce.html",
   "/services/edge-market-erp.html",
+  "/business/digital-solutions.html",
+  "/business/tsc-hardware.html",
+  "/business/essae-pos.html",
+  "/business/bpos-hardware.html",
   "/services/vestano-media.html",
   "/services/retail-supermarket-consulting.html",
   "/services/auditing-tax-compliance.html",
@@ -166,6 +177,13 @@ function updateHeaderScrollState() {
 updateHeaderScrollState();
 window.addEventListener("scroll", updateHeaderScrollState, { passive: true });
 
+function setMobileMenuOpen(isOpen) {
+  header?.classList.toggle("nav-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  menuToggle?.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  if (header) header.scrollTop = 0;
+}
+
 function closeMegaMenus() {
   megaMenus.forEach((menu) => menu.classList.remove("is-open"));
   megaButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
@@ -199,8 +217,7 @@ businessNavTrigger?.addEventListener("click", (event) => {
 businessDropdown?.addEventListener("click", (event) => {
   if (event.target.closest("a")) {
     closeBusinessDropdown();
-    header?.classList.remove("nav-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    setMobileMenuOpen(false);
   }
 });
 
@@ -232,10 +249,12 @@ function toggleMegaMenu(button) {
 
   closeMegaMenus();
   closeBusinessDropdown();
+  closeSearch();
 
   if (target && shouldOpen) {
     target.classList.add("is-open");
     button.setAttribute("aria-expanded", "true");
+    if (window.matchMedia("(max-width: 1040px)").matches) setMobileMenuOpen(true);
   }
 }
 
@@ -251,15 +270,14 @@ if (menuToggle) {
     closeMegaMenus();
     closeSearch();
     closeBusinessDropdown();
-    header.classList.toggle("nav-open", isOpen);
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    setMobileMenuOpen(isOpen);
   });
 }
 
 megaBackButtons.forEach((button) => {
   button.addEventListener("click", () => {
     closeMegaMenus();
+    if (header) header.scrollTop = 0;
   });
 });
 
@@ -302,8 +320,7 @@ document.addEventListener("keydown", (event) => {
     closeMegaMenus();
     closeSearch();
     closeBusinessDropdown();
-    header?.classList.remove("nav-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    setMobileMenuOpen(false);
   }
 });
 
@@ -318,11 +335,12 @@ document.addEventListener("click", (event) => {
   }
 });
 
-document.querySelectorAll(".mega-menu a").forEach((link) => {
+header?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     closeMegaMenus();
-    header?.classList.remove("nav-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    closeSearch();
+    closeBusinessDropdown();
+    setMobileMenuOpen(false);
   });
 });
 
@@ -337,10 +355,15 @@ document.querySelectorAll(".history-back").forEach((button) => {
   });
 });
 
+const mobileMenuMedia = window.matchMedia("(max-width: 1040px)");
+mobileMenuMedia.addEventListener("change", ({ matches }) => {
+  setMobileMenuOpen(matches && Boolean(header?.querySelector(".mega-menu.is-open")));
+});
+
 const initialMenu = new URLSearchParams(window.location.search).get("menu");
 
 if (initialMenu) {
-  const initialButton = document.querySelector(`[data-mega-target="${initialMenu}-menu"]`);
+  const initialButton = Array.from(megaButtons).find((button) => button.dataset.megaTarget === `${initialMenu}-menu`);
 
   if (initialButton) {
     toggleMegaMenu(initialButton);
@@ -1080,3 +1103,48 @@ function setupTrendingCarousel() {
 }
 
 setupTrendingCarousel();
+
+function setupScrollReveal() {
+  const elements = Array.from(document.querySelectorAll(".digital-solutions-page .reveal"));
+  if (elements.length === 0) return;
+
+  elements.forEach((element) => element.classList.add("scroll-reveal"));
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("is-inview"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-inview");
+      currentObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -12% 0px", threshold: 0.12 });
+
+  elements.forEach((element) => observer.observe(element));
+}
+
+setupScrollReveal();
+
+function setupContactModal() {
+  const modal = document.querySelector("[data-contact-modal]");
+  if (!modal) return;
+  const openers = document.querySelectorAll("[data-open-contact-modal]");
+  const closers = modal.querySelectorAll("[data-close-contact-modal]");
+  const close = () => {
+    modal.hidden = true;
+    document.body.classList.remove("contact-modal-open");
+  };
+  openers.forEach((opener) => opener.addEventListener("click", () => {
+    modal.hidden = false;
+    document.body.classList.add("contact-modal-open");
+    modal.querySelector(".contact-modal-close")?.focus();
+  }));
+  closers.forEach((closer) => closer.addEventListener("click", close));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) close();
+  });
+}
+
+setupContactModal();
