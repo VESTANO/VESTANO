@@ -5206,6 +5206,11 @@ body.contact-modal-open { overflow: hidden; }
     gap: 16px;
   }
 
+  .about-card-link {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
   .home-leadership-grid,
   .home-leader-card {
     grid-template-columns: 1fr;
