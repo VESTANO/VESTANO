@@ -1273,6 +1273,41 @@ function setupScrollReveal() {
 
 setupScrollReveal();
 
+function setupSiteAnimations() {
+  const groups = [
+    [".about-details .section-heading", ".about-grid article"],
+    [".clients-band .section-heading", ".client-logo"],
+    [".trending-band .trending-heading-row", ".trend-card"],
+    [".mission-vision-copy", ".mission-vision-visual", ".mission-vision-cards article", ".pillar-grid article"],
+    [".content-band .section-heading", ".insight-card"],
+    [".home-leadership .section-heading", ".home-leader-card", ".home-director-space"],
+    [".contact-band .contact-intro", ".contact-card"],
+    [".article-page .article-actions", ".article-page .article-hero", ".article-page .article-grid > *", ".article-page .article-result-panel"],
+    [".all-businesses-page > *", ".business-directory-card"],
+    [".market-page > section", ".market-service-card", ".market-leader-card"],
+    [".project-detail-layout > *", ".project-detail-actions"],
+  ];
+  const elements = groups.flatMap((selectors) => selectors.flatMap((selector) => Array.from(document.querySelectorAll(selector))));
+  elements.forEach((element, index) => {
+    element.classList.add("site-reveal");
+    element.style.setProperty("--home-reveal-delay", `${Math.min(index % 5, 4) * 70}ms`);
+  });
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      currentObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+  elements.forEach((element) => observer.observe(element));
+}
+
+setupSiteAnimations();
+
 function setupContactModal() {
   const modal = document.querySelector("[data-contact-modal]");
   if (!modal) return;

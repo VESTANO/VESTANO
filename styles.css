@@ -5671,6 +5671,139 @@ body.contact-modal-open { overflow: hidden; }
   body:has(.premium-cursor) [contenteditable="true"] { cursor: text; }
 }
 
+/* Site-wide motion layer. Page-specific selectors remain narrowly scoped. */
+.home-page .hero {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.home-page .hero-media {
+  animation: home-hero-drift 18s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.home-page .hero-content > * {
+  animation: home-fade-up 650ms cubic-bezier(.2, .75, .2, 1) both;
+}
+
+.home-page .hero-content > *:nth-child(2) { animation-delay: 80ms; }
+.home-page .hero-content > *:nth-child(3) { animation-delay: 150ms; }
+.home-page .hero-content > *:nth-child(4) { animation-delay: 220ms; }
+
+.home-page .hero-actions a,
+.home-page .contact-actions a,
+.home-page .read-more-link,
+.home-page .trending-view-all,
+.home-page .home-leader-card a {
+  transition: transform 260ms ease, box-shadow 260ms ease, color 260ms ease, background-color 260ms ease;
+}
+
+.home-page .hero-actions a:hover,
+.home-page .contact-actions a:hover,
+.home-page .home-leader-card a:hover { transform: translateY(-3px); }
+
+.site-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(.2, .75, .2, 1) var(--home-reveal-delay, 0ms), transform 600ms cubic-bezier(.2, .75, .2, 1) var(--home-reveal-delay, 0ms);
+}
+
+.site-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-grid article,
+.trend-card,
+.insight-card,
+.home-leader-card,
+.home-director-space,
+.mission-vision-cards article,
+.pillar-grid article {
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.home-page .about-grid article:hover,
+.home-page .trend-card:hover,
+.home-page .insight-card:hover,
+.home-page .home-leader-card:hover,
+.home-page .home-director-space:hover,
+.home-page .mission-vision-cards article:hover,
+.pillar-grid article:hover {
+  transform: translateY(-5px);
+  border-color: rgba(244, 161, 44, 0.72);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+}
+
+.home-page .about-card-link img,
+.home-page .home-leader-card img,
+.home-page .client-logo img,
+.home-page .trend-card img,
+.home-page .mission-vision-visual img {
+  transition: transform 450ms cubic-bezier(.2, .75, .2, 1), filter 350ms ease;
+}
+
+.home-page .about-grid article:hover .about-card-link img,
+.home-page .home-leader-card:hover img,
+.home-page .trend-card:hover img,
+.home-page .mission-vision-visual:hover img { transform: scale(1.035); }
+
+.home-page .client-logo { transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease; }
+.home-page .client-logo:hover { transform: translateY(-3px); border-color: rgba(244, 161, 44, 0.6); box-shadow: 0 10px 22px rgba(244, 161, 44, 0.12); }
+
+.business-directory-card,
+.article-grid > *,
+.market-service-card,
+.project-detail-layout > * {
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.business-directory-card:hover,
+.article-grid > *:hover,
+.market-service-card:hover,
+.project-detail-layout > *:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 161, 44, 0.66);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
+}
+
+.article-page img,
+.all-businesses-page img,
+.market-page img,
+.project-detail-layout img {
+  transition: transform 400ms cubic-bezier(.2, .75, .2, 1), filter 300ms ease;
+}
+
+.article-page a:hover img,
+.all-businesses-page a:hover img,
+.market-page a:hover img,
+.project-detail-layout a:hover img { transform: scale(1.03); }
+
+@keyframes home-fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes home-hero-drift { from { transform: scale(1); } to { transform: scale(1.045); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-media,
+  .home-page .hero-content > * { animation: none; }
+  .site-reveal { opacity: 1; transform: none; transition: none; }
+  .about-grid article,
+  .trend-card,
+  .insight-card,
+  .home-leader-card,
+  .home-director-space,
+  .mission-vision-cards article,
+  .pillar-grid article,
+  .home-page .client-logo img,
+  .business-directory-card,
+  .article-grid > *,
+  .market-service-card,
+  .project-detail-layout > *,
+  .article-page img,
+  .all-businesses-page img,
+  .market-page img,
+  .project-detail-layout img { transition: none; }
+}
+
 .vestano-assistant {
   position: fixed;
   right: 24px;
