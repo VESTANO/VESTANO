@@ -617,7 +617,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("assets/images/retail-insights-hero.png") center right / cover no-repeat;
+  background: url("assets/images/retail-insights-hero.webp") center right / cover no-repeat;
 }
 
 .hero::before {
@@ -1060,7 +1060,7 @@ a {
   min-height: 510px;
   padding: clamp(28px, 5vw, 64px) clamp(24px, 4vw, 52px);
   border-radius: 20px;
-  background: linear-gradient(100deg, rgba(3, 19, 32, 0.98), rgba(4, 27, 46, 0.72)), url("assets/images/vestano-media-digital-showcase.jpg") center / cover;
+  background: linear-gradient(100deg, rgba(3, 19, 32, 0.98), rgba(4, 27, 46, 0.72)), url("assets/images/vestano-media-digital-showcase.webp") center / cover;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
@@ -3081,13 +3081,13 @@ body.contact-modal-open { overflow: hidden; }
   padding: 88px var(--site-pad) 104px;
   background:
     linear-gradient(90deg, rgba(4, 20, 33, 0.94), rgba(4, 20, 33, 0.74)),
-    url("assets/images/retail-insights-hero.png") center right / cover no-repeat;
+    url("assets/images/retail-insights-hero.webp") center right / cover no-repeat;
 }
 
 .article-page.is-subpage {
   background:
     linear-gradient(90deg, rgba(4, 20, 33, 0.95), rgba(4, 20, 33, 0.78)),
-    url("../assets/images/retail-insights-hero.png") center right / cover no-repeat;
+    url("../assets/images/retail-insights-hero.webp") center right / cover no-repeat;
 }
 
 .article-wrap {
@@ -4526,7 +4526,7 @@ body.contact-modal-open { overflow: hidden; }
   padding: 76px var(--site-pad) 42px;
   background:
     linear-gradient(90deg, rgba(4, 20, 33, 0.96), rgba(4, 20, 33, 0.72)),
-    url("assets/images/retail-insights-hero.png") center right / cover no-repeat;
+    url("assets/images/retail-insights-hero.webp") center right / cover no-repeat;
 }
 
 .leadership-hero > div,
@@ -6159,7 +6159,7 @@ body.contact-modal-open { overflow: hidden; }
   padding: 96px var(--site-pad) 72px;
   background:
     linear-gradient(90deg, rgba(1, 7, 12, 0.96), rgba(4, 20, 33, 0.88) 58%, rgba(8, 36, 58, 0.7)),
-    url("assets/images/retail-insights-hero.png") center right / cover no-repeat;
+    url("assets/images/retail-insights-hero.webp") center right / cover no-repeat;
   border-bottom: 1px solid var(--line);
 }
 

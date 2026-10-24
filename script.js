@@ -140,19 +140,19 @@ if (businessNavLink) {
     "",
   );
   const businessItems = [
-    { title: "The Market", meta: "Supermarket venture", path: "the-market.html", image: "assets/images/the-market-logo-dark.png" },
-    { title: "StorePilot", meta: "Workforce operations", path: "services/storepilot-workforce.html", image: "assets/images/storepilot-logo.jpeg" },
-    { title: "Edge Market ERP", meta: "Retail ERP platform", path: "services/edge-market-erp.html", image: "assets/images/edge-market-logo.png" },
-    { title: "Vestano India LLP", meta: "Hardware", path: "business/digital-solutions.html", image: "assets/images/vestano-india-llp-logo-transparent.png" },
-    { title: "Vestano Projects & Property", meta: "Construction and development", path: "business/vestano-projects-property.html", image: "assets/images/vestano-india-llp-logo-transparent.png" },
-    { title: "Vestano Media", meta: "Digital marketing", path: "services/vestano-media.html", image: "assets/images/vestano-media-logo.jpeg" },
-    { title: "Import & Export", meta: "Global sourcing", path: "industries/import-export-operations.html", image: "assets/images/import-export-port.jpg" },
-    { title: "The Sign", meta: "Premium villa communities", path: "industries/villa-projects.html", image: "assets/images/the-sign-logo.png" },
-    { title: "NEXIQ", meta: "MIS & Data Analytics", path: "business/nexiq.html", image: "assets/images/nexiq-logo.png" },
-    { title: "AUDITRA", meta: "Finance & Auditing", path: "business/auditra.html", image: "assets/images/auditra-logo.png" },
-    { title: "Tiffin Box", meta: "New project • Coming soon", path: "business/tiffin-box.html", image: "assets/images/tiffin-box-logo-v2.png" },
-    { title: "UVPRO", meta: "Restaurant ERP & POS", path: "business/up-pro.html", image: "assets/images/uvpro-logo.png" },
-    { title: "Fanzzy", meta: "Online jewellery", path: "business/fanzzy.html", image: "assets/images/fanzzy-logo.png" },
+    { title: "The Market", meta: "Supermarket venture", path: "the-market.html", image: "assets/images/navigation/the-market-logo-dark.webp" },
+    { title: "StorePilot", meta: "Workforce operations", path: "services/storepilot-workforce.html", image: "assets/images/navigation/storepilot-logo.webp" },
+    { title: "Edge Market ERP", meta: "Retail ERP platform", path: "services/edge-market-erp.html", image: "assets/images/navigation/edge-market-logo.webp" },
+    { title: "Vestano India LLP", meta: "Hardware", path: "business/digital-solutions.html", image: "assets/images/navigation/vestano-india-llp-logo-transparent.webp" },
+    { title: "Vestano Projects & Property", meta: "Construction and development", path: "business/vestano-projects-property.html", image: "assets/images/navigation/vestano-india-llp-logo-transparent.webp" },
+    { title: "Vestano Media", meta: "Digital marketing", path: "services/vestano-media.html", image: "assets/images/navigation/vestano-media-logo.webp" },
+    { title: "Import & Export", meta: "Global sourcing", path: "industries/import-export-operations.html", image: "assets/images/navigation/import-export-port.webp" },
+    { title: "The Sign", meta: "Premium villa communities", path: "industries/villa-projects.html", image: "assets/images/navigation/the-sign-logo.webp" },
+    { title: "NEXIQ", meta: "MIS & Data Analytics", path: "business/nexiq.html", image: "assets/images/navigation/nexiq-logo.webp" },
+    { title: "AUDITRA", meta: "Finance & Auditing", path: "business/auditra.html", image: "assets/images/navigation/auditra-logo.webp" },
+    { title: "Tiffin Box", meta: "New project • Coming soon", path: "business/tiffin-box.html", image: "assets/images/navigation/tiffin-box-logo-v2.webp" },
+    { title: "UVPRO", meta: "Restaurant ERP & POS", path: "business/up-pro.html", image: "assets/images/navigation/uvpro-logo.webp" },
+    { title: "Fanzzy", meta: "Online jewellery", path: "business/fanzzy.html", image: "assets/images/navigation/fanzzy-logo.webp" },
   ];
 
   businessNavTrigger = document.createElement("button");
@@ -175,6 +175,8 @@ if (businessNavLink) {
     const title = document.createElement("strong");
     const meta = document.createElement("small");
     link.href = new URL(item.path, businessRootUrl).href;
+    image.loading = "lazy";
+    image.decoding = "async";
     image.src = new URL(item.image, businessRootUrl).href;
     image.alt = "";
     title.textContent = item.title;
