@@ -5031,6 +5031,9 @@ body.contact-modal-open { overflow: hidden; }
   body:has(.site-header.nav-open) { overflow: hidden; }
   .site-header.nav-open:has(.mega-menu.is-open) .nav-shell { display: none; }
   .site-header.nav-open .menu-toggle { position: sticky; top: 18px; z-index: 2; background: #fff; }
+  .site-header.nav-open:has(.mega-menu.is-open) .menu-toggle span:nth-child(1) { transform: none; }
+  .site-header.nav-open:has(.mega-menu.is-open) .menu-toggle span:nth-child(2) { opacity: 1; }
+  .site-header.nav-open:has(.mega-menu.is-open) .menu-toggle span:nth-child(3) { transform: none; }
 
   .navbar {
     flex-wrap: wrap;
