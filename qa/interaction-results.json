@@ -1,0 +1,823 @@
+[
+  {
+    "test": "mobile header about/alliances.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle about/alliances.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header about/alumni.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle about/alumni.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header about/newsroom.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle about/newsroom.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header about/people.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle about/people.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header about/purpose.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle about/purpose.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header about/values.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle about/values.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/auditra.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/auditra.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/bpos-hardware.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/bpos-hardware.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/digital-solutions.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/digital-solutions.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/essae-pos.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/essae-pos.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/essae-pos.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/fanzzy.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/fanzzy.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/fanzzy.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/nexiq.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/nexiq.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/nexiq.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/tiffin-box.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/tiffin-box.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/tiffin-box.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/tsc-hardware.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/tsc-hardware.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/tsc-hardware.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/up-pro.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/up-pro.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/up-pro.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header business/vestano-projects-property.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle business/vestano-projects-property.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/vestano-projects-property.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header careers/career-paths.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle careers/career-paths.html",
+    "pass": true
+  },
+  {
+    "test": "refresh careers/career-paths.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header careers/how-to-join.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle careers/how-to-join.html",
+    "pass": true
+  },
+  {
+    "test": "refresh careers/how-to-join.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header careers/internship-programs.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle careers/internship-programs.html",
+    "pass": true
+  },
+  {
+    "test": "refresh careers/internship-programs.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header careers/job-search.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle careers/job-search.html",
+    "pass": true
+  },
+  {
+    "test": "refresh careers/job-search.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header careers/life-at-vestano.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle careers/life-at-vestano.html",
+    "pass": true
+  },
+  {
+    "test": "refresh careers/life-at-vestano.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header index.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle index.html",
+    "pass": true
+  },
+  {
+    "test": "refresh index.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/auditing-risk-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/auditing-risk-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/auditing-risk-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/consumer-electronics-appliances.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/consumer-electronics-appliances.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/consumer-electronics-appliances.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/engineering-real-estate-infrastructure.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/engineering-real-estate-infrastructure.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/engineering-real-estate-infrastructure.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/fmcg-consumer-goods.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/fmcg-consumer-goods.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/fmcg-consumer-goods.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/hypermarkets-supermarkets-grocery.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/hypermarkets-supermarkets-grocery.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/hypermarkets-supermarkets-grocery.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/import-export-operations.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/import-export-operations.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/import-export-operations.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/technology-software-saas.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/technology-software-saas.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/technology-software-saas.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header industries/villa-projects.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle industries/villa-projects.html",
+    "pass": true
+  },
+  {
+    "test": "refresh industries/villa-projects.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header insights/cloud-pos.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle insights/cloud-pos.html",
+    "pass": true
+  },
+  {
+    "test": "refresh insights/cloud-pos.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header insights/genai-erp.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle insights/genai-erp.html",
+    "pass": true
+  },
+  {
+    "test": "refresh insights/genai-erp.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header insights/retail-internships.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle insights/retail-internships.html",
+    "pass": true
+  },
+  {
+    "test": "refresh insights/retail-internships.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header insights/risk-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle insights/risk-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "refresh insights/risk-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header insights/sustainable-retail.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle insights/sustainable-retail.html",
+    "pass": true
+  },
+  {
+    "test": "refresh insights/sustainable-retail.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header insights/transformation-realized.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle insights/transformation-realized.html",
+    "pass": true
+  },
+  {
+    "test": "refresh insights/transformation-realized.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header leadership.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle leadership.html",
+    "pass": true
+  },
+  {
+    "test": "refresh leadership.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/auditing-tax-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/auditing-tax-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/auditing-tax-compliance.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/edge-market-erp.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/edge-market-erp.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/edge-market-erp.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/hr-compliance-training.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/hr-compliance-training.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/hr-compliance-training.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/mis-analytics.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/mis-analytics.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/mis-analytics.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/retail-supermarket-consulting.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/retail-supermarket-consulting.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/retail-supermarket-consulting.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/storepilot-workforce.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/storepilot-workforce.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/storepilot-workforce.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/supply-chain-vendor-management.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/supply-chain-vendor-management.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/supply-chain-vendor-management.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header services/vestano-media.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle services/vestano-media.html",
+    "pass": true
+  },
+  {
+    "test": "refresh services/vestano-media.html",
+    "pass": true
+  },
+  {
+    "test": "mobile header the-market.html",
+    "pass": true
+  },
+  {
+    "test": "assistant toggle the-market.html",
+    "pass": true
+  },
+  {
+    "test": "refresh the-market.html",
+    "pass": true
+  },
+  {
+    "test": "refresh about/alliances.html",
+    "pass": true
+  },
+  {
+    "test": "refresh about/alumni.html",
+    "pass": true
+  },
+  {
+    "test": "refresh about/newsroom.html",
+    "pass": true
+  },
+  {
+    "test": "refresh about/people.html",
+    "pass": true
+  },
+  {
+    "test": "refresh about/purpose.html",
+    "pass": true
+  },
+  {
+    "test": "refresh about/values.html",
+    "pass": true
+  },
+  {
+    "test": "refresh all-businesses.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/auditra.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/bpos-hardware.html",
+    "pass": true
+  },
+  {
+    "test": "refresh business/digital-solutions.html",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 320",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 375",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 390",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 430",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 768",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 1024",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 1280",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 1440",
+    "pass": true
+  },
+  {
+    "test": "contact dialog fits 1920",
+    "pass": true
+  },
+  {
+    "test": "dialog Shift+Tab trapped",
+    "pass": true
+  },
+  {
+    "test": "dialog Tab wraps",
+    "pass": true
+  },
+  {
+    "test": "dialog Escape restores opener",
+    "pass": true
+  },
+  {
+    "test": "assistant HTML displayed literally",
+    "pass": true
+  },
+  {
+    "test": "assistant loading completes",
+    "pass": true
+  },
+  {
+    "test": "assistant whitespace ignored",
+    "pass": true
+  },
+  {
+    "test": "assistant long input fits 320",
+    "pass": true
+  },
+  {
+    "test": "assistant long input fits 390",
+    "pass": true
+  },
+  {
+    "test": "assistant long input fits 768",
+    "pass": true
+  },
+  {
+    "test": "assistant long input fits 1440",
+    "pass": true
+  },
+  {
+    "test": "article navigation Insights",
+    "pass": true
+  },
+  {
+    "test": "close then refresh Insights",
+    "pass": true
+  },
+  {
+    "test": "article navigation Services",
+    "pass": true
+  },
+  {
+    "test": "close then refresh Services",
+    "pass": true
+  },
+  {
+    "test": "article navigation Industries",
+    "pass": true
+  },
+  {
+    "test": "close then refresh Industries",
+    "pass": true
+  },
+  {
+    "test": "article navigation Careers",
+    "pass": true
+  },
+  {
+    "test": "close then refresh Careers",
+    "pass": true
+  },
+  {
+    "test": "article navigation About us",
+    "pass": true
+  },
+  {
+    "test": "close then refresh About us",
+    "pass": true
+  },
+  {
+    "test": "footer menu return Services",
+    "pass": true
+  },
+  {
+    "test": "footer menu return About",
+    "pass": true
+  },
+  {
+    "test": "footer Consulting Back position",
+    "pass": true
+  },
+  {
+    "test": "browser Forward",
+    "pass": true
+  },
+  {
+    "test": "Choose region opens selector",
+    "pass": false,
+    "note": "No implementation or destinations configured"
+  },
+  {
+    "test": "gallery one-mart-super-market ../assets/images/projects/portfolio/supermarket-1.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery one-mart-super-market ../assets/images/projects/portfolio/supermarket-2.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery one-mart-super-market ../assets/images/projects/portfolio/supermarket-3.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery one-mart-super-market ../assets/images/projects/portfolio/supermarket-4.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery one-mart-super-market ../assets/images/projects/portfolio/supermarket-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery retail-store-design ../assets/images/projects/portfolio/retail-1.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery retail-store-design ../assets/images/projects/portfolio/retail-2.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery retail-store-design ../assets/images/projects/portfolio/retail-3.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery retail-store-design ../assets/images/projects/portfolio/retail-4.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery retail-store-design ../assets/images/projects/portfolio/retail-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery kunnil-hypermarket ../assets/images/projects/portfolio/jewellery-4.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery kunnil-hypermarket ../assets/images/projects/portfolio/jewellery-1.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery kunnil-hypermarket ../assets/images/projects/portfolio/jewellery-2.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery kunnil-hypermarket ../assets/images/projects/portfolio/jewellery-3.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery kunnil-hypermarket ../assets/images/projects/portfolio/jewellery-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery fresh-market-layout ../assets/images/projects/portfolio/supermarket-4.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery fresh-market-layout ../assets/images/projects/portfolio/supermarket-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery grocery-merchandising ../assets/images/projects/portfolio/retail-2.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery grocery-merchandising ../assets/images/projects/portfolio/retail-3.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery office-workspace ../assets/images/projects/portfolio/office-1.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery office-workspace ../assets/images/projects/portfolio/office-2.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery office-workspace ../assets/images/projects/portfolio/office-3.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery office-workspace ../assets/images/projects/portfolio/office-4.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery office-workspace ../assets/images/projects/portfolio/office-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery meeting-room-interior ../assets/images/projects/portfolio/office-4.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery meeting-room-interior ../assets/images/projects/portfolio/office-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery reception-collaboration ../assets/images/projects/portfolio/office-2.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery reception-collaboration ../assets/images/projects/portfolio/office-3.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery executive-workspace ../assets/images/projects/portfolio/office-1.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery executive-workspace ../assets/images/projects/portfolio/office-5.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery commercial-building ../assets/images/projects/portfolio/choice-exterior.jpg",
+    "pass": true
+  },
+  {
+    "test": "gallery jamjoom-hypermarket-exterior ../assets/images/projects/portfolio/../jamjoom-hero.jpeg",
+    "pass": true
+  }
+]

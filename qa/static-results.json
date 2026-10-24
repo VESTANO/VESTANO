@@ -1,0 +1,247 @@
+{
+  "pages": [
+    "about/alliances.html",
+    "about/alumni.html",
+    "about/newsroom.html",
+    "about/people.html",
+    "about/purpose.html",
+    "about/values.html",
+    "all-businesses.html",
+    "business/auditra.html",
+    "business/bpos-hardware.html",
+    "business/digital-solutions.html",
+    "business/essae-pos.html",
+    "business/fanzzy.html",
+    "business/nexiq.html",
+    "business/tiffin-box.html",
+    "business/tsc-hardware.html",
+    "business/up-pro.html",
+    "business/vestano-projects-property.html",
+    "careers/career-paths.html",
+    "careers/how-to-join.html",
+    "careers/internship-programs.html",
+    "careers/job-search.html",
+    "careers/life-at-vestano.html",
+    "index.html",
+    "industries/auditing-risk-compliance.html",
+    "industries/consumer-electronics-appliances.html",
+    "industries/engineering-real-estate-infrastructure.html",
+    "industries/fmcg-consumer-goods.html",
+    "industries/hypermarkets-supermarkets-grocery.html",
+    "industries/import-export-operations.html",
+    "industries/technology-software-saas.html",
+    "industries/villa-projects.html",
+    "insights/cloud-pos.html",
+    "insights/genai-erp.html",
+    "insights/retail-internships.html",
+    "insights/risk-compliance.html",
+    "insights/sustainable-retail.html",
+    "insights/transformation-realized.html",
+    "leadership.html",
+    "services/auditing-tax-compliance.html",
+    "services/edge-market-erp.html",
+    "services/hr-compliance-training.html",
+    "services/mis-analytics.html",
+    "services/retail-supermarket-consulting.html",
+    "services/storepilot-workforce.html",
+    "services/supply-chain-vendor-management.html",
+    "services/vestano-media.html",
+    "the-market.html"
+  ],
+  "pageCount": 47,
+  "links": 533,
+  "images": 177,
+  "buttons": 105,
+  "forms": 0,
+  "issues": [],
+  "http": [
+    {
+      "page": "about/alliances.html",
+      "status": 200
+    },
+    {
+      "page": "about/alumni.html",
+      "status": 200
+    },
+    {
+      "page": "about/newsroom.html",
+      "status": 200
+    },
+    {
+      "page": "about/people.html",
+      "status": 200
+    },
+    {
+      "page": "about/purpose.html",
+      "status": 200
+    },
+    {
+      "page": "about/values.html",
+      "status": 200
+    },
+    {
+      "page": "all-businesses.html",
+      "status": 200
+    },
+    {
+      "page": "business/auditra.html",
+      "status": 200
+    },
+    {
+      "page": "business/bpos-hardware.html",
+      "status": 200
+    },
+    {
+      "page": "business/digital-solutions.html",
+      "status": 200
+    },
+    {
+      "page": "business/essae-pos.html",
+      "status": 200
+    },
+    {
+      "page": "business/fanzzy.html",
+      "status": 200
+    },
+    {
+      "page": "business/nexiq.html",
+      "status": 200
+    },
+    {
+      "page": "business/tiffin-box.html",
+      "status": 200
+    },
+    {
+      "page": "business/tsc-hardware.html",
+      "status": 200
+    },
+    {
+      "page": "business/up-pro.html",
+      "status": 200
+    },
+    {
+      "page": "business/vestano-projects-property.html",
+      "status": 200
+    },
+    {
+      "page": "careers/career-paths.html",
+      "status": 200
+    },
+    {
+      "page": "careers/how-to-join.html",
+      "status": 200
+    },
+    {
+      "page": "careers/internship-programs.html",
+      "status": 200
+    },
+    {
+      "page": "careers/job-search.html",
+      "status": 200
+    },
+    {
+      "page": "careers/life-at-vestano.html",
+      "status": 200
+    },
+    {
+      "page": "index.html",
+      "status": 200
+    },
+    {
+      "page": "industries/auditing-risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": "industries/consumer-electronics-appliances.html",
+      "status": 200
+    },
+    {
+      "page": "industries/engineering-real-estate-infrastructure.html",
+      "status": 200
+    },
+    {
+      "page": "industries/fmcg-consumer-goods.html",
+      "status": 200
+    },
+    {
+      "page": "industries/hypermarkets-supermarkets-grocery.html",
+      "status": 200
+    },
+    {
+      "page": "industries/import-export-operations.html",
+      "status": 200
+    },
+    {
+      "page": "industries/technology-software-saas.html",
+      "status": 200
+    },
+    {
+      "page": "industries/villa-projects.html",
+      "status": 200
+    },
+    {
+      "page": "insights/cloud-pos.html",
+      "status": 200
+    },
+    {
+      "page": "insights/genai-erp.html",
+      "status": 200
+    },
+    {
+      "page": "insights/retail-internships.html",
+      "status": 200
+    },
+    {
+      "page": "insights/risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": "insights/sustainable-retail.html",
+      "status": 200
+    },
+    {
+      "page": "insights/transformation-realized.html",
+      "status": 200
+    },
+    {
+      "page": "leadership.html",
+      "status": 200
+    },
+    {
+      "page": "services/auditing-tax-compliance.html",
+      "status": 200
+    },
+    {
+      "page": "services/edge-market-erp.html",
+      "status": 200
+    },
+    {
+      "page": "services/hr-compliance-training.html",
+      "status": 200
+    },
+    {
+      "page": "services/mis-analytics.html",
+      "status": 200
+    },
+    {
+      "page": "services/retail-supermarket-consulting.html",
+      "status": 200
+    },
+    {
+      "page": "services/storepilot-workforce.html",
+      "status": 200
+    },
+    {
+      "page": "services/supply-chain-vendor-management.html",
+      "status": 200
+    },
+    {
+      "page": "services/vestano-media.html",
+      "status": 200
+    },
+    {
+      "page": "the-market.html",
+      "status": 200
+    }
+  ]
+}

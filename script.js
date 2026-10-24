@@ -9,6 +9,7 @@ const searchResults = document.querySelector(".search-results");
 const megaBackButtons = document.querySelectorAll(".mega-mobile-back");
 let footerMenuReturn = false;
 let footerMenuPosition = null;
+let footerMenuLink = null;
 
 // Keep the departure position on each history entry, including footer links
 // that navigate to another section of the same document.
@@ -36,9 +37,11 @@ document.addEventListener("click", (event) => {
     const trigger = Array.from(megaButtons).find((button) => button.dataset.megaTarget === `${menuName}-menu`);
     if (link.closest(".footer-links") && trigger && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
       event.preventDefault();
-      footerMenuPosition = { x: window.scrollX, y: window.scrollY };
+      const position = { x: window.scrollX, y: window.scrollY };
       toggleMegaMenu(trigger);
       footerMenuReturn = true;
+      footerMenuPosition = position;
+      footerMenuLink = link;
     }
   }
 });
@@ -294,6 +297,9 @@ function renderSearchResults(query = "") {
 }
 
 function toggleMegaMenu(button) {
+  footerMenuReturn = false;
+  footerMenuPosition = null;
+  footerMenuLink = null;
   const target = document.getElementById(button.dataset.megaTarget);
   const shouldOpen = target && !target.classList.contains("is-open");
 
@@ -333,7 +339,7 @@ megaBackButtons.forEach((button) => {
     if (footerMenuReturn) {
       setMobileMenuOpen(false);
       footerMenuReturn = false;
-      document.querySelector('.footer-links a[href*="menu=services"]')?.focus({ preventScroll: true });
+      footerMenuLink?.focus({ preventScroll: true });
       const position = footerMenuPosition;
       requestAnimationFrame(() => {
         if (position) window.scrollTo({ left: position.x, top: position.y, behavior: "instant" });
@@ -808,7 +814,6 @@ function makeShortAssistantReply(reply) {
 
 function buildAssistant() {
   if (document.querySelector(".vestano-assistant")) return;
-  loadWebsiteKnowledge();
 
   let selectedAssistantVoice = null;
 
@@ -923,7 +928,10 @@ function buildAssistant() {
           .map((action) => `<a href="${makeSiteUrl(action.url)}">${action.label}</a>`)
           .join("")}</div>`
       : "";
-    message.innerHTML = `<p>${text}</p>${actionMarkup}`;
+    message.innerHTML = actionMarkup;
+    const paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    message.prepend(paragraph);
     messages.appendChild(message);
     messages.scrollTop = messages.scrollHeight;
   }
@@ -971,6 +979,7 @@ function buildAssistant() {
   }
 
   function openAssistant() {
+    loadWebsiteKnowledge();
     assistant.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
     if (!hasIntroducedVesty && !messages.children.length) {
@@ -1195,11 +1204,14 @@ function setupContactModal() {
   if (!modal) return;
   const openers = document.querySelectorAll("[data-open-contact-modal]");
   const closers = modal.querySelectorAll("[data-close-contact-modal]");
+  let opener = null;
   const close = () => {
     modal.hidden = true;
     document.body.classList.remove("contact-modal-open");
+    opener?.focus({ preventScroll: true });
   };
-  openers.forEach((opener) => opener.addEventListener("click", () => {
+  openers.forEach((button) => button.addEventListener("click", () => {
+    opener = button;
     modal.hidden = false;
     document.body.classList.add("contact-modal-open");
     modal.querySelector(".contact-modal-close")?.focus();
@@ -1207,6 +1219,18 @@ function setupContactModal() {
   closers.forEach((closer) => closer.addEventListener("click", close));
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !modal.hidden) close();
+    if (event.key === "Tab" && !modal.hidden) {
+      const focusable = Array.from(modal.querySelectorAll('button, a[href], input, select, textarea, [tabindex="0"]'));
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    }
   });
 }
 
