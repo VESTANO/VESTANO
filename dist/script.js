@@ -146,7 +146,7 @@ if (businessNavLink) {
     { title: "Vestano India LLP", meta: "Hardware", path: "business/digital-solutions.html", image: "assets/images/vestano-india-llp-logo-transparent.png" },
     { title: "Vestano Projects & Property", meta: "Construction and development", path: "business/vestano-projects-property.html", image: "assets/images/vestano-india-llp-logo-transparent.png" },
     { title: "Vestano Media", meta: "Digital marketing", path: "services/vestano-media.html", image: "assets/images/vestano-media-logo.jpeg" },
-    { title: "Import & Export", meta: "Global sourcing", path: "industries/import-export-operations.html#trade-readiness", image: "assets/images/import-export-port.jpg" },
+    { title: "Import & Export", meta: "Global sourcing", path: "industries/import-export-operations.html", image: "assets/images/import-export-port.jpg" },
     { title: "The Sign", meta: "Premium villa communities", path: "industries/villa-projects.html", image: "assets/images/the-sign-logo.png" },
     { title: "NEXIQ", meta: "MIS & Data Analytics", path: "business/nexiq.html", image: "assets/images/nexiq-logo.png" },
     { title: "AUDITRA", meta: "Finance & Auditing", path: "business/auditra.html", image: "assets/images/auditra-logo.png" },
