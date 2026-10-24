@@ -426,7 +426,11 @@ a {
 }
 
 .mega-mobile-bar {
-  display: none;
+  display: flex;
+  justify-content: flex-start;
+  max-width: var(--site-max);
+  margin: 0 auto;
+  padding: 18px var(--site-pad) 0;
 }
 
 .mega-mobile-back {
@@ -444,6 +448,11 @@ a {
 
 .mega-mobile-back:hover {
   filter: brightness(1.06);
+}
+
+.mega-mobile-back::before {
+  content: "\2190";
+  margin-right: 8px;
 }
 
 .mega-grid {

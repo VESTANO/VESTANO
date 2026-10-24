@@ -7,6 +7,48 @@ const searchToggle = document.querySelector(".search-toggle");
 const searchInput = document.querySelector("#site-search-input");
 const searchResults = document.querySelector(".search-results");
 const megaBackButtons = document.querySelectorAll(".mega-mobile-back");
+let footerMenuReturn = false;
+let footerMenuPosition = null;
+
+// Keep the departure position on each history entry, including footer links
+// that navigate to another section of the same document.
+function rememberPagePosition() {
+  window.history.replaceState(
+    { ...window.history.state, vestanoScroll: { x: window.scrollX, y: window.scrollY } },
+    "",
+  );
+}
+
+function restorePagePosition() {
+  const position = window.history.state?.vestanoScroll;
+  if (!position) return;
+  requestAnimationFrame(() => {
+    window.scrollTo({ left: position.x, top: position.y, behavior: "instant" });
+  });
+}
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a[href]");
+  if (link && link.origin === window.location.origin && !event.defaultPrevented) {
+    rememberPagePosition();
+    const destination = new URL(link.href);
+    const menuName = destination.searchParams.get("menu");
+    const trigger = Array.from(megaButtons).find((button) => button.dataset.megaTarget === `${menuName}-menu`);
+    if (link.closest(".footer-links") && trigger && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+      event.preventDefault();
+      footerMenuPosition = { x: window.scrollX, y: window.scrollY };
+      toggleMegaMenu(trigger);
+      footerMenuReturn = true;
+    }
+  }
+});
+window.addEventListener("pagehide", rememberPagePosition);
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
+    restorePagePosition();
+  }
+});
+window.addEventListener("popstate", restorePagePosition);
 
 const businessNavLink = Array.from(document.querySelectorAll(".nav-links > li > a")).find(
   (link) => link.textContent.trim().toUpperCase() === "OUR BUSINESS",
@@ -185,8 +227,16 @@ function setMobileMenuOpen(isOpen) {
 }
 
 function closeMegaMenus() {
+  const hadOpenMenu = Array.from(megaMenus).some((menu) => menu.classList.contains("is-open"));
   megaMenus.forEach((menu) => menu.classList.remove("is-open"));
   megaButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
+  if (hadOpenMenu) {
+    const url = new URL(window.location.href);
+    if (url.searchParams.has("menu")) {
+      url.searchParams.delete("menu");
+      window.history.replaceState(window.history.state, "", url);
+    }
+  }
 }
 
 function closeSearch() {
@@ -276,8 +326,21 @@ if (menuToggle) {
 
 megaBackButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    const menu = button.closest(".mega-menu");
+    const trigger = Array.from(megaButtons).find((item) => item.dataset.megaTarget === menu?.id);
     closeMegaMenus();
     if (header) header.scrollTop = 0;
+    if (footerMenuReturn) {
+      setMobileMenuOpen(false);
+      footerMenuReturn = false;
+      document.querySelector('.footer-links a[href*="menu=services"]')?.focus({ preventScroll: true });
+      const position = footerMenuPosition;
+      requestAnimationFrame(() => {
+        if (position) window.scrollTo({ left: position.x, top: position.y, behavior: "instant" });
+      });
+    } else {
+      trigger?.focus({ preventScroll: true });
+    }
   });
 });
 
@@ -329,7 +392,7 @@ document.addEventListener("click", (event) => {
     closeBusinessDropdown();
   }
 
-  if (header && !header.contains(event.target)) {
+  if (header && !header.contains(event.target) && !event.defaultPrevented) {
     closeMegaMenus();
     closeSearch();
   }
