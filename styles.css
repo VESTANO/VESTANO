@@ -5581,6 +5581,96 @@ body.contact-modal-open { overflow: hidden; }
   }
 }
 
+/* Premium pointer treatment: enabled by script only for fine, hover-capable pointers. */
+.premium-cursor {
+  position: fixed;
+  z-index: 10001;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.premium-cursor.is-visible { opacity: 1; }
+.premium-cursor-dot,
+.premium-cursor-ring,
+.premium-cursor-ripple {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate3d(var(--cursor-x), var(--cursor-y), 0) translate(-50%, -50%);
+}
+
+.premium-cursor-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--yellow);
+  box-shadow: 0 0 12px rgba(244, 161, 44, 0.75);
+}
+
+.premium-cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(244, 161, 44, 0.72);
+  box-shadow: 0 0 16px rgba(244, 161, 44, 0.18);
+  transform: translate3d(var(--ring-x), var(--ring-y), 0) translate(-50%, -50%);
+  transition: width 220ms ease, height 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.premium-cursor-ring::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #071b2a;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.premium-cursor.is-hovering .premium-cursor-ring {
+  width: 48px;
+  height: 48px;
+  border-color: var(--yellow);
+  background: rgba(244, 161, 44, 0.1);
+  box-shadow: 0 0 22px rgba(244, 161, 44, 0.34);
+}
+
+.premium-cursor.is-hovering .premium-cursor-ring[data-label="View"]::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.premium-cursor.is-image .premium-cursor-ring { width: 42px; height: 42px; }
+
+.premium-cursor-ripple {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(244, 161, 44, 0.72);
+  opacity: 0;
+}
+
+.premium-cursor-ripple.is-rippling { animation: premium-cursor-ripple 520ms ease-out both; }
+
+@keyframes premium-cursor-ripple {
+  0% { opacity: 0.72; transform: translate3d(var(--cursor-x), var(--cursor-y), 0) translate(-50%, -50%) scale(0.65); }
+  100% { opacity: 0; transform: translate3d(var(--cursor-x), var(--cursor-y), 0) translate(-50%, -50%) scale(3.4); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body:has(.premium-cursor) { cursor: none; }
+  body:has(.premium-cursor) input,
+  body:has(.premium-cursor) textarea,
+  body:has(.premium-cursor) select,
+  body:has(.premium-cursor) [contenteditable="true"] { cursor: text; }
+}
+
 .vestano-assistant {
   position: fixed;
   right: 24px;

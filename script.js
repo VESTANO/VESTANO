@@ -53,6 +53,80 @@ window.addEventListener("pageshow", (event) => {
 });
 window.addEventListener("popstate", restorePagePosition);
 
+// Premium pointer treatment for fine-pointer devices. The DOM nodes are shared
+// across pages and animation state stays outside the application render flow.
+function initPremiumCursor() {
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!finePointer.matches || reducedMotion.matches) return;
+
+  const cursor = document.createElement("div");
+  cursor.className = "premium-cursor";
+  cursor.setAttribute("aria-hidden", "true");
+  cursor.innerHTML = '<span class="premium-cursor-dot"></span><span class="premium-cursor-ring"></span><span class="premium-cursor-ripple"></span>';
+  document.body.append(cursor);
+
+  const ring = cursor.querySelector(".premium-cursor-ring");
+  const ripple = cursor.querySelector(".premium-cursor-ripple");
+  const point = { x: -100, y: -100 };
+  const ringPoint = { x: -100, y: -100 };
+  let frame = 0;
+  let visible = false;
+
+  const interactiveSelector = [
+    "a", "button", "summary", "input", "textarea", "select", "[role=button]",
+    ".business-directory-card", ".trend-card", ".hardware-partner-card", ".project-card",
+    ".mega-menu article", "[data-cursor-label]",
+  ].join(",");
+  const textControlSelector = "input, textarea, select, [contenteditable=true]";
+
+  const render = () => {
+    ringPoint.x += (point.x - ringPoint.x) * 0.16;
+    ringPoint.y += (point.y - ringPoint.y) * 0.16;
+    cursor.style.setProperty("--cursor-x", `${point.x}px`);
+    cursor.style.setProperty("--cursor-y", `${point.y}px`);
+    cursor.style.setProperty("--ring-x", `${ringPoint.x}px`);
+    cursor.style.setProperty("--ring-y", `${ringPoint.y}px`);
+    frame = requestAnimationFrame(render);
+  };
+
+  const setVisible = (next) => {
+    visible = next;
+    cursor.classList.toggle("is-visible", next);
+  };
+
+  document.addEventListener("pointermove", (event) => {
+    point.x = event.clientX;
+    point.y = event.clientY;
+    setVisible(true);
+    const target = event.target instanceof Element ? event.target.closest(interactiveSelector) : null;
+    const isTextControl = target?.matches(textControlSelector);
+    const isCard = target?.matches(".business-directory-card, .trend-card, .hardware-partner-card, .project-card");
+    cursor.classList.toggle("is-hovering", Boolean(target && !isTextControl));
+    cursor.classList.toggle("is-image", Boolean(target?.matches("img, a img")));
+    ring.dataset.label = isCard && target?.querySelector("a[href]") ? "View" : "";
+  }, { passive: true });
+
+  document.addEventListener("pointerleave", () => setVisible(false));
+  window.addEventListener("blur", () => setVisible(false));
+  window.addEventListener("focus", () => setVisible(false));
+  document.addEventListener("mousedown", () => {
+    if (!visible) return;
+    ripple.classList.remove("is-rippling");
+    void ripple.offsetWidth;
+    ripple.classList.add("is-rippling");
+  });
+  finePointer.addEventListener?.("change", () => {
+    if (!finePointer.matches) {
+      cancelAnimationFrame(frame);
+      cursor.remove();
+    }
+  });
+  render();
+}
+
+initPremiumCursor();
+
 const businessNavLink = Array.from(document.querySelectorAll(".nav-links > li > a")).find(
   (link) => link.textContent.trim().toUpperCase() === "OUR BUSINESS",
 );
