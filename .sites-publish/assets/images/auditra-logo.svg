@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">AUDITRA logo</title>
+  <desc id="desc">AUDITRA finance and auditing company logo</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061927" />
+      <stop offset="1" stop-color="#123f5b" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4a12c" />
+      <stop offset="1" stop-color="#ffe19b" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" rx="92" fill="url(#bg)" />
+  <path d="M450 120l246 96v180c0 178-104 300-246 371C308 696 204 574 204 396V216z" fill="#ffffff" fill-opacity=".06" stroke="url(#gold)" stroke-width="24" />
+  <path d="M325 526l83-84 57 56 126-157" fill="none" stroke="#68c7a5" stroke-linecap="round" stroke-linejoin="round" stroke-width="34" />
+  <path d="M331 365h62v118h-62zm93-69h62v176h-62zm93-61h62v181h-62" fill="url(#gold)" />
+  <path d="M294 586h312" stroke="#ffffff" stroke-opacity=".82" stroke-linecap="round" stroke-width="20" />
+  <text x="450" y="716" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="112" font-weight="800" letter-spacing="9" text-anchor="middle">AUDITRA</text>
+  <text x="450" y="784" fill="#f4a12c" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8" text-anchor="middle">FINANCE &amp; AUDITING</text>
+</svg>
