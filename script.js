@@ -193,6 +193,11 @@ function initPremiumCursor() {
   const textControlSelector = "input, textarea, select, [contenteditable=true]";
 
   const render = () => {
+    // The contact popup uses the native pointer; avoid cursor paints over its blur.
+    if (document.body.classList.contains("contact-modal-open")) {
+      frame = requestAnimationFrame(render);
+      return;
+    }
     ringPoint.x += (point.x - ringPoint.x) * 0.16;
     ringPoint.y += (point.y - ringPoint.y) * 0.16;
     cursor.style.setProperty("--cursor-x", `${point.x}px`);
@@ -210,6 +215,12 @@ function initPremiumCursor() {
   document.addEventListener("pointermove", (event) => {
     point.x = event.clientX;
     point.y = event.clientY;
+    if (document.body.classList.contains("contact-modal-open")) {
+      ringPoint.x = point.x;
+      ringPoint.y = point.y;
+      setVisible(false);
+      return;
+    }
     setVisible(true);
     const target = event.target instanceof Element ? event.target.closest(interactiveSelector) : null;
     const isTextControl = target?.matches(textControlSelector);
