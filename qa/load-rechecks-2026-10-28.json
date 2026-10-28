@@ -1,0 +1,191 @@
+[
+  {
+    "route": "all-businesses.html",
+    "width": 320,
+    "prior": {
+      "brokenImages": [
+        "assets/images/uvpro-logo.webp"
+      ]
+    },
+    "result": {
+      "width": 320,
+      "scrollWidth": 320,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "all-businesses.html",
+    "width": 375,
+    "prior": {
+      "brokenImages": [
+        "assets/images/edge-market-logo.webp",
+        "assets/images/vestano-media-logo.webp",
+        "assets/images/nexiq-logo.webp",
+        "assets/images/auditra-logo.webp",
+        "assets/images/tiffin-box-logo-v2.webp",
+        "assets/images/uvpro-logo.webp",
+        "assets/images/fanzzy-logo.webp"
+      ]
+    },
+    "result": {
+      "width": 375,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "all-businesses.html",
+    "width": 430,
+    "prior": {
+      "brokenImages": [
+        "assets/images/nexiq-logo.webp",
+        "assets/images/auditra-logo.webp",
+        "assets/images/tiffin-box-logo-v2.webp",
+        "assets/images/uvpro-logo.webp"
+      ]
+    },
+    "result": {
+      "width": 430,
+      "scrollWidth": 430,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "all-businesses.html",
+    "width": 768,
+    "prior": {
+      "brokenImages": [
+        "assets/images/uvpro-logo.webp",
+        "assets/images/fanzzy-logo.webp"
+      ]
+    },
+    "result": {
+      "width": 768,
+      "scrollWidth": 768,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "all-businesses.html",
+    "width": 1024,
+    "prior": {
+      "brokenImages": [
+        "assets/images/storepilot-logo.webp"
+      ]
+    },
+    "result": {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "index.html",
+    "width": 375,
+    "prior": {
+      "brokenImages": [
+        "assets/images/trust-handshake.webp",
+        "assets/images/clients/manapuram.png"
+      ]
+    },
+    "result": {
+      "width": 375,
+      "scrollWidth": 375,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "index.html",
+    "width": 430,
+    "prior": {
+      "brokenImages": [
+        "assets/images/clients/happy-days.png",
+        "assets/images/clients/hyper-city.png"
+      ]
+    },
+    "result": {
+      "width": 430,
+      "scrollWidth": 430,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "index.html",
+    "width": 1280,
+    "prior": {
+      "brokenImages": [
+        "assets/images/clients/easy-mart.png",
+        "assets/images/clients/pearl.png",
+        "assets/images/clients/danuve.png",
+        "assets/images/clients/galaxy.png"
+      ]
+    },
+    "result": {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "industries/auditing-risk-compliance.html",
+    "width": 390,
+    "prior": {
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8000/industries/auditing-risk-compliance.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/industries/auditing-risk-compliance.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    "result": {
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "index.html",
+    "width": 1920,
+    "prior": {
+      "brokenImages": [
+        "assets/images/clients/al-dahbia.png"
+      ]
+    },
+    "result": {
+      "width": 1920,
+      "scrollWidth": 1920,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "industries/villa-projects.html",
+    "width": 1280,
+    "prior": {
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8000/industries/villa-projects.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/industries/villa-projects.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    "result": {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "overflow": false,
+      "brokenImages": []
+    }
+  },
+  {
+    "route": "insights/cloud-pos.html",
+    "width": 320,
+    "prior": {
+      "error": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8000/insights/cloud-pos.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8000/insights/cloud-pos.html\", waiting until \"load\"\u001b[22m\n"
+    },
+    "result": {
+      "width": 320,
+      "scrollWidth": 320,
+      "overflow": false,
+      "brokenImages": []
+    }
+  }
+]
