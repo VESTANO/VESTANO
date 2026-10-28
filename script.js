@@ -10,6 +10,118 @@ const megaBackButtons = document.querySelectorAll(".mega-mobile-back");
 let footerMenuReturn = false;
 let footerMenuPosition = null;
 let footerMenuLink = null;
+let localMenuReturn = null;
+let navigatingAway = false;
+
+// Keep an explicit trail as embedded browsers may not expose a referrer or
+// retain the same native history as a standalone browser.
+const navigationStorageKey = "vestano-navigation-pending-v2";
+const siteRootUrl = new URL(".", document.querySelector('script[src*="script.js"]').src);
+const backSelector = ".history-back, .mega-mobile-back, .projects-back, .all-businesses-back, .all-businesses-bottom-back";
+function readNavigationStorage() {
+  try { return JSON.parse(sessionStorage.getItem(navigationStorageKey)); } catch { return null; }
+}
+function storeNavigation(destination, trail, position = null) {
+  try {
+    sessionStorage.setItem(navigationStorageKey, JSON.stringify({ destination, trail, position }));
+  } catch { /* Native history remains available if storage is disabled. */ }
+}
+function siteUrl(value) {
+  try {
+    const url = new URL(value, siteRootUrl);
+    return url.origin === location.origin ? url : null;
+  } catch { return null; }
+}
+const pendingNavigation = readNavigationStorage();
+let previousPages = window.history.state?.vestanoPreviousPages || [];
+let returnPosition = null;
+if (pendingNavigation?.destination === location.href) {
+  previousPages = pendingNavigation.trail;
+  returnPosition = pendingNavigation.position;
+} else if (!previousPages.length && document.referrer && document.referrer !== location.href) {
+  const referrer = siteUrl(document.referrer);
+  if (referrer) previousPages = [{ url: referrer.href, x: 0, y: 0 }];
+}
+try { sessionStorage.removeItem(navigationStorageKey); } catch { /* Storage is optional. */ }
+function savePreviousPages() {
+  history.replaceState({ ...history.state, vestanoPreviousPages: previousPages }, "");
+}
+savePreviousPages();
+function selectedPage() {
+  const url = new URL(location.href);
+  const openMenu = document.querySelector(".mega-menu.is-open");
+  if (openMenu) url.searchParams.set("menu", openMenu.id.replace(/-menu$/, ""));
+  url.searchParams.delete("returnTo");
+  return { url: url.href, x: scrollX, y: scrollY };
+}
+function returnToPage(target, trail) {
+  const destination = siteUrl(target.url);
+  if (!destination) return false;
+  storeNavigation(destination.href, trail, { x: target.x || 0, y: target.y || 0 });
+  navigatingAway = true;
+  // Navigate explicitly: embedded browser history can include hidden document
+  // or frame entries, which are not the user's previous selected page.
+  location.replace(destination.href);
+  return true;
+}
+function goToPreviousPage(fallback) {
+  const trail = previousPages.slice();
+  let target = trail.pop();
+  while (target && target.url === location.href) target = trail.pop();
+  if (target) return returnToPage(target, trail);
+  const destination = fallback && siteUrl(fallback);
+  if (destination && destination.href !== location.href) {
+    return returnToPage({ url: destination.href }, []);
+  }
+  return false;
+}
+document.addEventListener("click", (event) => {
+  if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const control = event.target.closest(backSelector);
+  if (control && !control.matches(".mega-mobile-back")) {
+    event.preventDefault();
+    event.stopPropagation();
+    goToPreviousPage(control.getAttribute("href"));
+    return;
+  }
+  const link = event.target.closest("a[href]");
+  if (!link || link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
+  const destination = siteUrl(link.href);
+  if (!destination || destination.href === location.href) return;
+  if (link.closest(".footer-links") && destination.searchParams.has("menu") && megaButtons.length) return;
+  const source = selectedPage();
+  history.replaceState(history.state, "", source.url);
+  const localPages = [];
+  for (let selection = localMenuReturn; selection; selection = selection.previous) {
+    localPages.unshift({ url: selection.url, x: selection.x, y: selection.y });
+  }
+  storeNavigation(destination.href, [...previousPages, ...localPages, source].slice(-50));
+  // Header handlers must not erase the selected menu before leaving it.
+  if (destination.pathname !== location.pathname || destination.search !== location.search) navigatingAway = true;
+}, true);
+window.addEventListener("pageshow", () => {
+  navigatingAway = false;
+  const pending = readNavigationStorage();
+  if (pending?.destination === location.href) {
+    previousPages = pending.trail;
+    returnPosition = pending.position;
+    try { sessionStorage.removeItem(navigationStorageKey); } catch { /* Storage is optional. */ }
+    savePreviousPages();
+  }
+  if (returnPosition) {
+    const position = returnPosition;
+    requestAnimationFrame(() => scrollTo({ left: position.x, top: position.y, behavior: "instant" }));
+    returnPosition = null;
+  }
+});
+window.addEventListener("hashchange", () => {
+  const pending = readNavigationStorage();
+  if (pending?.destination === location.href) {
+    previousPages = pending.trail;
+    savePreviousPages();
+    try { sessionStorage.removeItem(navigationStorageKey); } catch { /* Storage is optional. */ }
+  }
+});
 
 // Keep the departure position on each history entry, including footer links
 // that navigate to another section of the same document.
@@ -309,10 +421,11 @@ function closeMegaMenus() {
   const hadOpenMenu = Array.from(megaMenus).some((menu) => menu.classList.contains("is-open"));
   megaMenus.forEach((menu) => menu.classList.remove("is-open"));
   megaButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
-  if (hadOpenMenu) {
+  if (hadOpenMenu && !navigatingAway) {
     const url = new URL(window.location.href);
     if (url.searchParams.has("menu")) {
       url.searchParams.delete("menu");
+      url.searchParams.delete("returnTo");
       window.history.replaceState(window.history.state, "", url);
     }
   }
@@ -372,7 +485,9 @@ function renderSearchResults(query = "") {
     : '<p class="search-empty">No matching pages found</p>';
 }
 
-function toggleMegaMenu(button) {
+function toggleMegaMenu(button, { initial = false } = {}) {
+  const previousSelection = selectedPage();
+  megaBackButtons.forEach((backButton) => backButton.setAttribute("aria-label", "Back to main menu"));
   footerMenuReturn = false;
   footerMenuPosition = null;
   footerMenuLink = null;
@@ -384,9 +499,12 @@ function toggleMegaMenu(button) {
   closeSearch();
 
   if (target && shouldOpen) {
+    localMenuReturn = initial ? null : { ...previousSelection, previous: localMenuReturn };
     target.classList.add("is-open");
     button.setAttribute("aria-expanded", "true");
     if (window.matchMedia("(max-width: 1040px)").matches) setMobileMenuOpen(true);
+  } else {
+    localMenuReturn = null;
   }
 }
 
@@ -399,6 +517,7 @@ megaButtons.forEach((button) => {
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
     const isOpen = !header.classList.contains("nav-open");
+    localMenuReturn = null;
     closeMegaMenus();
     closeSearch();
     closeBusinessDropdown();
@@ -409,10 +528,14 @@ if (menuToggle) {
 megaBackButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const menu = button.closest(".mega-menu");
+    if (!localMenuReturn && !footerMenuReturn && goToPreviousPage()) {
+      return;
+    }
     const trigger = Array.from(megaButtons).find((item) => item.dataset.megaTarget === menu?.id);
     closeMegaMenus();
     if (header) header.scrollTop = 0;
     if (footerMenuReturn) {
+      localMenuReturn = null;
       setMobileMenuOpen(false);
       footerMenuReturn = false;
       footerMenuLink?.focus({ preventScroll: true });
@@ -421,6 +544,12 @@ megaBackButtons.forEach((button) => {
         if (position) window.scrollTo({ left: position.x, top: position.y, behavior: "instant" });
       });
     } else {
+      if (localMenuReturn) {
+        const position = localMenuReturn;
+        localMenuReturn = null;
+        setMobileMenuOpen(false);
+        requestAnimationFrame(() => scrollTo({ left: position.x, top: position.y, behavior: "instant" }));
+      }
       trigger?.focus({ preventScroll: true });
     }
   });
@@ -462,6 +591,7 @@ if (searchToggle && siteSearch && searchInput) {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    localMenuReturn = null;
     closeMegaMenus();
     closeSearch();
     closeBusinessDropdown();
@@ -475,6 +605,7 @@ document.addEventListener("click", (event) => {
   }
 
   if (header && !header.contains(event.target) && !event.defaultPrevented) {
+    localMenuReturn = null;
     closeMegaMenus();
     closeSearch();
   }
@@ -482,21 +613,11 @@ document.addEventListener("click", (event) => {
 
 header?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
+    if (navigatingAway) return;
     closeMegaMenus();
     closeSearch();
     closeBusinessDropdown();
     setMobileMenuOpen(false);
-  });
-});
-
-document.querySelectorAll(".history-back").forEach((button) => {
-  button.addEventListener("click", () => {
-    if (window.history.length > 1) {
-      window.history.back();
-      return;
-    }
-
-    window.location.href = "../index.html";
   });
 });
 
@@ -511,7 +632,12 @@ if (initialMenu) {
   const initialButton = Array.from(megaButtons).find((button) => button.dataset.megaTarget === `${initialMenu}-menu`);
 
   if (initialButton) {
-    toggleMegaMenu(initialButton);
+    toggleMegaMenu(initialButton, { initial: true });
+    const returnTo = siteUrl(new URLSearchParams(location.search).get("returnTo") || "");
+    if (!previousPages.length && returnTo && returnTo.href !== location.href && returnTo.href !== siteRootUrl.href) {
+      previousPages = [{ url: returnTo.href, x: 0, y: 0 }];
+      savePreviousPages();
+    }
   }
 }
 

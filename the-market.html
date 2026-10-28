@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=perf-v1" />
+    <link rel="stylesheet" href="styles.css?v=market-editorial-v9" />
   </head>
   <body>
     <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="Home"><img src="assets/images/vestano-logo.webp" alt="Vestano International Pvt Ltd" decoding="async" /></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button><div class="nav-shell" id="primary-nav"><ul class="nav-links"><li><a href="index.html?menu=insights">Insights</a></li><li><a href="index.html?menu=services">Services</a></li><li><a href="index.html?menu=industries">Industries</a></li><li><a href="index.html?menu=careers">Careers</a></li><li><a href="the-market.html">OUR BUSINESS</a></li><li><a href="index.html?menu=about">About us</a></li></ul><div class="nav-actions"><a href="index.html#contact">Contact us</a></div></div></nav></header>
@@ -37,6 +37,7 @@
     <main class="market-page">
       <section class="market-hero">
         <div class="market-hero-copy">
+          <div class="article-actions"><button class="back-link history-back" type="button">Back</button></div>
           <p class="ey-kicker">Strategic retail venture</p>
           <figure class="market-logo-lockup">
             <img src="assets/images/the-market-logo-dark.webp" alt="The Market Fresh Food Grocery logo" decoding="async" />
@@ -60,7 +61,34 @@
         <p>The Market is positioned to become a trusted retail destination by combining curated quality products, modern infrastructure, advanced retail technologies, and customer-centric service excellence. Its operating model is designed around convenience, reliability, process strength, and consistent brand standards across every future outlet.</p>
       </section>
 
-      <section class="market-metrics" aria-label="The Market project highlights">
+      <figure class="market-storefront" data-reveal>
+        <div class="market-storefront-frame">
+          <img src="assets/images/the-market-storefront-feature.png" alt="The Market supermarket storefront glowing at sunset" loading="lazy" decoding="async" />
+        </div>
+        <figcaption>A premium retail destination designed around comfort, clarity, and convenience.</figcaption>
+      </figure>
+
+      <section class="market-interior-ad" aria-labelledby="market-interior-title" data-reveal>
+        <div class="market-interior-ad-copy">
+          <p class="ey-kicker">The Market interior design</p>
+          <h2 id="market-interior-title">Step inside The Market.</h2>
+          <p>Warm materials, clear wayfinding, and carefully planned product zones shape an interior designed to make every visit feel comfortable, intuitive, and effortless.</p>
+          <a class="market-interior-ad-link" href="#market-highlights">Explore The Market interior <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="market-interior-gallery" aria-label="The Market interior design highlights">
+          <figure class="market-interior-card market-interior-card-wide">
+            <img src="assets/images/market-interior-overview.jpeg" alt="The Market interior with produce and grocery aisles" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="market-interior-card">
+            <img src="assets/images/market-interior-aisles.jpeg" alt="The Market grocery aisles with warm architectural lighting" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="market-interior-card">
+            <img src="assets/images/market-interior-checkout.jpeg" alt="The Market checkout area and illuminated grocery aisles" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="market-metrics" id="market-highlights" aria-label="The Market project highlights">
         <article><span>01</span><strong>100 key locations</strong><p>Premium supermarket chain planned across Kerala.</p></article>
         <article><span>02</span><strong>Chalakudy flagship</strong><p>The first outlet will launch as the venture's flagship store.</p></article>
         <article><span>03</span><strong>International standards</strong><p>Modern retail infrastructure designed for premium operations.</p></article>
@@ -158,6 +186,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=perf-v1"></script>
+    <script src="script.js?v=navigation-v4"></script>
   </body>
 </html>
