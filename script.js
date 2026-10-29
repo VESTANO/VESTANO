@@ -1519,3 +1519,20 @@ function setupContactModal() {
 }
 
 setupContactModal();
+
+// Provide the welcome notice on subpages as well as the homepage.
+(() => {
+  const sharedScript = document.currentScript;
+  if (!sharedScript) return;
+  function loadWelcome() {
+    if (document.querySelector('.vestano-welcome')) return;
+    const welcomeScript = document.createElement('script');
+    welcomeScript.src = new URL('welcome.js?v=7', sharedScript.src).href;
+    document.body.append(welcomeScript);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadWelcome, { once: true });
+  } else {
+    loadWelcome();
+  }
+})();
