@@ -1,4 +1,5 @@
 /* Responsive project lifecycle with room for the connector rails. */
+.core-back { max-width: 1200px; margin: 0 auto 24px; }
 .core-intro { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 6vw, 88px); max-width: 1440px; margin: 0 auto 54px; padding: 10px 0 32px; border-bottom: 1px solid #e9eff5; }
 .core-intro h1 { margin: 0 0 16px; color: #081c34; font-size: clamp(28px, 2.9vw, 42px); font-weight: 800; line-height: 1.14; letter-spacing: -.045em; }
 .core-intro h1 span { color: #0756a5; }
