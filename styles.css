@@ -5890,6 +5890,8 @@ body.contact-modal-open { overflow: hidden; }
 @media (hover: hover) and (pointer: fine) {
   body:has(.premium-cursor) { cursor: none; }
   body.contact-modal-open:has(.premium-cursor) { cursor: auto; }
+  /* A native dialog is painted in the browser's top layer, above the custom cursor. */
+  body.welcome-is-open:has(.premium-cursor) { cursor: auto; }
   body:has(.premium-cursor) input,
   body:has(.premium-cursor) textarea,
   body:has(.premium-cursor) select,
@@ -5898,6 +5900,7 @@ body.contact-modal-open { overflow: hidden; }
 
 /* Keep pointer movement immediate throughout the contact popup and backdrop. */
 body.contact-modal-open .premium-cursor { display: none; }
+body.welcome-is-open .premium-cursor { display: none; }
 
 /* Site-wide motion layer. Page-specific selectors remain narrowly scoped. */
 .home-page .hero {
