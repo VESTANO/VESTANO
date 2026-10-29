@@ -152,6 +152,7 @@ a {
 }
 
 .nav-links a:hover,
+.nav-links a[aria-current="page"],
 .nav-button:hover,
 .nav-button[aria-expanded="true"],
 .nav-actions a:hover {
