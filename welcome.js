@@ -24,6 +24,11 @@
       if (previousFocus instanceof HTMLElement && previousFocus !== document.body) previousFocus.focus({ preventScroll: true });
     });
     dialog.addEventListener('click', event => {
+      if (event.target.closest('[data-welcome-warning]')) {
+        dialog.querySelector('.welcome-warning').scrollIntoView({ block: 'start', behavior: 'smooth' });
+        dialog.querySelector('#welcome-safety-title').focus({ preventScroll: true });
+        return;
+      }
       if (event.target.closest('a[href]')) dismiss();
     });
     // Native dialog makes the underlying page inert; explicitly cycle focus within it.
@@ -47,7 +52,7 @@
   const homeURL = new URL('index.html', document.currentScript.src);
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('welcome.css?v=8', homeURL).href;
+  stylesheet.href = new URL('welcome.css?v=9', homeURL).href;
   const stylesReady = new Promise((resolve, reject) => {
     stylesheet.onload = resolve;
     stylesheet.onerror = reject;

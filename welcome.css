@@ -9,6 +9,11 @@
 .vestano-welcome::backdrop { background: #020c18c9; backdrop-filter: blur(6px); }
 body.welcome-is-open { overflow: hidden; }
 .vestano-welcome .welcome-scroll { width: 100%; overflow-y: auto; overscroll-behavior: contain; }
+.vestano-welcome .welcome-safety-alert { display: grid; gap: 5px; width: 100%; padding: 18px 68px 18px 24px; border: 0; background: #b71f2c; color: #fff; font: inherit; text-align: left; cursor: pointer; }
+.vestano-welcome .welcome-safety-alert > span { color: #ffe3ab; font-size: 10px; font-weight: 800; line-height: 1.4; letter-spacing: .12em; }
+.vestano-welcome .welcome-safety-alert > strong { font-size: clamp(20px, 3vw, 25px); line-height: 1.2; letter-spacing: -.025em; }
+.vestano-welcome .welcome-safety-alert > small { font-size: 12px; line-height: 1.5; color: #fff4e0; }
+.vestano-welcome .welcome-safety-alert:hover { background: #a71b27; }
 .vestano-welcome .welcome-close {
   position: absolute; right: 14px; top: 14px; z-index: 2; display: grid; place-items: center;
   width: 38px; height: 38px; padding: 0; border: 1px solid #ffffff75; border-radius: 50%;
