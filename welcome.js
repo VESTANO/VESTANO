@@ -1,9 +1,17 @@
 (() => {
   const dialog = document.querySelector('.vestano-welcome');
   if (!dialog || typeof dialog.showModal !== 'function') return;
-  // Show on a browser refresh, without interrupting navigation back home.
+  // Welcome visitors once per tab, and show again whenever they refresh home.
   const navigation = performance.getEntriesByType('navigation')[0];
-  if (navigation?.type !== 'reload') return;
+  const welcomeSeenKey = 'vestano-welcome-seen';
+  let welcomeSeen = false;
+  try {
+    welcomeSeen = sessionStorage.getItem(welcomeSeenKey) === '1';
+  } catch {
+    // When storage is unavailable, avoid interrupting internal navigation.
+    try { welcomeSeen = new URL(document.referrer).origin === location.origin; } catch {}
+  }
+  if (welcomeSeen && navigation?.type !== 'reload') return;
   const previousFocus = document.activeElement;
   function dismiss() {
     dialog.close();
@@ -26,5 +34,6 @@
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
   dialog.showModal();
+  try { sessionStorage.setItem(welcomeSeenKey, '1'); } catch {}
   document.body.classList.add('welcome-is-open');
 })();
