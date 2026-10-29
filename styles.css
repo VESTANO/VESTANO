@@ -114,6 +114,7 @@ a {
 .nav-button,
 .nav-actions a {
   display: inline-flex;
+  text-transform: uppercase;
   align-items: center;
   min-height: var(--header-height);
   padding: 0 14px;
@@ -655,6 +656,53 @@ a {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 32px;
+}
+
+.hero-milestone {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 28px;
+  padding: 22px 28px;
+  border: 1px solid rgba(244, 161, 44, 0.55);
+  border-top: 3px solid var(--yellow);
+  border-radius: 12px;
+  background: radial-gradient(ellipse at top left, rgba(244, 161, 44, 0.18), transparent 75%), rgba(3, 19, 29, 0.94);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 32px rgba(244, 161, 44, 0.08);
+}
+
+.milestone-eyebrow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: #ffd38d; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.milestone-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 4px rgba(244, 161, 44, 0.12), 0 0 14px var(--yellow); }
+
+.hero-milestone h2 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.milestone-counter:not([hidden]) {
+  display: flex;
+  gap: clamp(18px, 4vw, 36px);
+}
+
+.milestone-counter > div { display: grid; gap: 4px; }
+.milestone-counter > div + div { border-left: 1px solid var(--line); padding-left: clamp(18px, 4vw, 36px); }
+.milestone-counter strong { color: #ffbd54; font-size: clamp(40px, 4.5vw, 60px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; text-shadow: 0 2px 24px rgba(244, 161, 44, 0.18); }
+.milestone-counter span { color: #e5e5df; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero .hero-milestone .milestone-origin { margin: 24px 0 0; padding-top: 18px; border-top: 1px solid rgba(244, 161, 44, 0.2); color: #c8c8c2; font-size: 12px; line-height: 1.6; }
+
+@media (max-width: 480px) {
+  .hero-milestone { padding: 18px 16px; }
+  .hero-milestone h2 { font-size: 20px; }
+}
+
+@media (min-width: 1000px) {
+  .home-page .hero { align-items: center; }
+  .home-page .hero-content { margin-top: 36px; margin-bottom: 36px; }
+  .home-page .hero-content h1 { font-size: clamp(48px, 4.6vw, 70px); }
+  .home-page .hero-content > p:not(.ey-kicker) { margin-top: 20px; font-size: 20px; }
+  .home-page .hero-actions { margin-top: 24px; }
 }
 
 .content-band {
@@ -2971,10 +3019,10 @@ body.contact-modal-open { overflow: hidden; }
 
 .cert-image-badge {
   display: grid;
-  grid-template-columns: 58px 1fr;
+  grid-template-columns: 90px minmax(0, 1fr);
   align-items: center;
-  min-height: 58px;
-  padding: 8px;
+  min-height: 104px;
+  padding: 12px;
   gap: 12px;
   border: 1px solid rgba(244, 161, 44, 0.36);
   border-radius: var(--radius);
@@ -2983,8 +3031,8 @@ body.contact-modal-open { overflow: hidden; }
 
 .cert-image-badge img {
   display: block;
-  width: 50px;
-  height: 42px;
+  width: 88px;
+  height: 78px;
   object-fit: contain;
   background: white;
   border-radius: 4px;
@@ -2997,6 +3045,17 @@ body.contact-modal-open { overflow: hidden; }
   font-weight: 800;
   line-height: 1.25;
 }
+
+.cert-standard-copy { min-width: 0; }
+.cert-standard-copy em { display: block; }
+.cert-standard-copy small { display: block; margin-top: 6px; color: #b5c7d3; font-size: 12px; font-weight: 500; line-height: 1.45; }
+
+.cert-duns-badge img { width: 88px; height: 78px; }
+.cert-duns-copy { min-width: 0; color: #d8e7ef; }
+.cert-duns-copy strong { display: block; font-size: 14px; }
+.cert-duns-number { display: block; margin-top: 5px; font-size: 12px; line-height: 1.5; }
+.cert-duns-number b { white-space: nowrap; }
+.cert-duns-copy p { margin: 6px 0 0; color: #b5c7d3; font-size: 12px; line-height: 1.5; }
 
 .social-row {
   display: flex;
@@ -7556,3 +7615,51 @@ main.market-page .market-rollout-track strong {
     letter-spacing: -0.015em;
   }
 }
+
+/* Incorporation milestone: a focal point beside the desktop hero copy. */
+.home-page .hero > .hero-milestone {
+  position: relative;
+  width: auto;
+  margin: 0 24px 40px;
+  padding: clamp(20px, 2.2vw, 28px);
+  border: 1px solid rgba(244, 161, 44, 0.5);
+  border-top: 3px solid #ffc76d;
+  border-radius: 16px;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.home-page .hero-milestone .milestone-eyebrow { margin-bottom: 14px; font-size: 10px; }
+.home-page .hero-milestone h2 { max-width: 340px; margin-bottom: 22px; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.12; letter-spacing: -0.04em; }
+.home-page .milestone-counter:not([hidden]) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.home-page .milestone-counter > div { min-width: 0; gap: 12px; }
+.home-page .milestone-counter > div + div { padding-left: 12px; border-color: rgba(244, 161, 44, 0.24); }
+.home-page .milestone-counter strong { font-size: clamp(34px, 3.6vw, 52px); color: #ffcc7b; }
+.home-page .milestone-counter span { font-size: 10px; letter-spacing: 0.14em; }
+
+@media (min-width: 1100px) {
+  .home-page .hero {
+    grid-template-columns: minmax(0, 1.45fr) minmax(350px, 1fr);
+    gap: clamp(48px, 5vw, 90px);
+    align-items: center;
+    padding: 64px max(var(--site-pad), calc((100% - var(--site-max)) / 2));
+  }
+  .home-page .hero .hero-content { width: auto; margin: 0; }
+  .home-page .hero > .hero-milestone { width: 100%; max-width: 390px; justify-self: end; margin: 0; animation: home-fade-up 800ms 200ms both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero > .hero-milestone { animation: none; }
+}
+
+.home-page .hero-milestone h2 {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(18px, 2vw, 24px);
+}
+@media (max-width: 480px) {
+  .home-page .hero-milestone h2 { font-size: clamp(15px, 4.3vw, 20px); }
+}
+
+/* Frame the supplied Mafam artwork without its surrounding white margins. */
+.client-mafam-art { position: relative; display: block; width: 110px; height: 66px; overflow: hidden; }
+.client-logo .client-mafam-art img { position: absolute; left: 50%; top: -27px; width: 265px; height: 150px; max-width: none; max-height: none; transform: translateX(-50%); }

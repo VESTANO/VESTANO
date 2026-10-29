@@ -1,4 +1,39 @@
 const header = document.querySelector(".site-header");
+
+// Count calendar years, months and days in India, independent of the visitor's timezone.
+const milestoneCounter = document.querySelector(".milestone-counter");
+if (milestoneCounter) {
+  const indiaDate = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"
+  });
+  function updateMilestone() {
+    const parts = Object.fromEntries(indiaDate.formatToParts(new Date()).map(part => [part.type, part.value]));
+    const today = new Date(Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day)));
+    const start = new Date(Date.UTC(2021, 3, 30));
+    let months = Math.max(0, (today.getUTCFullYear() - 2021) * 12 + today.getUTCMonth() - 3);
+    function anniversary(offset) {
+      const month = new Date(Date.UTC(2021, 3 + offset, 1));
+      const lastDay = new Date(Date.UTC(month.getUTCFullYear(), month.getUTCMonth() + 1, 0)).getUTCDate();
+      return new Date(Date.UTC(month.getUTCFullYear(), month.getUTCMonth(), Math.min(30, lastDay)));
+    }
+    if (months > 0 && anniversary(months) > today) months--;
+    const values = {
+      years: Math.floor(months / 12),
+      months: months % 12,
+      days: Math.max(0, Math.round((today - (months ? anniversary(months) : start)) / 86400000))
+    };
+    for (const [unit, value] of Object.entries(values)) {
+      milestoneCounter.querySelector(`[data-milestone="${unit}"]`).textContent = String(value).padStart(2, "0");
+    }
+    milestoneCounter.hidden = false;
+  }
+  updateMilestone();
+  setInterval(updateMilestone, 30000);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) updateMilestone();
+  });
+}
+
 const megaButtons = document.querySelectorAll(".nav-button[data-mega-target]");
 const megaMenus = document.querySelectorAll(".mega-menu");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -266,6 +301,7 @@ if (businessNavLink) {
     { title: "The Market", meta: "Supermarket venture", path: "the-market.html", image: "assets/images/navigation/the-market-logo-dark.webp" },
     { title: "StorePilot", meta: "Workforce operations", path: "services/storepilot-workforce.html", image: "assets/images/navigation/storepilot-logo.webp" },
     { title: "Edge Market ERP", meta: "Retail ERP platform", path: "services/edge-market-erp.html", image: "assets/images/navigation/edge-market-logo.webp" },
+    { title: "Vestano Retail ERP", meta: "Retail ERP solutions", path: "business/vestano-retail-erp.html", image: "assets/images/vestano-logo-transparent.webp" },
     { title: "Vestano India LLP", meta: "Hardware", path: "business/digital-solutions.html", image: "assets/images/navigation/vestano-india-llp-logo-transparent.webp" },
     { title: "Vestano Projects & Property", meta: "Construction and development", path: "business/vestano-projects-property.html", image: "assets/images/navigation/vestano-india-llp-logo-transparent.webp" },
     { title: "Vestano Media", meta: "Digital marketing", path: "services/vestano-media.html", image: "assets/images/navigation/vestano-media-logo.webp" },

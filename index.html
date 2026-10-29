@@ -58,13 +58,14 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=perf-v1" />
+    <link rel="stylesheet" href="styles.css?v=duns-certification-v3" />
+    <link rel="stylesheet" href="welcome.css?v=8" />
   </head>
   <body class="home-page">
     <header class="site-header">
       <div class="ey-strip"></div>
       <nav class="navbar" aria-label="Main navigation">
-        <a class="brand" href="#" aria-label="Home">
+        <a class="brand" href="index.html" aria-label="Home">
           <img src="assets/images/vestano-logo.webp" alt="Vestano International Pvt Ltd" decoding="async" />
         </a>
 
@@ -99,6 +100,7 @@
             <li>
               <a href="the-market.html">OUR BUSINESS</a>
             </li>
+            <li><a href="vestano-core.html">VESTANO CORE</a></li>
             <li class="has-mega">
               <button class="nav-button" type="button" aria-expanded="false" data-mega-target="about-menu">
                 About us
@@ -399,6 +401,7 @@
       <section class="hero">
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-content">
+
           <p class="ey-kicker">Vestano International Pvt Ltd</p>
           <h1>Shape smarter stores with data led decisions</h1>
           <p>
@@ -409,7 +412,18 @@
             <a class="primary-button" href="insights/genai-erp.html">Read insights</a>
             <a class="secondary-button" href="services/retail-supermarket-consulting.html">View services</a>
           </div>
+
         </div>
+          <aside class="hero-milestone" aria-labelledby="milestone-heading">
+            <div class="milestone-eyebrow"><span class="milestone-dot" aria-hidden="true"></span> A legacy in the making</div>
+            <h2 id="milestone-heading">Growing stronger every day.</h2>
+            <div class="milestone-counter" role="group" aria-label="Time since incorporation" hidden>
+              <div><strong data-milestone="years">00</strong><span>Years</span></div>
+              <div><strong data-milestone="months">00</strong><span>Months</span></div>
+              <div><strong data-milestone="days">00</strong><span>Days</span></div>
+            </div>
+            <p class="milestone-origin">Vestano India LLP · Incorporated <time datetime="2021-04-30">April 30, 2021</time></p>
+          </aside>
       </section>
 
       <section class="about-details" id="about-details">
@@ -463,8 +477,8 @@
           <h2>Retail brands and supermarket networks that trust Vestano.</h2>
         </div>
         <div class="clients-grid" aria-label="Vestano client logos">
-          <div class="client-logo"><img src="assets/images/clients/sunny-group-crop.png" alt="Sunny Group" loading="lazy" decoding="async" /></div>
-          <div class="client-logo client-logo-wide"><img src="assets/images/clients/manapuram.png" alt="Manappuram Finance Limited" loading="lazy" decoding="async" /></div>
+          <div class="client-logo"><img src="assets/images/clients/sunny-diamonds.webp" alt="Sunny Diamonds" loading="lazy" decoding="async" /></div>
+          <div class="client-logo client-logo-mafam"><span class="client-mafam-art"><img src="assets/images/clients/mafam-manappuram-agro.png" alt="Mafam — Manappuram Agro Farms Limited" loading="lazy" decoding="async" /></span></div>
           <div class="client-logo"><img src="assets/images/clients/kunnil.png" alt="Kunnil" loading="lazy" decoding="async" /></div>
           <div class="client-logo"><img src="assets/images/clients/quixa.png" alt="Quixa Hypermart" loading="lazy" decoding="async" /></div>
           <div class="client-logo"><img src="assets/images/clients/happy-days.png" alt="Happy Days Hypermarket" loading="lazy" decoding="async" /></div>
@@ -967,12 +981,26 @@
               <div class="certification-list">
                 <span class="cert-image-badge">
                   <img src="assets/images/iso-certification.jpg" alt="ISO certification logo" loading="lazy" decoding="async" />
-                  <em>ISO certified</em>
+                  <span class="cert-standard-copy">
+                    <em>ISO certified</em>
+                    <small>Quality standards that support consistent, reliable delivery.</small>
+                  </span>
                 </span>
                 <span class="cert-image-badge">
                   <img src="assets/images/aab-certification.png" alt="AAB American Accreditation Board logo" loading="lazy" decoding="async" />
-                  <em>AAB accredited</em>
+                  <span class="cert-standard-copy">
+                    <em>AAB accredited</em>
+                    <small>Accreditation that reinforces trusted professional standards.</small>
+                  </span>
                 </span>
+                <div class="cert-image-badge cert-duns-badge">
+                  <img src="assets/images/duns-logo.png" alt="Dun &amp; Bradstreet D-U-N-S Registered logo" loading="lazy" decoding="async" />
+                  <div class="cert-duns-copy">
+                    <strong>D-U-N-S®</strong>
+                    <span class="cert-duns-number">D-U-N-S Number: <b>565245429</b></span>
+                    <p>Recognized business identity that builds trust and credibility worldwide</p>
+                  </div>
+                </div>
               </div>
               <div class="social-row" aria-label="Social media links">
                 <a href="https://www.instagram.com/vestanoretail_solutions?igsh=MWxlMm84bGVxMzhzcg==" target="_blank" rel="noopener" aria-label="Instagram">
@@ -997,6 +1025,52 @@
       </section>
     </main>
 
-    <script src="script.js?v=navigation-v4"></script>
+    <script src="script.js?v=retail-erp-nav-v3"></script>
+
+    <dialog class="vestano-welcome" aria-labelledby="welcome-title" aria-describedby="welcome-summary">
+      <button class="welcome-close" type="button" aria-label="Close welcome message" autofocus>×</button>
+      <div class="welcome-scroll">
+        <header class="welcome-intro">
+          <p class="welcome-kicker">WELCOME TO VESTANO</p>
+          <h2 id="welcome-title">Experience That Builds Trust.</h2>
+          <p id="welcome-summary">Built on experience. Driven by commitment. Focused on delivering results.</p>
+          <div class="welcome-stats">
+            <div><span class="welcome-stat-icon" aria-hidden="true">✦</span><p><strong>15+</strong><span>Years of Marketing Experience</span></p></div>
+            <div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H5v18h14V8l-5-5Zm0 0v6h5M8 14l3 3 5-5"/></svg><p><strong>7 Years</strong><span>Of Company Registration History</span></p></div>
+          </div>
+        </header>
+        <div class="welcome-content">
+          <section class="welcome-warning" aria-labelledby="welcome-safety-title">
+            <header class="welcome-warning-header">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="M12 8v5m0 3h.01"/></svg>
+              <div><p>IMPORTANT SECURITY WARNING</p><h3 id="welcome-safety-title">Your Safety. Our Priority.</h3></div>
+            </header>
+            <div class="welcome-warning-body">
+              <h4>BEWARE: Verify Before You Trust.</h4>
+              <p class="welcome-warning-lead">Protect yourself and your business. Please verify the following before proceeding:</p>
+              <div class="welcome-warning-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="M12 8v5m0 3h.01"/></svg><div><h5>Verify Vestano Representatives</h5><p>If anyone approaches you claiming to represent Vestano, verify their identity and association with the company through the official Leadership page on our website before proceeding with any business dealings.</p></div></div>
+              <div class="welcome-warning-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H5v18h14V8l-5-5Zm0 0v6h5M8 14l3 3 5-5"/></svg><div><h5>Verify Former Employees</h5><p>If a former Vestano employee joins your organisation, request and verify their relieving letter and relevant employment details before making decisions based on their previous association with Vestano.</p></div></div>
+              <div class="welcome-warning-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 3 5-3 3a16 16 0 0 0 6 6l3-3 5 3-2 4C10 22 2 14 3 5l4-2Z"/></svg><div><h5>Contact Us for Verification</h5><p>If you have any doubts about someone's identity, employment history, or association with Vestano, please contact us directly through our official contact number before proceeding.</p><a class="welcome-phone" href="tel:+917306178755">Call Vestano: 7306178755</a></div></div>
+              <a class="welcome-verify" href="leadership.html">Verify Our Leadership →</a>
+              <p class="welcome-awareness">Your awareness is your first line of protection.</p>
+            </div>
+          </section>
+          <section class="welcome-commitment" aria-labelledby="welcome-commitment-title">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.03.28H21"/><path d="m21 3 1 11h-2M3 3 2 14h2M3 4h6"/><path d="m4 14 4 4a1 1 0 0 0 3-3M8 18l2 2a1 1 0 0 0 3-3"/></svg>
+            <div><h3 id="welcome-commitment-title">Our Commitment Goes Beyond Profit.</h3><p>Once a project is mutually agreed upon and formally confirmed, Vestano remains committed to completing it as agreed, whether the project presents a profit or a loss. Our word, our responsibility, and our commitment matter.</p><a href="about/values.html">Discover Our Commitment →</a></div>
+          </section>
+          <a class="welcome-discover" href="vestano-core.html">
+            <span class="welcome-hook-copy">
+              <span class="welcome-hook-label">Discover the Vestano Difference</span>
+              <strong>Get to know the people behind your next great partnership.</strong>
+              <span class="welcome-hook-detail">One minute to connect, a lasting foundation for success.</span>
+            </span>
+            <span class="welcome-hook-arrow" aria-hidden="true">→</span>
+          </a>
+          <p class="welcome-closing">Trust takes transparency. Partnerships take commitment.</p>
+        </div>
+      </div>
+    </dialog>
+    <script src="welcome.js?v=5"></script>
   </body>
 </html>

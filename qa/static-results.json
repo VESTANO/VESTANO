@@ -1,5 +1,100 @@
 {
   "pages": [
+    ".sites-open-temp/dist/about/alliances.html",
+    ".sites-open-temp/dist/about/alumni.html",
+    ".sites-open-temp/dist/about/newsroom.html",
+    ".sites-open-temp/dist/about/people.html",
+    ".sites-open-temp/dist/about/purpose.html",
+    ".sites-open-temp/dist/about/values.html",
+    ".sites-open-temp/dist/all-businesses.html",
+    ".sites-open-temp/dist/business/auditra.html",
+    ".sites-open-temp/dist/business/bpos-hardware.html",
+    ".sites-open-temp/dist/business/digital-solutions.html",
+    ".sites-open-temp/dist/business/essae-pos.html",
+    ".sites-open-temp/dist/business/fanzzy.html",
+    ".sites-open-temp/dist/business/nexiq.html",
+    ".sites-open-temp/dist/business/tiffin-box.html",
+    ".sites-open-temp/dist/business/tsc-hardware.html",
+    ".sites-open-temp/dist/business/up-pro.html",
+    ".sites-open-temp/dist/business/vestano-projects-property.html",
+    ".sites-open-temp/dist/careers/career-paths.html",
+    ".sites-open-temp/dist/careers/how-to-join.html",
+    ".sites-open-temp/dist/careers/internship-programs.html",
+    ".sites-open-temp/dist/careers/job-search.html",
+    ".sites-open-temp/dist/careers/life-at-vestano.html",
+    ".sites-open-temp/dist/index.html",
+    ".sites-open-temp/dist/industries/auditing-risk-compliance.html",
+    ".sites-open-temp/dist/industries/consumer-electronics-appliances.html",
+    ".sites-open-temp/dist/industries/engineering-real-estate-infrastructure.html",
+    ".sites-open-temp/dist/industries/fmcg-consumer-goods.html",
+    ".sites-open-temp/dist/industries/hypermarkets-supermarkets-grocery.html",
+    ".sites-open-temp/dist/industries/import-export-operations.html",
+    ".sites-open-temp/dist/industries/technology-software-saas.html",
+    ".sites-open-temp/dist/industries/villa-projects.html",
+    ".sites-open-temp/dist/insights/cloud-pos.html",
+    ".sites-open-temp/dist/insights/genai-erp.html",
+    ".sites-open-temp/dist/insights/retail-internships.html",
+    ".sites-open-temp/dist/insights/risk-compliance.html",
+    ".sites-open-temp/dist/insights/sustainable-retail.html",
+    ".sites-open-temp/dist/insights/transformation-realized.html",
+    ".sites-open-temp/dist/leadership.html",
+    ".sites-open-temp/dist/services/auditing-tax-compliance.html",
+    ".sites-open-temp/dist/services/edge-market-erp.html",
+    ".sites-open-temp/dist/services/hr-compliance-training.html",
+    ".sites-open-temp/dist/services/mis-analytics.html",
+    ".sites-open-temp/dist/services/retail-supermarket-consulting.html",
+    ".sites-open-temp/dist/services/storepilot-workforce.html",
+    ".sites-open-temp/dist/services/supply-chain-vendor-management.html",
+    ".sites-open-temp/dist/services/vestano-media.html",
+    ".sites-open-temp/dist/the-market.html",
+    ".sites-publish/dist/all-businesses.html",
+    ".sites-publish/dist/alliances.html",
+    ".sites-publish/dist/alumni.html",
+    ".sites-publish/dist/assets/brochures/the-sign-interactive-brochure.html",
+    ".sites-publish/dist/business/auditra.html",
+    ".sites-publish/dist/business/bpos-hardware.html",
+    ".sites-publish/dist/business/digital-solutions.html",
+    ".sites-publish/dist/business/essae-pos.html",
+    ".sites-publish/dist/business/fanzzy.html",
+    ".sites-publish/dist/business/nexiq.html",
+    ".sites-publish/dist/business/tiffin-box.html",
+    ".sites-publish/dist/business/tsc-hardware.html",
+    ".sites-publish/dist/business/up-pro.html",
+    ".sites-publish/dist/business/vestano-projects-property.html",
+    ".sites-publish/dist/careers/career-paths.html",
+    ".sites-publish/dist/careers/how-to-join.html",
+    ".sites-publish/dist/careers/internship-programs.html",
+    ".sites-publish/dist/careers/job-search.html",
+    ".sites-publish/dist/careers/life-at-vestano.html",
+    ".sites-publish/dist/index.html",
+    ".sites-publish/dist/industries/auditing-risk-compliance.html",
+    ".sites-publish/dist/industries/consumer-electronics-appliances.html",
+    ".sites-publish/dist/industries/engineering-real-estate-infrastructure.html",
+    ".sites-publish/dist/industries/fmcg-consumer-goods.html",
+    ".sites-publish/dist/industries/hypermarkets-supermarkets-grocery.html",
+    ".sites-publish/dist/industries/import-export-operations.html",
+    ".sites-publish/dist/industries/technology-software-saas.html",
+    ".sites-publish/dist/industries/villa-projects.html",
+    ".sites-publish/dist/insights/cloud-pos.html",
+    ".sites-publish/dist/insights/genai-erp.html",
+    ".sites-publish/dist/insights/retail-internships.html",
+    ".sites-publish/dist/insights/risk-compliance.html",
+    ".sites-publish/dist/insights/sustainable-retail.html",
+    ".sites-publish/dist/insights/transformation-realized.html",
+    ".sites-publish/dist/leadership.html",
+    ".sites-publish/dist/newsroom.html",
+    ".sites-publish/dist/people.html",
+    ".sites-publish/dist/purpose.html",
+    ".sites-publish/dist/services/auditing-tax-compliance.html",
+    ".sites-publish/dist/services/edge-market-erp.html",
+    ".sites-publish/dist/services/hr-compliance-training.html",
+    ".sites-publish/dist/services/mis-analytics.html",
+    ".sites-publish/dist/services/retail-supermarket-consulting.html",
+    ".sites-publish/dist/services/storepilot-workforce.html",
+    ".sites-publish/dist/services/supply-chain-vendor-management.html",
+    ".sites-publish/dist/services/vestano-media.html",
+    ".sites-publish/dist/the-market.html",
+    ".sites-publish/dist/values.html",
     "about/alliances.html",
     "about/alumni.html",
     "about/newsroom.html",
@@ -7,6 +102,7 @@
     "about/purpose.html",
     "about/values.html",
     "all-businesses.html",
+    "assets/brochures/the-sign-interactive-brochure.html",
     "business/auditra.html",
     "business/bpos-hardware.html",
     "business/digital-solutions.html",
@@ -17,11 +113,59 @@
     "business/tsc-hardware.html",
     "business/up-pro.html",
     "business/vestano-projects-property.html",
+    "business/vestano-retail-erp.html",
     "careers/career-paths.html",
     "careers/how-to-join.html",
     "careers/internship-programs.html",
     "careers/job-search.html",
     "careers/life-at-vestano.html",
+    "dist/about/alliances.html",
+    "dist/about/alumni.html",
+    "dist/about/newsroom.html",
+    "dist/about/people.html",
+    "dist/about/purpose.html",
+    "dist/about/values.html",
+    "dist/all-businesses.html",
+    "dist/business/auditra.html",
+    "dist/business/bpos-hardware.html",
+    "dist/business/digital-solutions.html",
+    "dist/business/essae-pos.html",
+    "dist/business/fanzzy.html",
+    "dist/business/nexiq.html",
+    "dist/business/tiffin-box.html",
+    "dist/business/tsc-hardware.html",
+    "dist/business/up-pro.html",
+    "dist/business/vestano-projects-property.html",
+    "dist/careers/career-paths.html",
+    "dist/careers/how-to-join.html",
+    "dist/careers/internship-programs.html",
+    "dist/careers/job-search.html",
+    "dist/careers/life-at-vestano.html",
+    "dist/index.html",
+    "dist/industries/auditing-risk-compliance.html",
+    "dist/industries/consumer-electronics-appliances.html",
+    "dist/industries/engineering-real-estate-infrastructure.html",
+    "dist/industries/fmcg-consumer-goods.html",
+    "dist/industries/hypermarkets-supermarkets-grocery.html",
+    "dist/industries/import-export-operations.html",
+    "dist/industries/technology-software-saas.html",
+    "dist/industries/villa-projects.html",
+    "dist/insights/cloud-pos.html",
+    "dist/insights/genai-erp.html",
+    "dist/insights/retail-internships.html",
+    "dist/insights/risk-compliance.html",
+    "dist/insights/sustainable-retail.html",
+    "dist/insights/transformation-realized.html",
+    "dist/leadership.html",
+    "dist/services/auditing-tax-compliance.html",
+    "dist/services/edge-market-erp.html",
+    "dist/services/hr-compliance-training.html",
+    "dist/services/mis-analytics.html",
+    "dist/services/retail-supermarket-consulting.html",
+    "dist/services/storepilot-workforce.html",
+    "dist/services/supply-chain-vendor-management.html",
+    "dist/services/vestano-media.html",
+    "dist/the-market.html",
     "index.html",
     "industries/auditing-risk-compliance.html",
     "industries/consumer-electronics-appliances.html",
@@ -46,15 +190,2202 @@
     "services/storepilot-workforce.html",
     "services/supply-chain-vendor-management.html",
     "services/vestano-media.html",
-    "the-market.html"
+    "the-market.html",
+    "vestano-core.html"
   ],
-  "pageCount": 47,
-  "links": 533,
-  "images": 177,
-  "buttons": 105,
+  "pageCount": 192,
+  "links": 2209,
+  "images": 738,
+  "buttons": 431,
   "forms": 0,
-  "issues": [],
+  "issues": [
+    [
+      ".sites-open-temp/dist/about/alliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/alliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/alliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/alumni.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/alumni.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/alumni.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/newsroom.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/newsroom.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/newsroom.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/people.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/people.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/people.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/purpose.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/purpose.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/purpose.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/values.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/values.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/about/values.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/the-market-logo-dark.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/storepilot-logo.jpeg"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/edge-market-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/vestano-india-llp-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/vestano-india-llp-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/vestano-media-logo.jpeg"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/the-sign-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/nexiq-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/auditra-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/tiffin-box-logo-v2.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/uvpro-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/all-businesses.html",
+      "missing-file",
+      "assets/images/fanzzy-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/auditra.html",
+      "missing-file",
+      "../assets/images/auditra-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/auditra.html",
+      "missing-file",
+      "../assets/images/auditra-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/auditra.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/auditra.html",
+      "missing-file",
+      "../assets/images/auditra-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/bpos-hardware.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/bpos-hardware.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/bpos-hardware.html",
+      "missing-file",
+      "../assets/images/storepilot-workforce-showcase.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/vestano-india-llp-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/vestano-india-llp-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/essae-pos-916.webp"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/tsc-printer-third.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/essae-pos-916.webp"
+    ],
+    [
+      ".sites-open-temp/dist/business/digital-solutions.html",
+      "missing-file",
+      "../assets/images/bpos-device-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/essae-pos.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/essae-pos.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/essae-pos.html",
+      "missing-file",
+      "../assets/images/edge-market-pos-professional.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/fanzzy-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/fanzzy-site-collections.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/fanzzy-site-products.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/fanzzy.html",
+      "missing-file",
+      "../assets/images/fanzzy-site-campaign.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/nexiq.html",
+      "missing-file",
+      "../assets/images/nexiq-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/nexiq.html",
+      "missing-file",
+      "../assets/images/nexiq-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/nexiq.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/nexiq.html",
+      "missing-file",
+      "../assets/images/nexiq-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/nexiq.html",
+      "missing-file",
+      "../assets/images/business-analytics-meeting.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/business/tiffin-box.html",
+      "missing-file",
+      "../assets/images/tiffin-box-logo-v2.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/tiffin-box.html",
+      "missing-file",
+      "../assets/images/tiffin-box-logo-v2.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/tiffin-box.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/tiffin-box.html",
+      "missing-file",
+      "../assets/images/tiffin-box-logo-v2.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/tsc-hardware.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/tsc-hardware.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/tsc-hardware.html",
+      "missing-file",
+      "../assets/images/uvpro-pos-billing.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/up-pro.html",
+      "missing-file",
+      "../assets/images/uvpro-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/up-pro.html",
+      "missing-file",
+      "../assets/images/uvpro-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/up-pro.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/up-pro.html",
+      "missing-file",
+      "../assets/images/uvpro-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/up-pro.html",
+      "missing-file",
+      "../assets/images/uvpro-dashboard.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/up-pro.html",
+      "missing-file",
+      "../assets/images/uvpro-pos-billing.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/vestano-projects-property.html",
+      "missing-file",
+      "../assets/images/vestano-india-llp-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/vestano-projects-property.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/business/vestano-projects-property.html",
+      "missing-file",
+      "../assets/images/projects/jamjoom-hero.jpeg"
+    ],
+    [
+      ".sites-open-temp/dist/careers/career-paths.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/career-paths.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/career-paths.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/how-to-join.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/how-to-join.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/how-to-join.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/internship-programs.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/internship-programs.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/internship-programs.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/job-search.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/job-search.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/job-search.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/life-at-vestano.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/life-at-vestano.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/careers/life-at-vestano.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/purpose-led-retail.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/business-analytics-meeting.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/trust-handshake.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/sunny-group-crop.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/manapuram.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/kunnil.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/quixa.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/happy-days.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/hyper-city.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/tick-mart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/jamjoom.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/hymart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/atnow.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/budget.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/4pmart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/wagonmart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/metreo-centre.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/easy-mart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/pearl.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/danuve.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/galaxy.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/atlas.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/bovidae.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/daymart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/carrefresh.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/al-dahbia.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/yesmart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/thuduvil-3mart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/shalimar-stores.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/vismaya.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/oshira.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/dayfresh.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/fresh-day.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/nice-supermarket.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/clients/apple-mart.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/the-market-logo-dark.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/the-market-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/storepilot-logo.jpeg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/edge-market-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/vestano-india-llp-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/vestano-media-logo.jpeg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/media-card-vr-preview.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/the-sign-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/villa-card-preview.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/nexiq-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/auditra-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/tiffin-box-logo-v2.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/tiffin-box-logo-v2.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/uvpro-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/uvpro-dashboard.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/fanzzy-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/fanzzy-site-collections.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/mission-vision-2030.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/sudheesh-nit-smooth.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/nidheesh-finance-auditing.png"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/iso-certification.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/index.html",
+      "missing-file",
+      "assets/images/aab-certification.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/auditing-risk-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/auditing-risk-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/auditing-risk-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/consumer-electronics-appliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/consumer-electronics-appliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/consumer-electronics-appliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/engineering-real-estate-infrastructure.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/engineering-real-estate-infrastructure.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/engineering-real-estate-infrastructure.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/fmcg-consumer-goods.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/fmcg-consumer-goods.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/fmcg-consumer-goods.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/hypermarkets-supermarkets-grocery.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/hypermarkets-supermarkets-grocery.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/hypermarkets-supermarkets-grocery.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/import-export-operations.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/import-export-operations.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/import-export-operations.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/import-export-operations.html",
+      "missing-file",
+      "../assets/images/import-export-port.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/industries/import-export-operations.html",
+      "missing-file",
+      "../assets/images/import-export-airfreight.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/industries/technology-software-saas.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/technology-software-saas.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/technology-software-saas.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/villa-projects.html",
+      "missing-file",
+      "../assets/images/the-sign-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/villa-projects.html",
+      "missing-file",
+      "../assets/images/the-sign-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/villa-projects.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/villa-projects.html",
+      "missing-file",
+      "../assets/images/the-sign-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/villa-projects.html",
+      "missing-file",
+      "../assets/images/villa-project-aerial.png"
+    ],
+    [
+      ".sites-open-temp/dist/industries/villa-projects.html",
+      "missing-file",
+      "../assets/images/villa-project-streetview.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/cloud-pos.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/cloud-pos.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/cloud-pos.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/genai-erp.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/genai-erp.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/genai-erp.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/retail-internships.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/retail-internships.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/retail-internships.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/risk-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/risk-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/risk-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/sustainable-retail.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/sustainable-retail.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/sustainable-retail.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/transformation-realized.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/transformation-realized.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/insights/transformation-realized.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/sudheesh-nit-smooth.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/nidheesh-finance-auditing.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/executive-director-2.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/executive-director-abida.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/executive-director-3.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/executive-director-praveen.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/praveen-lazar.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/project-execution-athira.jpeg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/accountant-profile.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/accounts-auditing.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/software-developer-profile.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/assistant-software-developer.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/media-it-profile.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/data-management-profile.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/data-analytics-profile-1.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/mis-head.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/data-analytics-profile-2.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/marketing-manager-new.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/marketing-manager.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/visual-design-brand-identity.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/ai-creative-specialist.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/3d-creative-designer.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/architectural-3d-visualizer.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/designer-portrait.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/media-production-executive.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/civil-engineering.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/visual-display-specialist.png"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/asrith-kp.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/visual-display-specialist-final.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/leadership.html",
+      "missing-file",
+      "assets/images/business-consultant.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/auditing-tax-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/auditing-tax-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/auditing-tax-compliance.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/edge-market-erp.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/edge-market-erp.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/edge-market-erp.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/edge-market-erp.html",
+      "missing-file",
+      "../assets/images/edge-market-dashboard-professional.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/services/edge-market-erp.html",
+      "missing-file",
+      "../assets/images/edge-market-pos-professional.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/services/hr-compliance-training.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/hr-compliance-training.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/hr-compliance-training.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/mis-analytics.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/mis-analytics.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/mis-analytics.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/retail-supermarket-consulting.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/retail-supermarket-consulting.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/retail-supermarket-consulting.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/storepilot-workforce.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/storepilot-workforce.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/storepilot-workforce.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/storepilot-workforce.html",
+      "missing-file",
+      "../assets/images/storepilot-workforce-showcase.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/supply-chain-vendor-management.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/supply-chain-vendor-management.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/supply-chain-vendor-management.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/vestano-media.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/vestano-media.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/vestano-media.html",
+      "missing-file",
+      "../assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/services/vestano-media.html",
+      "missing-file",
+      "../assets/images/vestano-media-digital-showcase.jpg"
+    ],
+    [
+      ".sites-open-temp/dist/the-market.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/the-market.html",
+      "missing-file",
+      "assets/images/vestano-logo-transparent.png"
+    ],
+    [
+      ".sites-open-temp/dist/the-market.html",
+      "missing-file",
+      "assets/images/vestano-logo.png"
+    ],
+    [
+      ".sites-open-temp/dist/the-market.html",
+      "missing-file",
+      "assets/images/the-market-logo-dark.png"
+    ],
+    [
+      ".sites-open-temp/dist/the-market.html",
+      "missing-file",
+      "assets/images/pp-sunny-card.png"
+    ],
+    [
+      ".sites-open-temp/dist/the-market.html",
+      "missing-file",
+      "assets/images/sudheesh-denoised.png"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../assets/images/vestano-favicon.png"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.webp"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../styles.css?v=perf-v1"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../assets/images/vestano-logo.webp"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html?menu=insights"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html?menu=services"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html?menu=industries"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html?menu=careers"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../the-market.html"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html?menu=about"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html#contact"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../index.html#about-details"
+    ],
+    [
+      ".sites-publish/dist/alliances.html",
+      "missing-file",
+      "../script.js?v=navigation-v4"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../assets/images/vestano-favicon.png"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.webp"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../styles.css?v=perf-v1"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../assets/images/vestano-logo.webp"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html?menu=insights"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html?menu=services"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html?menu=industries"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html?menu=careers"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../the-market.html"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html?menu=about"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html#contact"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../index.html#about-details"
+    ],
+    [
+      ".sites-publish/dist/alumni.html",
+      "missing-file",
+      "../script.js?v=navigation-v4"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/alliances.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/alumni.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/newsroom.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/newsroom.html#gcc-expansion"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/newsroom.html#iso-milestone"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/purpose.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/purpose.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/people.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/people.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/values.html"
+    ],
+    [
+      ".sites-publish/dist/index.html",
+      "missing-file",
+      "about/values.html"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../assets/images/vestano-favicon.png"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.webp"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../styles.css?v=perf-v1"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../assets/images/vestano-logo.webp"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html?menu=insights"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html?menu=services"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html?menu=industries"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html?menu=careers"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../the-market.html"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html?menu=about"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html#contact"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../index.html#about-details"
+    ],
+    [
+      ".sites-publish/dist/newsroom.html",
+      "missing-file",
+      "../script.js?v=navigation-v4"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../assets/images/vestano-favicon.png"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.webp"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../styles.css?v=perf-v1"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../assets/images/vestano-logo.webp"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html?menu=insights"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html?menu=services"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html?menu=industries"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html?menu=careers"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../the-market.html"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html?menu=about"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html#contact"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../index.html#about-details"
+    ],
+    [
+      ".sites-publish/dist/people.html",
+      "missing-file",
+      "../script.js?v=navigation-v4"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../assets/images/vestano-favicon.png"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.webp"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../styles.css?v=perf-v1"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../assets/images/vestano-logo.webp"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html?menu=insights"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html?menu=services"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html?menu=industries"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html?menu=careers"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../the-market.html"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html?menu=about"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html#contact"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../index.html#about-details"
+    ],
+    [
+      ".sites-publish/dist/purpose.html",
+      "missing-file",
+      "../script.js?v=navigation-v4"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../assets/images/vestano-favicon.png"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../assets/images/vestano-logo-transparent.webp"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../styles.css?v=perf-v1"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../assets/images/vestano-logo.webp"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html?menu=insights"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html?menu=services"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html?menu=industries"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html?menu=careers"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../the-market.html"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html?menu=about"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html#contact"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../index.html#about-details"
+    ],
+    [
+      ".sites-publish/dist/values.html",
+      "missing-file",
+      "../script.js?v=navigation-v4"
+    ]
+  ],
   "http": [
+    {
+      "page": ".sites-open-temp/dist/about/alliances.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/about/alumni.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/about/newsroom.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/about/people.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/about/purpose.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/about/values.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/all-businesses.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/auditra.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/bpos-hardware.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/digital-solutions.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/essae-pos.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/fanzzy.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/nexiq.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/tiffin-box.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/tsc-hardware.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/up-pro.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/business/vestano-projects-property.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/careers/career-paths.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/careers/how-to-join.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/careers/internship-programs.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/careers/job-search.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/careers/life-at-vestano.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/index.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/auditing-risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/consumer-electronics-appliances.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/engineering-real-estate-infrastructure.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/fmcg-consumer-goods.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/hypermarkets-supermarkets-grocery.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/import-export-operations.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/technology-software-saas.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/industries/villa-projects.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/insights/cloud-pos.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/insights/genai-erp.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/insights/retail-internships.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/insights/risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/insights/sustainable-retail.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/insights/transformation-realized.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/leadership.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/auditing-tax-compliance.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/edge-market-erp.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/hr-compliance-training.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/mis-analytics.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/retail-supermarket-consulting.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/storepilot-workforce.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/supply-chain-vendor-management.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/services/vestano-media.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-open-temp/dist/the-market.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/all-businesses.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/alliances.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/alumni.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/assets/brochures/the-sign-interactive-brochure.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/auditra.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/bpos-hardware.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/digital-solutions.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/essae-pos.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/fanzzy.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/nexiq.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/tiffin-box.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/tsc-hardware.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/up-pro.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/business/vestano-projects-property.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/careers/career-paths.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/careers/how-to-join.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/careers/internship-programs.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/careers/job-search.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/careers/life-at-vestano.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/index.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/auditing-risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/consumer-electronics-appliances.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/engineering-real-estate-infrastructure.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/fmcg-consumer-goods.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/hypermarkets-supermarkets-grocery.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/import-export-operations.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/technology-software-saas.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/industries/villa-projects.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/insights/cloud-pos.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/insights/genai-erp.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/insights/retail-internships.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/insights/risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/insights/sustainable-retail.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/insights/transformation-realized.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/leadership.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/newsroom.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/people.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/purpose.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/auditing-tax-compliance.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/edge-market-erp.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/hr-compliance-training.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/mis-analytics.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/retail-supermarket-consulting.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/storepilot-workforce.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/supply-chain-vendor-management.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/services/vestano-media.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/the-market.html",
+      "status": 200
+    },
+    {
+      "page": ".sites-publish/dist/values.html",
+      "status": 200
+    },
     {
       "page": "about/alliances.html",
       "status": 200
@@ -81,6 +2412,10 @@
     },
     {
       "page": "all-businesses.html",
+      "status": 200
+    },
+    {
+      "page": "assets/brochures/the-sign-interactive-brochure.html",
       "status": 200
     },
     {
@@ -124,6 +2459,10 @@
       "status": 200
     },
     {
+      "page": "business/vestano-retail-erp.html",
+      "status": 200
+    },
+    {
       "page": "careers/career-paths.html",
       "status": 200
     },
@@ -141,6 +2480,194 @@
     },
     {
       "page": "careers/life-at-vestano.html",
+      "status": 200
+    },
+    {
+      "page": "dist/about/alliances.html",
+      "status": 200
+    },
+    {
+      "page": "dist/about/alumni.html",
+      "status": 200
+    },
+    {
+      "page": "dist/about/newsroom.html",
+      "status": 200
+    },
+    {
+      "page": "dist/about/people.html",
+      "status": 200
+    },
+    {
+      "page": "dist/about/purpose.html",
+      "status": 200
+    },
+    {
+      "page": "dist/about/values.html",
+      "status": 200
+    },
+    {
+      "page": "dist/all-businesses.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/auditra.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/bpos-hardware.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/digital-solutions.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/essae-pos.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/fanzzy.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/nexiq.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/tiffin-box.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/tsc-hardware.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/up-pro.html",
+      "status": 200
+    },
+    {
+      "page": "dist/business/vestano-projects-property.html",
+      "status": 200
+    },
+    {
+      "page": "dist/careers/career-paths.html",
+      "status": 200
+    },
+    {
+      "page": "dist/careers/how-to-join.html",
+      "status": 200
+    },
+    {
+      "page": "dist/careers/internship-programs.html",
+      "status": 200
+    },
+    {
+      "page": "dist/careers/job-search.html",
+      "status": 200
+    },
+    {
+      "page": "dist/careers/life-at-vestano.html",
+      "status": 200
+    },
+    {
+      "page": "dist/index.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/auditing-risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/consumer-electronics-appliances.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/engineering-real-estate-infrastructure.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/fmcg-consumer-goods.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/hypermarkets-supermarkets-grocery.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/import-export-operations.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/technology-software-saas.html",
+      "status": 200
+    },
+    {
+      "page": "dist/industries/villa-projects.html",
+      "status": 200
+    },
+    {
+      "page": "dist/insights/cloud-pos.html",
+      "status": 200
+    },
+    {
+      "page": "dist/insights/genai-erp.html",
+      "status": 200
+    },
+    {
+      "page": "dist/insights/retail-internships.html",
+      "status": 200
+    },
+    {
+      "page": "dist/insights/risk-compliance.html",
+      "status": 200
+    },
+    {
+      "page": "dist/insights/sustainable-retail.html",
+      "status": 200
+    },
+    {
+      "page": "dist/insights/transformation-realized.html",
+      "status": 200
+    },
+    {
+      "page": "dist/leadership.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/auditing-tax-compliance.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/edge-market-erp.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/hr-compliance-training.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/mis-analytics.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/retail-supermarket-consulting.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/storepilot-workforce.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/supply-chain-vendor-management.html",
+      "status": 200
+    },
+    {
+      "page": "dist/services/vestano-media.html",
+      "status": 200
+    },
+    {
+      "page": "dist/the-market.html",
       "status": 200
     },
     {
@@ -241,6 +2768,10 @@
     },
     {
       "page": "the-market.html",
+      "status": 200
+    },
+    {
+      "page": "vestano-core.html",
       "status": 200
     }
   ]

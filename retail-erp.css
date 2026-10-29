@@ -1,0 +1,108 @@
+/* Retail ERP coming-soon landing page. Device screens are illustrative previews. */
+.retail-erp-page .erp-launch { color: #f6f8fb; min-height: calc(100dvh - 80px); background: linear-gradient(90deg, #001823ed 0%, #001823a8 60%, #0018239c), linear-gradient(0deg, #001722 5%, #00172200 80%), url('assets/images/retail-insights-hero.webp') center top / cover no-repeat; padding: 26px 0 48px; overflow: hidden; }
+.erp-wrap { width: min(1320px, calc(100% - 80px)); margin-inline: auto; }
+.erp-page-actions { display: flex; align-items: center; gap: 12px; }
+.erp-back { display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; color: #08243a; background: #ffb530; box-shadow: 0 0 24px #ffb53030; font-size: 23px; text-decoration: none; cursor: pointer; }
+.erp-page-actions a:not(.erp-back) { padding: 8px 16px; border: 1px solid #ffffff35; border-radius: 4px; color: #fff; font-size: 12px; font-weight: 600; text-decoration: none; }
+.erp-launch-grid { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); align-items: center; gap: 28px; margin-top: 48px; }
+.erp-eyebrow { display: flex; align-items: center; gap: 16px; margin: 0 0 18px; color: #ffb32b; font-size: 12px; font-weight: 700; }
+.erp-eyebrow > span { width: 25px; height: 1px; background: #b68a40; }
+.erp-launch-status { display: inline-flex; align-items: center; gap: 9px; padding: 10px 13px; border-radius: 11px; background: linear-gradient(100deg, #ffb83c, #f6a321); color: #071c2b; font-size: 10px; font-weight: 800; box-shadow: 0 0 28px #ffad3335; }
+.erp-launch-status > span { font-size: 15px; }
+.retail-erp-page .erp-launch h1 { margin: 20px 0 18px; max-width: 530px; font-size: clamp(36px, 3.7vw, 54px); line-height: 1.1; font-weight: 750; letter-spacing: -.035em; }
+.erp-launch h1 > span { color: #ffb13a; }
+.erp-launch-lead { max-width: 475px; margin: 0; color: #c8d3dd; font-size: 15px; line-height: 1.65; }
+.erp-enquiry { display: inline-flex; align-items: center; justify-content: center; gap: 20px; margin-top: 22px; padding: 16px 22px; border-radius: 12px; background: linear-gradient(110deg, #ffbb47, #f5a21b); color: #071d2c; text-decoration: none; font-size: 13px; font-weight: 750; transition: transform 180ms ease; }
+.erp-enquiry span { font-size: 22px; line-height: 1; }
+.erp-enquiry:hover { transform: translateY(-2px); }
+.erp-launch :is(a,button):focus-visible { outline: 3px solid #ffcd70; outline-offset: 5px; }
+.erp-product-preview { position: relative; min-width: 0; margin: 34px 0 0; padding: 0 30px 24px 0; align-self: end; }
+.erp-laptop { position: relative; width: 100%; padding: 12px 12px 16px; border: 2px solid #91a0a7; border-radius: 22px 22px 9px 9px; background: linear-gradient(120deg, #030609, #1a2630 70%, #060c10); box-shadow: 0 22px 42px #0008; }
+.erp-laptop-screen { overflow: hidden; background: #061e2d; border: 1px solid #ffffff14; border-radius: 9px; aspect-ratio: 1.7; font-family: Inter, sans-serif; }
+.erp-laptop-base { position: absolute; left: -7%; bottom: -15px; width: 114%; height: 16px; border-radius: 2px 2px 50% 50% / 2px 2px 100% 100%; background: linear-gradient(90deg, #293f4c, #a4b1bb 8%, #3f5665 13%, #9eabb5 50%, #2a404e 90%, #9eabb5 97%, #2a404e); box-shadow: 0 14px 30px #0006; }
+.erp-laptop-base::before { content: ''; display: block; width: 16%; height: 5px; margin: 0 auto; border-radius: 0 0 8px 8px; background: #2a3f4d; }
+.erp-demo-top { display: flex; align-items: center; gap: 5px; height: 35px; padding: 7px 10px; border-bottom: 1px solid #ffffff09; font-size: 7px; }
+.erp-demo-top img { width: 16px; height: 18px; object-fit: contain; }
+.erp-demo-top b { font-size: 8px; letter-spacing: .04em; }
+.erp-demo-search { margin-left: 18px; padding: 5px 9px; border-radius: 4px; min-width: 30%; background: #112f41; color: #a1b3c3; font-size: 6px; }
+.erp-demo-user { margin-left: auto; color: #c0d0db; font-size: 6px; }
+.erp-demo-layout { display: grid; grid-template-columns: 18% minmax(0,1fr); height: calc(100% - 35px); }
+.erp-demo-sidebar { display: grid; align-content: start; gap: 4px; padding: 8px 5px; border-right: 1px solid #ffffff09; color: #adbfcd; font-size: 6px; }
+.erp-demo-sidebar span { display: block; padding: 6px 5px; border-radius: 4px; white-space: nowrap; }
+.erp-demo-sidebar .erp-demo-selected { background: #124d85; color: #fff; }
+.erp-demo-main { padding: 12px 10px; }
+.erp-demo-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 12px; }
+.erp-demo-heading h2 { margin: 0 0 3px; color: #fff; font-size: 11px; font-weight: 600; }
+.erp-demo-heading p { margin: 0; color: #92aabb; font-size: 6px; }
+.erp-demo-heading > span { padding: 5px; border: 1px solid #ffffff12; border-radius: 4px; color: #a3b6c5; font-size: 5px; }
+.erp-demo-metrics { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 7px; }
+.erp-demo-metrics > div { display: grid; gap: 7px; padding: 10px 8px; border: 1px solid #ffffff06; border-radius: 5px; background: linear-gradient(135deg, #123447, #0d293a); }
+.erp-demo-metrics span { color: #a3b6c5; font-size: 6px; }
+.erp-demo-metrics strong { color: #eef5fc; font-size: clamp(8px, .9vw, 13px); font-weight: 650; white-space: nowrap; }
+.erp-demo-metrics small { color: #47d0a5; font-size: 5px; }
+.erp-demo-metrics > div:last-child small { color: #9baebb; }
+.erp-demo-charts { display: grid; grid-template-columns: 1.2fr 1fr; gap: 8px; margin-top: 9px; }
+.erp-demo-chart { min-width: 0; padding: 10px 8px; border: 1px solid #ffffff06; border-radius: 5px; background: #0c293a; font-size: 6px; }
+.erp-chart-heading { display: flex; justify-content: space-between; gap: 6px; }
+.erp-chart-heading span { color: #47d0a5; }
+.erp-line-chart { display: block; width: 100%; margin-top: 12px; }
+.erp-chart-dates { display: flex; justify-content: space-between; color: #9eb3c2; font-size: 5px; margin-top: 5px; }
+.erp-category-layout { display: flex; align-items: center; gap: 10px; margin-top: 24px; }
+.erp-donut { flex: 0 0 55%; display: grid; place-items: center; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(#2586e1 0 35%, #7a5edc 35% 55%, #24baa1 55% 77%, #edb43d 77% 92%, #3598c3 92%); }
+.erp-donut > span { display: grid; place-content: center; gap: 3px; width: 68%; height: 68%; border-radius: 50%; background: #0c293a; color: #bacbd5; text-align: center; font-size: 5px; }
+.erp-donut strong { color: #fff; font-size: 11px; }
+.erp-chart-legend { display: grid; gap: 8px; color: #b5c5d0; font-size: 5px; white-space: nowrap; }
+.erp-phone { position: absolute; right: -10px; bottom: 7px; width: 23%; min-width: 105px; padding: 16px 8px 13px; border: 2px solid #8b9aa6; border-radius: 23px; background: #041b2b; box-shadow: inset 0 0 0 3px #000, 0 16px 30px #0008; }
+.erp-phone-notch { position: absolute; top: 0; left: 29%; width: 42%; height: 10px; border-radius: 0 0 8px 8px; background: #02070a; }
+.erp-phone-brand { color: #e2eff8; font-size: 6px; font-weight: 700; }
+.erp-phone-brand > span { float: right; color: #a5bac8; }
+.erp-phone-sales { margin-top: 14px; padding: 9px 5px; background: #0b2a3c; border: 1px solid #ffffff09; border-radius: 5px; }
+.erp-phone-sales > span { display: block; color: #acbdca; font-size: 6px; }
+.erp-phone-sales > strong { display: block; color: #fff; margin-top: 4px; font-size: 10px; }
+.erp-phone-sales > small { color: #48c9ac; font-size: 5px; }
+.erp-phone-bars { display: flex; align-items: end; gap: 3px; height: 44px; margin-top: 6px; }
+.erp-phone-bars i { flex: 1; height: 20%; border-radius: 1px; background: linear-gradient(#3a9eff, #1260a8); }
+.erp-phone-bars i:nth-child(2n) { height: 33%; }.erp-phone-bars i:nth-child(3n) { height: 45%; }.erp-phone-bars i:nth-child(4n) { height: 60%; }.erp-phone-bars i:nth-child(7) { height: 72%; }.erp-phone-bars i:nth-child(9) { height: 85%; }.erp-phone-bars i:last-child { height: 100%; }
+.erp-orders-title { display: block; margin: 14px 0 9px; font-size: 6px; font-weight: 600; }
+.erp-phone-order { display: flex; align-items: center; gap: 7px; padding: 6px 0; border-top: 1px solid #ffffff09; font-size: 5px; }
+.erp-phone-order i { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 5px; background: #288be0; font-size: 10px; font-style: normal; }
+.erp-phone-order:nth-last-child(3) i { background: #d1a63d; }.erp-phone-order:nth-last-child(2) i { background: #7862d1; }
+.erp-phone-order small { display: block; margin-top: 4px; color: #8ca7b9; font-size: 4px; }
+.erp-phone-home { width: 34%; height: 2px; margin: 14px auto 0; border-radius: 3px; background: #8093a1; }
+.erp-product-preview figcaption { position: relative; margin: 28px 0 0; color: #8ca6b8; font-size: 9px; letter-spacing: .03em; text-align: center; }
+.erp-benefits { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 26px; margin-top: 64px; }
+.erp-benefit { display: flex; gap: 18px; }
+.erp-benefit + .erp-benefit { border-left: 1px solid #ffffff1a; padding-left: 26px; }
+.erp-benefit-icon { display: grid; flex: 0 0 44px; place-items: center; width: 44px; height: 44px; border: 1px solid #c28a2a; border-radius: 8px; color: #ffac29; }
+.erp-benefit-icon svg { width: 26px; height: 26px; }
+.erp-benefit h2 { margin: 7px 0 8px; font-size: 12px; font-weight: 650; line-height: 1.4; }
+.erp-benefit p { margin: 0; color: #bdcbd7; font-size: 11px; line-height: 1.6; }
+@media (max-width:1100px) {
+  .erp-wrap { width: calc(100% - 64px); }
+  .erp-launch-grid { gap: 24px; grid-template-columns: .9fr 1.1fr; }
+  .retail-erp-page .erp-launch h1 { font-size: 42px; }
+  .erp-benefits { gap: 18px; }.erp-benefit { gap: 12px; }.erp-benefit + .erp-benefit { padding-left: 18px; }
+  .erp-benefit-icon { flex-basis: 36px; width: 36px; height: 38px; }.erp-benefit-icon svg { width: 23px; height: 23px; }
+}
+@media (max-width:900px) {
+  .erp-launch-grid { grid-template-columns: 1fr; margin-top: 36px; }
+  .erp-launch-copy { max-width: 600px; }.retail-erp-page .erp-launch h1 { max-width: 600px; font-size: 48px; }
+  .erp-product-preview { width: min(700px, 95%); margin: 30px auto 0; padding-right: 28px; }
+  .erp-benefits { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 24px; margin-top: 40px; }
+  .erp-benefit + .erp-benefit { padding-left: 0; border: 0; }
+}
+@media (max-width:520px) {
+  .erp-wrap { width: calc(100% - 40px); }.retail-erp-page .erp-launch { padding-top: 20px; }
+  .retail-erp-page .erp-launch h1 { font-size: 38px; }.erp-launch-lead { font-size: 14px; }
+  .erp-launch-status { font-size: 9px; }.erp-enquiry { font-size: 12px; gap: 14px; padding: 14px 16px; }
+  .erp-product-preview { width: 100%; padding-right: 18px; }.erp-laptop { padding: 6px 6px 10px; border-radius: 14px 14px 6px 6px; }
+  .erp-laptop-screen { aspect-ratio: 1.65; }
+  .erp-demo-top { height: 24px; padding: 4px; }.erp-demo-top img { width: 10px; height: 12px; }.erp-demo-top b { font-size: 5px; }.erp-demo-search { font-size: 4px; margin-left: 5px; padding: 3px 4px; }.erp-demo-user { font-size: 4px; }
+  .erp-demo-layout { height: calc(100% - 24px); }.erp-demo-sidebar { font-size: 4px; gap: 2px; padding: 4px 2px; }.erp-demo-sidebar span { padding: 3px 2px; }
+  .erp-demo-main { padding: 6px; }.erp-demo-heading { margin-bottom: 6px; }.erp-demo-heading h2 { font-size: 7px; }.erp-demo-heading p { font-size: 4px; }.erp-demo-heading > span { font-size: 3px; padding: 3px; }
+  .erp-demo-metrics { gap: 3px; }.erp-demo-metrics > div { gap: 4px; padding: 5px 3px; }.erp-demo-metrics span { font-size: 4px; }.erp-demo-metrics strong { font-size: 6px; }.erp-demo-metrics small { font-size: 3px; }
+  .erp-demo-charts { margin-top: 5px; gap: 4px; }.erp-demo-chart { padding: 5px 4px; font-size: 4px; }.erp-line-chart { margin-top: 6px; }.erp-chart-dates { font-size: 3px; }.erp-category-layout { margin-top: 10px; gap: 4px; }.erp-chart-legend { font-size: 3px; gap: 4px; }.erp-donut strong { font-size: 7px; }.erp-donut > span { font-size: 3px; }
+  .erp-phone { min-width: 0; width: 25%; right: -5px; padding: 12px 5px 8px; border-radius: 14px; }.erp-phone-brand { font-size: 4px; }.erp-phone-notch { height: 7px; }.erp-phone-sales { margin-top: 8px; padding: 5px 3px; }.erp-phone-sales > span { font-size: 4px; }.erp-phone-sales > strong { font-size: 6px; }.erp-phone-sales > small { font-size: 3px; }.erp-phone-bars { height: 25px; gap: 2px; }.erp-orders-title { font-size: 4px; margin: 8px 0 4px; }.erp-phone-order { gap: 4px; padding: 3px 0; font-size: 3px; }.erp-phone-order i { width: 13px; height: 13px; font-size: 7px; border-radius: 3px; }.erp-phone-order small { font-size: 3px; margin-top: 2px; }.erp-phone-home { margin-top: 7px; }
+  .erp-product-preview figcaption { font-size: 8px; }.erp-benefits { grid-template-columns: 1fr; gap: 22px; margin-top: 24px; }.erp-benefit { gap: 16px; }.erp-benefit h2 { font-size: 13px; margin-top: 2px; }.erp-benefit p { font-size: 12px; }.erp-benefit-icon { flex-basis: 42px; width: 42px; height: 44px; }
+}
+@media (prefers-reduced-motion:reduce) { .erp-enquiry { transition:none; }.erp-enquiry:hover { transform:none; } }
