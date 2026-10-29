@@ -690,6 +690,9 @@ a {
 .milestone-counter > div + div { border-left: 1px solid var(--line); padding-left: clamp(18px, 4vw, 36px); }
 .milestone-counter strong { color: #ffbd54; font-size: clamp(40px, 4.5vw, 60px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; text-shadow: 0 2px 24px rgba(244, 161, 44, 0.18); }
 .milestone-counter span { color: #e5e5df; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.hero .hero-milestone .milestone-experience { display: flex; align-items: center; gap: 16px; margin: 0 0 24px; padding: 18px; border: 1px solid rgba(255, 204, 123, 0.55); border-left: 4px solid #ffcc7b; border-radius: 12px; background: linear-gradient(110deg, rgba(244, 161, 44, 0.2), rgba(244, 161, 44, 0.06)); box-shadow: 0 4px 24px rgba(244, 161, 44, 0.1); }
+.milestone-experience strong { flex-shrink: 0; color: #ffcc7b; font-size: clamp(36px, 4vw, 46px); font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+.milestone-experience span { max-width: 180px; color: #fff1d6; font-size: 14px; font-weight: 700; line-height: 1.5; }
 .hero .hero-milestone .milestone-origin { margin: 24px 0 0; padding-top: 18px; border-top: 1px solid rgba(244, 161, 44, 0.2); color: #c8c8c2; font-size: 12px; line-height: 1.6; }
 
 @media (max-width: 480px) {
