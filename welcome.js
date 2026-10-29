@@ -52,7 +52,7 @@
   const homeURL = new URL('index.html', document.currentScript.src);
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('welcome.css?v=10', homeURL).href;
+  stylesheet.href = new URL('welcome.css?v=9', homeURL).href;
   const stylesReady = new Promise((resolve, reject) => {
     stylesheet.onload = resolve;
     stylesheet.onerror = reject;
