@@ -32,7 +32,7 @@ body.welcome-is-open { overflow: hidden; }
 .vestano-welcome .welcome-stats > div { display: flex; gap: 12px; align-items: center; }
 .vestano-welcome .welcome-stats > div + div { border-left: 1px solid #ffffff29; padding-left: 24px; }
 .vestano-welcome .welcome-stats p { margin: 0; display: grid; gap: 4px; }
-.vestano-welcome .welcome-stats strong { font-size: 28px; font-weight: 700; color: #f2c275; line-height: 1; letter-spacing: -.04em; }
+.vestano-welcome .welcome-stats strong { font-size: 28px; font-weight: 700; color: #f2c275; line-height: 1; letter-spacing: -.04em; white-space: nowrap; }
 .vestano-welcome .welcome-stats p span { font-size: 10px; line-height: 1.4; color: #d4e0e9; }
 .vestano-welcome .welcome-stats svg, .vestano-welcome .welcome-stat-icon { width: 26px; height: 26px; flex-shrink: 0; color: #f2c275; font-size: 26px; }
 .vestano-welcome .welcome-content { padding: 18px 22px; }
