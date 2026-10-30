@@ -5028,6 +5028,28 @@ body.contact-modal-open { overflow: hidden; }
   border-radius: 6px;
 }
 
+.leadership-profile-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.leadership-small-card .leadership-profile-name {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.leadership-small-card .leadership-profile-caption > span {
+  margin-top: 0;
+}
+
 .leadership-small-card span {
   display: block;
   margin-top: 10px;
