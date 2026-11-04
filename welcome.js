@@ -9,9 +9,9 @@
     // When storage is unavailable, avoid interrupting internal navigation.
     try { welcomeSeen = new URL(document.referrer).origin === location.origin; } catch {}
   }
-  if (welcomeSeen && navigation?.type !== 'reload') return;
+  const shouldOpenWelcome = !welcomeSeen || navigation?.type === 'reload';
 
-  function showWelcome(dialog) {
+  function showWelcome(dialog, openImmediately) {
     if (!dialog || typeof dialog.showModal !== 'function') return;
     const reopenButton = document.createElement('button');
     reopenButton.type = 'button';
@@ -66,13 +66,16 @@
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     });
-    openWelcome();
-    try { sessionStorage.setItem(welcomeSeenKey, '1'); } catch {}
-    document.body.classList.add('welcome-is-open');
+    if (openImmediately) {
+      openWelcome();
+      try { sessionStorage.setItem(welcomeSeenKey, '1'); } catch {}
+    } else {
+      reopenButton.hidden = false;
+    }
   }
   const existingDialog = document.querySelector('.vestano-welcome');
   if (existingDialog) {
-    showWelcome(existingDialog);
+    showWelcome(existingDialog, shouldOpenWelcome);
     return;
   }
   // Reuse the homepage notice on every page, keeping one source for its content.
@@ -101,6 +104,6 @@
       link.href = new URL(link.getAttribute('href'), homeURL).href;
     });
     document.body.append(dialog);
-    showWelcome(dialog);
+    showWelcome(dialog, shouldOpenWelcome);
   }).catch(() => { /* The page remains usable if the notice cannot load. */ });
 })();
