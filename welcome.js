@@ -13,15 +13,42 @@
 
   function showWelcome(dialog) {
     if (!dialog || typeof dialog.showModal !== 'function') return;
-    const previousFocus = document.activeElement;
-    function dismiss() {
-      dialog.close();
+    const reopenButton = document.createElement('button');
+    reopenButton.type = 'button';
+    reopenButton.className = 'welcome-reopen';
+    reopenButton.setAttribute('aria-label', 'Open welcome message');
+    reopenButton.title = 'Open welcome message';
+    reopenButton.textContent = 'V';
+    reopenButton.hidden = true;
+    document.body.append(reopenButton);
+
+    function openWelcome() {
+      if (!dialog.open) {
+        dialog.classList.add('is-expanding');
+        dialog.showModal();
+      }
+      reopenButton.hidden = true;
+      reopenButton.classList.remove('is-revealing');
+      document.body.classList.add('welcome-is-open');
     }
-    dialog.querySelector('.welcome-close').addEventListener('click', dismiss);
-    dialog.addEventListener('cancel', event => { event.preventDefault(); dismiss(); });
+    function collapseWelcome() {
+      if (!dialog.open || dialog.classList.contains('is-collapsing')) return;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      reopenButton.hidden = false;
+      reopenButton.classList.add('is-revealing');
+      dialog.classList.remove('is-expanding');
+      dialog.classList.add('is-collapsing');
+      window.setTimeout(() => dialog.close(), reducedMotion ? 0 : 280);
+    }
+
+    dialog.querySelector('.welcome-close').addEventListener('click', collapseWelcome);
+    reopenButton.addEventListener('click', openWelcome);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); collapseWelcome(); });
     dialog.addEventListener('close', () => {
+      dialog.classList.remove('is-collapsing', 'is-expanding');
       document.body.classList.remove('welcome-is-open');
-      if (previousFocus instanceof HTMLElement && previousFocus !== document.body) previousFocus.focus({ preventScroll: true });
+      reopenButton.hidden = false;
+      reopenButton.focus({ preventScroll: true });
     });
     dialog.addEventListener('click', event => {
       if (event.target.closest('[data-welcome-warning]')) {
@@ -29,7 +56,7 @@
         dialog.querySelector('#welcome-safety-title').focus({ preventScroll: true });
         return;
       }
-      if (event.target.closest('a[href]')) dismiss();
+      if (event.target.closest('a[href]')) collapseWelcome();
     });
     // Native dialog makes the underlying page inert; explicitly cycle focus within it.
     dialog.addEventListener('keydown', event => {
@@ -39,7 +66,7 @@
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     });
-    dialog.showModal();
+    openWelcome();
     try { sessionStorage.setItem(welcomeSeenKey, '1'); } catch {}
     document.body.classList.add('welcome-is-open');
   }
@@ -52,7 +79,7 @@
   const homeURL = new URL('index.html', document.currentScript.src);
   const stylesheet = document.createElement('link');
   stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('welcome.css?v=14', homeURL).href;
+  stylesheet.href = new URL('welcome.css?v=16', homeURL).href;
   const stylesReady = new Promise((resolve, reject) => {
     stylesheet.onload = resolve;
     stylesheet.onerror = reject;

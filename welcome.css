@@ -6,7 +6,10 @@
   font-family: Inter, sans-serif;
 }
 .vestano-welcome[open] { display: flex; animation: welcome-enter 250ms ease-out; }
+.vestano-welcome[open].is-expanding { transform-origin: 100% 50%; animation: welcome-expand 280ms cubic-bezier(.2, .8, .2, 1) both; }
+.vestano-welcome[open].is-collapsing { pointer-events: none; transform-origin: 100% 50%; animation: welcome-collapse 280ms cubic-bezier(.4, 0, .8, .2) both; }
 .vestano-welcome::backdrop { background: #020c18c9; backdrop-filter: blur(6px); }
+.vestano-welcome.is-collapsing::backdrop { animation: welcome-backdrop-out 280ms ease-out both; }
 body.welcome-is-open { overflow: hidden; }
 .vestano-welcome .welcome-scroll { width: 100%; overflow-y: auto; overscroll-behavior: contain; }
 .vestano-welcome .welcome-safety-alert { display: grid; gap: 5px; width: 100%; padding: 18px 68px 18px 24px; border: 0; background: #b71f2c; color: #fff; font: inherit; text-align: left; cursor: pointer; }
@@ -20,7 +23,15 @@ body.welcome-is-open { overflow: hidden; }
   background: #092439; color: white; font: 28px/1 Inter, sans-serif; cursor: pointer;
 }
 .vestano-welcome .welcome-close:hover { background: #23475f; }
-.vestano-welcome :is(a,button):focus-visible { outline: 3px solid #e8a739; outline-offset: 4px; }
+.welcome-reopen {
+  position: fixed; right: 18px; top: 50%; z-index: 1001; display: grid; place-items: center;
+  width: 52px; height: 52px; padding: 0; border: 2px solid #f2c275; border-radius: 50%;
+  background: #08243a; box-shadow: 0 10px 26px #0005; color: #f2c275;
+  font: 800 22px/1 Inter, sans-serif; cursor: pointer; transition: transform 180ms ease, background 180ms ease;
+}
+.welcome-reopen:hover { background: #153f5c; transform: translateY(-2px); }
+.welcome-reopen.is-revealing { animation: welcome-reopen-reveal 280ms ease-out both; }
+.welcome-reopen:focus-visible, .vestano-welcome :is(a,button):focus-visible { outline: 3px solid #e8a739; outline-offset: 4px; }
 .vestano-welcome .welcome-intro {
   padding: 22px 28px 20px; color: white;
   background: repeating-linear-gradient(125deg, transparent 0 65px, #ffffff04 66px 67px), radial-gradient(ellipse at 100% 0, #224966, transparent 75%), #08243a;
@@ -75,7 +86,12 @@ body.welcome-is-open { overflow: hidden; }
 }
 .vestano-welcome .welcome-closing { margin: 14px 0 0; color: #66717c; font-size: 10px; line-height: 1.6; text-align: center; }
 @keyframes welcome-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes welcome-expand { from { opacity: 0; transform: translateX(45vw) scale(.08); border-radius: 50%; } to { opacity: 1; transform: translateX(0) scale(1); border-radius: 18px; } }
+@keyframes welcome-collapse { from { opacity: 1; transform: translateX(0) scale(1); border-radius: 18px; } to { opacity: 0; transform: translateX(45vw) scale(.08); border-radius: 50%; } }
+@keyframes welcome-backdrop-out { to { opacity: 0; backdrop-filter: blur(0); } }
+@keyframes welcome-reopen-reveal { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
 @media (max-width: 520px) {
+  .welcome-reopen { right: 14px; width: 46px; height: 46px; font-size: 20px; }
   .vestano-welcome { width: calc(100% - 28px); max-height: 90dvh; border-radius: 12px; }
   .vestano-welcome .welcome-intro { padding: 26px 20px 22px; }
   .vestano-welcome h2 { max-width: 260px; margin-right: 26px; }
@@ -93,4 +109,4 @@ body.welcome-is-open { overflow: hidden; }
   .vestano-welcome .welcome-warning-item > svg { flex-basis: 20px; width: 20px; }
   .vestano-welcome .welcome-commitment { gap: 10px; }
 }
-@media (prefers-reduced-motion: reduce) { .vestano-welcome[open] { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .vestano-welcome[open], .vestano-welcome[open].is-expanding, .vestano-welcome[open].is-collapsing, .welcome-reopen.is-revealing { animation: none; } }
