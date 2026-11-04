@@ -1527,7 +1527,7 @@ setupContactModal();
   function loadWelcome() {
     if (document.querySelector('.vestano-welcome')) return;
     const welcomeScript = document.createElement('script');
-    welcomeScript.src = new URL('welcome.js?v=16', sharedScript.src).href;
+    welcomeScript.src = new URL('welcome.js?v=17', sharedScript.src).href;
     document.body.append(welcomeScript);
   }
   if (document.readyState === 'loading') {
