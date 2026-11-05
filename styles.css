@@ -7758,3 +7758,6 @@ main.market-page .market-rollout-track strong {
 /* Frame the supplied Mafam artwork without its surrounding white margins. */
 .client-mafam-art { position: relative; display: block; width: 110px; height: 66px; overflow: hidden; }
 .client-logo .client-mafam-art img { position: absolute; left: 50%; top: -27px; width: 265px; height: 150px; max-width: none; max-height: none; transform: translateX(-50%); }
+
+/* Temporary public newsroom removal: keep About us balanced. */
+@media (min-width: 1041px) { #about-menu .about-without-news { grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); } }
