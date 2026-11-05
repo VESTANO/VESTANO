@@ -5061,6 +5061,29 @@ body.contact-modal-open { overflow: hidden; }
   text-transform: uppercase;
 }
 
+.leadership-profile-department {
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.leadership-profile-department dt {
+  color: #b0c4d1;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.leadership-profile-department dd {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 .article-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
