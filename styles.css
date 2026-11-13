@@ -5351,6 +5351,9 @@ body.contact-modal-open { overflow: hidden; }
 }
 
 @media (max-width: 1040px) {
+  /* Leave a little breathing room between the compact navbar and homepage hero. */
+  .home-page .hero { margin-top: 12px; }
+
   body:has(.site-header.nav-open) { overflow: hidden; }
   .site-header.nav-open:has(.mega-menu.is-open) .nav-shell { display: none; }
   .site-header.nav-open .menu-toggle { position: sticky; top: 18px; z-index: 2; background: #fff; }
@@ -5752,6 +5755,8 @@ body.contact-modal-open { overflow: hidden; }
   .hero-content {
     width: calc(100% - 48px);
     margin: 0 24px 48px;
+    position: relative;
+    top: 18px;
   }
 
   .hero-content h1 {

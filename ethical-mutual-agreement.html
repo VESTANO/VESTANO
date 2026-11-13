@@ -11,9 +11,11 @@
 :root{--blue:#0870b4;--deep:#123653;--orange:#efa83e;--ink:#263746;--muted:#687887;--line:#d7dfe5}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#e9edf0;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-.pages{padding:28px 0 50px}
-.page{position:relative;width:min(100%,794px);min-height:1123px;margin:0 auto 28px;background:#fff;overflow:hidden;box-shadow:0 5px 24px rgba(22,43,60,.13);padding:58px 58px 68px}
+body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.pages{padding:0;background:#fff}
+.page{position:relative;width:100%;min-height:1123px;margin:0;background:#fff;overflow:hidden;box-shadow:none;padding:58px 58px 68px}
+.page:not(.cover){min-height:0;padding-bottom:32px;padding-left:max(58px,calc((100% - 980px)/2));padding-right:max(58px,calc((100% - 980px)/2))}
+.page:not(.cover) .page-footer{position:static;margin-top:32px}
 .cover{padding:0;display:flex;flex-direction:column;align-items:center;text-align:center}
 .cover-top{height:35px;width:100%;background:linear-gradient(to right,var(--orange) 0 21.5%,var(--blue) 21.5% 100%)}
 .cover-content{width:100%;padding:130px 70px 0;display:flex;flex-direction:column;align-items:center}
@@ -31,6 +33,7 @@ body{margin:0;background:#e9edf0;color:var(--ink);font-family:Arial,Helvetica,sa
 .page-intro{font-size:13px;line-height:1.65;color:#71808c;font-style:italic;margin:0 0 24px;position:relative;z-index:2}
 .watermark{position:absolute;width:390px;height:auto;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.075;z-index:0;pointer-events:none}
 .terms{position:relative;z-index:1}
+.pages > .page:nth-of-type(n+3) .terms{margin-top:24px}
 .term{display:grid;grid-template-columns:43px 1fr;column-gap:12px;padding:15px 0 17px;border-bottom:1px solid var(--line);break-inside:avoid}
 .term:first-child{padding-top:0}
 .num{font-size:23px;line-height:1.25;color:var(--blue);font-weight:800}
@@ -47,6 +50,8 @@ body{margin:0;background:#e9edf0;color:var(--ink);font-family:Arial,Helvetica,sa
  .agreement-back{top:calc(var(--header-height) + 28px);left:12px}
  .pages{padding:0;background:#fff}
  .page{width:100%;min-height:100vh;height:auto;margin:0 auto 14px;padding:28px 22px 62px;box-shadow:none}
+ .page:not(.cover){padding-left:22px;padding-right:22px}
+ .page:not(.cover) .page-footer{left:22px;right:22px}
  .cover{min-height:100svh;padding:0}
  .cover-top{height:7px}
  .cover-content{padding:16vh 25px 115px}
