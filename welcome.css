@@ -24,7 +24,7 @@ body.welcome-is-open { overflow: hidden; }
 }
 .vestano-welcome .welcome-close:hover { background: #23475f; }
 .welcome-reopen {
-  position: fixed; right: 18px; top: 50%; z-index: 1001; display: grid; place-items: center;
+  position: fixed; right: 18px; top: calc(var(--header-height) + 28px); z-index: 1001; display: grid; place-items: center;
   width: 52px; height: 52px; padding: 0; border: 2px solid #f2c275; border-radius: 50%;
   overflow: visible; isolation: isolate; background: #08243a;
   box-shadow: 0 10px 26px #0005, 0 0 0 0 #f2c27555; color: #f2c275;
@@ -103,7 +103,7 @@ body.welcome-is-open { overflow: hidden; }
 @keyframes welcome-sparkle-a { 0%, 62%, 100% { opacity: .3; transform: scale(.45) rotate(0); } 72% { opacity: 1; transform: scale(1.45) rotate(45deg); } 82% { opacity: .5; transform: scale(.7) rotate(90deg); } }
 @keyframes welcome-sparkle-b { 0%, 64%, 100% { opacity: .25; transform: scale(.35) rotate(0); } 74% { opacity: 1; transform: scale(1.25) rotate(-45deg); } 84% { opacity: .45; transform: scale(.65) rotate(-90deg); } }
 @media (max-width: 520px) {
-  .welcome-reopen { right: 14px; width: 46px; height: 46px; font-size: 20px; }
+  .welcome-reopen { right: 14px; top: 96px; width: 46px; height: 46px; font-size: 20px; }
   .vestano-welcome { width: calc(100% - 28px); max-height: 90dvh; border-radius: 12px; }
   .vestano-welcome .welcome-intro { padding: 26px 20px 22px; }
   .vestano-welcome h2 { max-width: 260px; margin-right: 26px; }
