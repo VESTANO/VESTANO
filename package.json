@@ -1,0 +1,7 @@
+{
+  "name": "vestano-website",
+  "private": true,
+  "type": "module",
+  "scripts": { "test:news": "node --test tests/news-*.test.mjs" },
+  "devDependencies": { "@electric-sql/pglite": "0.5.15" }
+}

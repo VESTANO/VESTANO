@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
-  <meta http-equiv="refresh" content="0;url=../index.html" />
-  <title>Vestano International Pvt Ltd</title>
-  <link rel="canonical" href="https://vestanoretail.com/" />
-  <script>location.replace(new URL('../index.html', location.href).href);</script>
-</head>
-<body><p><a href="../index.html">Continue to Vestano</a></p></body>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRJQKGNV8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      if (!(new URLSearchParams(location.search).get('admin-preview') === '1' && window.parent !== window)) gtag('config', 'G-CVRJQKGNV8');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../assets/images/vestano-favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/images/vestano-logo-transparent.webp" />
+    <title>Newsroom | Vestano International Pvt Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css?v=news-nav-v1" />
+    <link rel="stylesheet" href="../assets/css/news.css?v=13" />
+    <script type="module" src="../assets/js/news-public.js?v=12"></script>
+  </head>
+  <body>
+    <header class="site-header"><nav class="navbar" aria-label="Main navigation"><a class="brand" href="../index.html" aria-label="Home"><img src="../assets/images/vestano-logo.webp" alt="Vestano International Pvt Ltd" decoding="async" /></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button><div class="nav-shell" id="primary-nav"><ul class="nav-links"><li><a href="../index.html?menu=insights">Insights</a></li><li><a href="../index.html?menu=services">Services</a></li><li><a href="../index.html?menu=industries">Industries</a></li><li><a href="newsroom.html" aria-current="page">VESTRANO NEWS</a></li><li><a href="../index.html?menu=careers">Careers</a></li><li><a href="../the-market.html">OUR BUSINESS</a></li><li><a href="../vestano-core.html">VESTANO BLUEPRINT</a></li>
+            <li><a href="../index.html?menu=about">About us</a></li></ul><div class="nav-actions"><a href="../index.html#contact">Contact us</a></div></div></nav></header>
+    <main class="article-page is-subpage newsroom-page">
+      <div class="article-wrap">
+        <div class="article-actions">
+          <button class="back-link history-back" type="button">Back</button>
+          <a class="back-link secondary-action" href="../index.html#about-details">View about section</a>
+        </div>
+        <p class="ey-kicker">Newsroom</p>
+        <h1>Brand transformations and press releases</h1>
+        <p class="article-lead">The Vestano Newsroom brings together official company updates, brand transformation stories, GCC expansion news, and announcements around IT-driven retail upgrades.</p>
+        <p id="news-status" class="news-status" role="status" aria-live="polite">Loading news…</p>
+        <div class="article-grid news-list" data-news-list></div>
+        <button id="news-more" class="news-more" type="button" hidden>More stories</button>
+        <p class="news-admin-entry"><a href="../admin/">News admin</a></p>
+      </div>
+    </main>
+    <script>if (!(new URLSearchParams(location.search).get('admin-preview') === '1' && window.parent !== window)) { const sharedScript = document.createElement('script'); sharedScript.src = '../script.js?v=popup-sitewide-v7'; document.body.append(sharedScript); }</script>
+</body>
 </html>

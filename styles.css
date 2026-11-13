@@ -117,7 +117,7 @@ a {
   text-transform: uppercase;
   align-items: center;
   min-height: var(--header-height);
-  padding: 0 14px;
+  padding: 0 10px;
   color: var(--nav-blue);
   background: transparent;
   border: 0;
@@ -127,27 +127,49 @@ a {
   cursor: pointer;
 }
 
-@media (min-width: 1041px) and (max-width: 1320px) {
+.nav-links > li > a,
+.nav-links > li > .nav-button,
+.nav-actions > a {
+  white-space: nowrap;
+}
+
+@media (min-width: 1041px) and (max-width: 1599.98px) {
   .navbar {
-    gap: 18px;
-    padding: 0 36px;
+    gap: 16px;
+    padding: 0 28px;
   }
 
+  .nav-shell { gap: 16px; }
+
   .brand {
-    width: 236px;
-    min-width: 236px;
+    width: 180px;
+    min-width: 180px;
   }
 
   .brand img {
-    width: 224px;
+    width: 180px;
     height: 58px;
   }
 
   .nav-links a,
   .nav-button,
   .nav-actions a {
-    padding: 0 10px;
+    padding: 0 8px;
     font-size: 13px;
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1279.98px) {
+  .navbar { gap: 10px; padding: 0 18px; }
+  .nav-shell { gap: 8px; }
+  .brand { width: 112px; min-width: 112px; }
+  .brand img { width: 112px; }
+
+  .nav-links > li > a,
+  .nav-links > li > .nav-button,
+  .nav-actions > a {
+    padding-inline: 4px;
+    font-size: 12px;
   }
 }
 

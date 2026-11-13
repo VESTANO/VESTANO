@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="same-origin" />
+  <title>News Admin | Vestano</title>
+  <link rel="icon" href="../assets/images/vestano-favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/news-admin.css?v=7" />
+    <script type="module" src="../assets/js/news-admin.js?v=16"></script>
+</head>
+<body>
+  <header class="admin-header">
+    <a class="admin-brand" href="../index.html"><img src="../assets/images/vestano-logo.webp" alt="Vestano home" /><span>News admin</span></a>
+    <nav aria-label="Admin navigation"><a href="../about/newsroom.html">View newsroom <span aria-hidden="true">↗</span></a><button id="sign-out" class="quiet" hidden>Sign out</button></nav>
+  </header>
+  <main>
+    <section id="auth-view" class="auth-layout" aria-labelledby="auth-title">
+      <div class="auth-intro"><p class="eyebrow">THE VESTANO NEWSROOM</p><h1>Good stories.<br />A clear voice.</h1><p>Share the people, progress, and ideas moving Vestano forward.</p><div class="auth-note"><span aria-hidden="true">✦</span><p>Draft thoughtfully. Review your story. Publish when it’s ready.</p></div></div>
+      <div class="auth-card">
+        <p class="eyebrow">ADMIN ACCESS</p><h2 id="auth-title">Welcome back</h2><p class="muted">Sign in to create and manage company news.</p>
+        <div id="configuration-note" class="notice" hidden>Admin sign-in will be available when the website’s Supabase project is connected.</div>
+        <form id="login-form">
+          <label for="email">Email address</label><input id="email" type="email" value="info@vestanoretail.com" autocomplete="username" required maxlength="254" />
+          <label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required maxlength="128" />
+          <button id="login-button" class="primary" type="submit" disabled>Sign in</button>
+          <button id="reset-password" class="text-button" type="button" disabled>Forgot your password?</button>
+        </form>
+        <p id="auth-message" class="message" role="status" aria-live="polite">Preparing secure sign-in…</p>
+        <p class="access-note">Access is restricted to approved news administrators.</p>
+      </div>
+    </section>
+
+    <section id="recovery-view" class="recovery-card" aria-labelledby="recovery-title" hidden>
+      <p class="eyebrow">YOUR ACCOUNT</p><h1 id="recovery-title">Set your password</h1><p class="muted">Use at least 12 characters for your admin account.</p>
+      <form id="recovery-form"><label for="new-password">New password</label><input id="new-password" type="password" minlength="12" maxlength="128" autocomplete="new-password" required /><label for="confirm-password">Confirm password</label><input id="confirm-password" type="password" minlength="12" maxlength="128" autocomplete="new-password" required /><button class="primary" type="submit">Save password</button></form>
+      <p id="recovery-message" class="message" role="status"></p>
+    </section>
+
+    <section id="dashboard-view" class="dashboard" aria-labelledby="dashboard-title" hidden>
+      <div class="dashboard-heading"><div><p class="eyebrow">THE NEWSROOM</p><h1 id="dashboard-title">Your stories</h1><p class="muted">Edit your news. Arrange the page. See it before you publish.</p></div><button id="new-post" class="primary">+ New story</button></div>
+      <div class="workspace-tabs" role="tablist" aria-label="News workspace"><button id="edit-tab" role="tab" aria-selected="true" aria-controls="editor-panel">Edit stories</button><button id="page-preview-tab" role="tab" aria-selected="false" aria-controls="page-preview-panel" tabindex="-1">Page preview</button></div>
+      <p id="dashboard-message" class="message" role="status" aria-live="polite"></p>
+      <div class="workspace">
+        <aside class="story-sidebar" aria-label="News stories"><label class="sr-only" for="post-search">Search stories</label><input id="post-search" type="search" placeholder="Search your stories…" /><label class="sr-only" for="post-filter">Filter by status</label><select id="post-filter"><option value="all">All stories</option><option value="draft">Drafts</option><option value="published">Published</option><option value="archived">Archived</option><option value="deleted">Trash</option></select><p class="muted small">Stories appear in this order. Use the arrows to move them; changes save immediately.</p><p id="post-count" class="muted small"></p><div id="post-list" class="story-list" aria-live="polite"></div></aside>
+        <div id="editor-panel" class="editor-panel" role="tabpanel" aria-labelledby="edit-tab">
+          <div class="editor-heading"><div><h2 id="editor-title">New story</h2><p id="editor-meta" class="muted small">Start with a title. Your changes stay private until published.</p></div><span id="editor-status" class="badge">Draft</span></div>
+          <form id="post-form">
+            <label for="post-title">Title <span class="muted">(optional · up to 160 characters)</span></label><input id="post-title" name="title" maxlength="160" placeholder="Give your story a clear headline" />
+            <label for="post-category">Category</label><select id="post-category" name="category"><option>Company news</option><option>Press release</option><option>Corporate updates</option><option>Transformation stories</option><option>Team updates</option><option>Events</option></select>
+            <label for="post-summary">Short summary <span class="muted">(optional · up to 300 characters)</span></label><textarea id="post-summary" name="summary" rows="3" maxlength="300" placeholder="A short introduction for the newsroom card"></textarea>
+            <label for="post-body">Article <span class="muted">(optional)</span></label><textarea id="post-body" name="body" rows="12" maxlength="20000" placeholder="Write your story here. Leave a blank line between paragraphs."></textarea>
+            <div class="layout-fields"><div><label for="card-width">Newsroom card width</label><select id="card-width" name="card_width"><option value="standard">Standard · 1 column</option><option value="wide">Wide · 2 columns</option><option value="full">Full row</option></select></div><div><label>Cover image</label><p class="muted small">The complete image is shown; it is never cropped.</p><input id="image-position" name="image_position" type="hidden" value="center" /></div></div><p class="muted small">Widths adapt to smaller screens. Preview the newsroom to check the layout before saving.</p>
+            <div class="cover-section"><div><label for="cover-file">Cover image <span class="muted">(optional)</span></label><p class="muted small">JPG, PNG, or WebP. Maximum 5 MB.</p></div><input id="cover-file" type="file" accept="image/jpeg,image/png,image/webp" /><img id="cover-preview" class="cover-preview" alt="Cover image preview" hidden /><button id="remove-cover" class="text-button" type="button" hidden>Remove image</button><label for="image-alt">Image description</label><input id="image-alt" name="image_alt" maxlength="180" placeholder="Describe what the image shows" /></div>
+            <p id="editor-message" class="message" role="status" aria-live="polite"></p>
+            <div class="editor-actions"><button id="save-draft" class="secondary" type="submit" data-status="draft">Save draft</button><button id="publish-post" class="primary" type="submit" data-status="published">Publish story</button><button id="preview-post" class="quiet" type="button">Preview article</button><button id="archive-post" class="text-button" type="button" hidden>Archive</button><button id="delete-post" class="text-button danger" type="button" hidden>Delete story</button><button id="restore-post" class="secondary" type="button" hidden>Restore as draft</button></div>
+          </form>
+        </div>
+        <section id="page-preview-panel" class="page-preview-panel" role="tabpanel" aria-labelledby="page-preview-tab" hidden>
+          <div class="page-preview-heading"><div><h2>Visitor preview</h2><p class="muted small">The public page, with your proposed changes. Previewing never publishes a story.</p></div><button id="return-editor" class="quiet">Back to editor</button></div>
+          <div class="preview-controls"><div class="segmented" aria-label="Preview page"><button type="button" id="preview-newsroom" aria-pressed="true">Newsroom</button><button type="button" id="preview-article" aria-pressed="false">Article</button></div><label class="preview-device-label" for="preview-device">Screen<select id="preview-device"><option value="1280">Desktop · 1280px</option><option value="768">Tablet · 768px</option><option value="390">Mobile · 390px</option></select></label></div>
+          <label class="preview-toggle"><input id="include-edits" type="checkbox" checked /> Include selected story and unsaved edits</label>
+          <div id="visual-layout-controls">
+            <label class="preview-toggle"><input id="edit-preview-layout" type="checkbox" checked /> Arrange cards in the preview</label>
+            <p class="muted small">Choose Desktop, then drag any empty part of a card to place it anywhere on the canvas. Drag its bottom-right blue handle to set both width and height. Use Quick edit to change content. Tablet and mobile automatically use a safe responsive layout.</p>
+            <div class="preview-layout-bar"><span id="layout-state" role="status">Layout is saved</span><button id="discard-preview-layout" class="quiet" type="button" disabled>Discard layout</button><button id="save-preview-layout" class="primary" type="button" disabled>Save layout</button></div>
+            <p id="preview-layout-message" class="message" role="status" aria-live="polite"></p>
+          </div>
+          <section id="preview-inspector" class="preview-inspector" aria-labelledby="preview-inspector-title">
+            <div class="preview-inspector-heading"><div><p class="eyebrow">QUICK EDIT</p><h3 id="preview-inspector-title">Select a card to edit</h3><p id="preview-inspector-help" class="muted small">Choose Quick edit on a card below. Changes appear in the visitor preview immediately, but are not saved until you choose Save draft or Publish / update.</p></div><button id="preview-open-full-editor" class="quiet" type="button" hidden>Open full editor</button></div>
+            <div id="preview-inspector-fields" class="preview-inspector-fields" hidden>
+              <label for="preview-title">Title</label><input id="preview-title" data-preview-field="title" maxlength="160" />
+              <div class="preview-inspector-grid"><div><label for="preview-category">Category</label><select id="preview-category" data-preview-field="category"><option>Company news</option><option>Press release</option><option>Corporate updates</option><option>Transformation stories</option><option>Team updates</option><option>Events</option></select></div><div><label for="preview-card-width">Card width</label><select id="preview-card-width" data-preview-field="card_width"><option value="standard">Standard · 1 column</option><option value="wide">Wide · 2 columns</option><option value="full">Full row</option></select></div></div>
+              <label for="preview-summary">Short summary</label><textarea id="preview-summary" data-preview-field="summary" rows="3" maxlength="300"></textarea>
+              <label for="preview-body">Article text</label><textarea id="preview-body" data-preview-field="body" rows="8" maxlength="20000"></textarea>
+              <div class="preview-inspector-grid"><div><label>Cover image</label><p class="muted small">Full image shown — no cropping.</p></div><div><label for="preview-image-alt">Image description</label><input id="preview-image-alt" data-preview-field="image_alt" maxlength="180" /></div></div>
+              <section id="local-layout-controls" class="local-layout-controls" aria-labelledby="local-layout-title" hidden><div><p class="eyebrow">LOCAL FREEHAND LAYOUT</p><h4 id="local-layout-title">Drag image and text directly</h4><p class="muted small">In the desktop Page Preview, choose <strong>Freehand edit</strong> on the card. Drag either outlined area and use its corner handle to resize it. These adjustments stay only in this browser: they are not published or saved to Supabase.</p></div><button id="reset-local-layout" class="quiet" type="button">Reset local card layout</button></section>
+              <div class="preview-inspector-actions"><button id="preview-save-draft" class="secondary" type="button">Save draft</button><button id="preview-publish" class="primary" type="button">Publish / update</button><button id="preview-delete" class="text-button danger" type="button">Move to Trash</button><button id="preview-more-options" class="text-button" type="button">Image, status &amp; archive…</button></div>
+            </div>
+          </section>
+          <div id="preview-stage" class="preview-stage"><div id="preview-frame-shell" class="preview-frame-shell"><iframe id="page-preview-frame" title="Newsroom visitor preview" sandbox="allow-scripts allow-same-origin" referrerpolicy="same-origin"></iframe></div></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <dialog id="archive-dialog" class="confirm-dialog"><h2>Archive this story?</h2><p>It will leave the public newsroom. You can restore it as a draft later.</p><div class="editor-actions"><button id="cancel-archive" class="secondary">Cancel</button><button id="confirm-archive" class="primary">Archive story</button></div></dialog>
+  <dialog id="delete-dialog" class="confirm-dialog"><h2>Delete this story?</h2><p id="delete-description"></p><p>The story will leave the public newsroom and move to Trash. You can restore it as a draft. Unsaved edits will be discarded.</p><div class="editor-actions"><button id="cancel-delete" class="secondary">Cancel</button><button id="confirm-delete" class="primary danger-fill">Move to Trash</button></div></dialog>
+</body>
+</html>
